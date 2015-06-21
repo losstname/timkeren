@@ -19,3 +19,5 @@ langkah- langkahnya sebagai berikut:
 
 
 khusus untuk tim keren aja ya
+untuk tambahannya baca ini deh ya : 
+http://stackoverflow.com/questions/4384776/how-do-i-contribute-to-others-code-in-github

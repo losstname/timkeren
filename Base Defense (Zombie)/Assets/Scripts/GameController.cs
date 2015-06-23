@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour {
 	}
 
     IEnumerator EnemySpawning(){
-        while(true){
+		while(GameManager.instance.hitPoints > 0){
             Vector3 InstantiatePos = new Vector3(xPos, Random.Range(y1Pos, y2Pos), 0f);
             Instantiate(Enemy, InstantiatePos, Quaternion.identity);
             yield return new WaitForSeconds(wavesWait);

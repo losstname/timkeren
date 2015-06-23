@@ -7,6 +7,11 @@ public class Navigation : MonoBehaviour {
         Application.Quit();
     }
 
+	public void RestartApplication(){
+		GameManager.instance.restartScene();
+		Application.LoadLevel(0);
+	}
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
-	public int hitPoints = 20;
+	public int hitPoints ;
 	private Text levelText;
 	private Text attackText;
 	private Text destroyText;
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 
 	void InitGame()
 	{		
-		hitPoints = 1;
+		hitPoints = 10;
 		attackable = false;
 		destroyable = false;
 		levelText = GameObject.Find("BaseHPText").GetComponent<Text>();

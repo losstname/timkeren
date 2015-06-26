@@ -26,18 +26,18 @@ public class GameManager : MonoBehaviour {
 		Destroy(gameObject);
 
 		//Sets this to not be destroyed when reloading scene
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
 		InitGame();
 	}
 
 	void InitGame()
 	{
 		hitPoints = 10;
-		attackable = false;
-		destroyable = false;
+		attackable = true;
+		destroyable = true;
 		levelText = GameObject.Find("BaseHPText").GetComponent<Text>();
 		baseDoor = GameObject.Find("Door");
-		levelText.text = "Base HP:" + hitPoints;
+		levelText.text = "Base HP: " + hitPoints;
 	}
 
 	public void AttackBase(){

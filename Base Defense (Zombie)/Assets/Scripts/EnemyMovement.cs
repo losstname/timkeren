@@ -5,7 +5,7 @@ public class EnemyMovement : MonoBehaviour {
 
     public float speed = 1f;
     private bool ableMove = true;
-	private Transform targetBase;	
+	private Transform targetBase;
 
 	void Start(){
 			targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour {
 		}
 	}
 
-    void OnTriggerEnter2D(Collider2D other) {	
+    void OnTriggerEnter2D(Collider2D other) {
 //		ableMove = false;
 		if(other.tag == "Base"){
 			GameManager.instance.AttackBase();

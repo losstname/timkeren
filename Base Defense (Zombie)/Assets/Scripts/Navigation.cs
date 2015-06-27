@@ -8,7 +8,7 @@ public class Navigation : MonoBehaviour {
     }
 
     public void GoToSurvival() {
-        Application.LoadLevel("main");
+        Application.LoadLevel("Survival");
     }
 
     public void ExitApplication() {

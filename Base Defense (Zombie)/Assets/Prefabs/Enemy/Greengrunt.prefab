@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &130886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405110}
+  m_Layer: 0
+  m_Name: EndSight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &148942
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,6 +35,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &405110
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.988322675, y: -.0401135869, z: 0}
+  m_LocalScale: {x: 1.42857146, y: 1.42857146, z: 1}
+  m_Children: []
+  m_Father: {fileID: 451688}
+  m_RootOrder: 0
 --- !u!4 &451688
 Transform:
   m_ObjectHideFlags: 1
@@ -27,9 +54,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.74000001, y: -1.16999996, z: 0}
+  m_LocalPosition: {x: 5.68182564, y: -1.2119205, z: 0}
   m_LocalScale: {x: .699999988, y: .699999988, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 405110}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!58 &5866688
@@ -83,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  sightStart: {fileID: 451688}
+  sightEnd: {fileID: 405110}
 --- !u!212 &21248454
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -124,6 +154,14 @@ Prefab:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sightStart
+      value: 
+      objectReference: {fileID: 451688}
+    - target: {fileID: 0}
+      propertyPath: sightEnd
+      value: 
+      objectReference: {fileID: 448214, guid: c9bb16a95f46a8749a1ad7dbac9375b3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 148942}

@@ -1,3 +1,3 @@
 # timkeren
 
-tutorial dipidahkan ke doc GDrive
+tutorial dipidahkan ke doc Google Drive

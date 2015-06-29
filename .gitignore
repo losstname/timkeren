@@ -28,7 +28,6 @@ local.properties
 # PDT-specific
 .buildpath
 
-
 #################
 ## Visual Studio
 #################
@@ -57,7 +56,6 @@ build/
 *_i.c
 *_p.c
 *.ilk
-*.meta
 *.obj
 *.pch
 *.pdb
@@ -246,3 +244,5 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+*.csproj
+*.sln

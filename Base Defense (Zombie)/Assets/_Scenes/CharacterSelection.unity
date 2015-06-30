@@ -249,7 +249,7 @@ Prefab:
       objectReference: {fileID: 699551533}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: setPreviewCharacter
+      value: setPreviewCharacterToThis
       objectReference: {fileID: 0}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -333,7 +333,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 699551532}
-        m_MethodName: GoToMenuScreen
+        m_MethodName: GoToStageSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -655,7 +655,7 @@ Prefab:
       objectReference: {fileID: 699551533}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: setPreviewCharacter
+      value: setPreviewCharacterToThis
       objectReference: {fileID: 0}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1071,6 +1071,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 699551533}
+    - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setPreviewCharacterToThis
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
   m_IsPrefabParent: 0
@@ -1168,7 +1172,7 @@ Prefab:
       objectReference: {fileID: 699551533}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: setPreviewCharacter
+      value: setPreviewCharacterToThis
       objectReference: {fileID: 0}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1266,7 +1270,7 @@ Prefab:
       objectReference: {fileID: 699551533}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: setPreviewCharacter
+      value: setPreviewCharacterToThis
       objectReference: {fileID: 0}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1843,7 +1847,7 @@ Prefab:
       objectReference: {fileID: 699551533}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: setPreviewCharacter
+      value: setPreviewCharacterToThis
       objectReference: {fileID: 0}
     - target: {fileID: 11420602, guid: 8faaf8042220de64d9b1ca18c10629ea, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument

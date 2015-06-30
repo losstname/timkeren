@@ -8,7 +8,11 @@ public class Navigation : MonoBehaviour {
     }
 
     public void GoToSurvival() {
-        Application.LoadLevel("main");
+        Application.LoadLevel("Survival");
+    }
+
+    public void GoToCharacterSelection() {
+        Application.LoadLevel("CharacterSelection");
     }
 
     public void ExitApplication() {

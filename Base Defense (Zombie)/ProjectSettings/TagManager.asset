@@ -6,9 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Base
-  - LoS
-  - Projectiles
-  - Hero
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -18,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - InvisWall
   - 
   - 
   - 

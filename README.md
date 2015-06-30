@@ -1,3 +1,2 @@
 # timkeren
-
-tutorial dipidahkan ke doc Google Drive.
+Game Pertama dari TimKeren

@@ -25,8 +25,6 @@ GameObject:
   - 4: {fileID: 451688}
   - 212: {fileID: 21248454}
   - 114: {fileID: 11492192}
-  - 58: {fileID: 5866688}
-  - 58: {fileID: 5881292}
   - 61: {fileID: 6175128}
   m_Layer: 0
   m_Name: Greengrunt
@@ -60,32 +58,6 @@ Transform:
   - {fileID: 405110}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &5866688
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148942}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.540000021}
-  serializedVersion: 2
-  m_Radius: .349999994
---- !u!58 &5881292
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148942}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .100000001}
-  serializedVersion: 2
-  m_Radius: .340000004
 --- !u!61 &6175128
 BoxCollider2D:
   m_ObjectHideFlags: 1

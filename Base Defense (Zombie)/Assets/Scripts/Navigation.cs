@@ -11,6 +11,10 @@ public class Navigation : MonoBehaviour {
         Application.LoadLevel("Survival");
     }
 
+    public void GoToCharacterSelection() {
+        Application.LoadLevel("CharacterSelection");
+    }
+
     public void ExitApplication() {
         Application.Quit();
     }

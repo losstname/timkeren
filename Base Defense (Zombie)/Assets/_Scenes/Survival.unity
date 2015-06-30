@@ -635,6 +635,10 @@ Prefab:
       propertyPath: m_Name
       value: SkillBtn (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 11478362, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}
+      propertyPath: m_Text
+      value: Skill 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}
   m_IsPrefabParent: 0
@@ -1168,6 +1172,10 @@ Prefab:
     - target: {fileID: 187834, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}
       propertyPath: m_Name
       value: SkillBtn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478362, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}
+      propertyPath: m_Text
+      value: Skill 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}
@@ -1785,6 +1793,10 @@ Prefab:
     - target: {fileID: 187834, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}
       propertyPath: m_Name
       value: SkillBtn (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478362, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}
+      propertyPath: m_Text
+      value: Skill 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a4f9342cd9c40540ba0140517f7e9b1, type: 2}

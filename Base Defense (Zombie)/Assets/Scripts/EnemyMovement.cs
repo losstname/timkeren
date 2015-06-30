@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour {
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
+	public static int gghp = 3;
 
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;

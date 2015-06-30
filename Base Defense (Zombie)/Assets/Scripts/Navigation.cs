@@ -11,6 +11,10 @@ public class Navigation : MonoBehaviour {
         Application.LoadLevel("Survival");
     }
 
+    public void GoToStageSelection() {
+        Application.LoadLevel("StageSelection");
+    }
+
     public void GoToCharacterSelection() {
         Application.LoadLevel("CharacterSelection");
     }

@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour {
 
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
-	} 
+	}
 
 	void Update () {
 		if(ableMove){
@@ -20,11 +20,11 @@ public class EnemyMovement : MonoBehaviour {
 			//if got contact to invisWall LayerMask then enemy will move to door instead move toward left
 			moveToDoor = Physics2D.Linecast (sightStart.position, sightEnd.position, 1 << LayerMask.NameToLayer ("InvisWall"));
 			//un-Comment debug below to see LineCast on Enemy
-			//Debug.DrawLine (sightStart.position, sightEnd.position, Color.green);		
+			//Debug.DrawLine (sightStart.position, sightEnd.position, Color.green);
 			if(moveToDoor){
 				//un-Comment debug below to see if Enemy will move to door
-				//Debug.Log("Enemy Move to Door");	
-				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);				
+				//Debug.Log("Enemy Move to Door");
+				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}

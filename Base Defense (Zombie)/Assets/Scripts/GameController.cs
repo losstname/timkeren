@@ -11,14 +11,16 @@ public class GameController : MonoBehaviour {
     public GameObject Enemy;
 
 	void Start () {
+        //To Start Enemy Spawning waves using IEnumeratir function
 	    StartCoroutine(EnemySpawning());
 	}
 
     IEnumerator EnemySpawning(){
+        //Enemy spawns when Base HP not zero
 		while(GameManager.instance.hitPoints > 0){
-            Vector3 InstantiatePos = new Vector3(xPos, Random.Range(y1Pos, y2Pos), 0f);
+            Vector3 InstantiatePos = new Vector3(xPos, Random.Range(y1Pos, y2Pos), 0f); //Set spawning position
             Instantiate(Enemy, InstantiatePos, Quaternion.identity);
-            yield return new WaitForSeconds(wavesWait);
+            yield return new WaitForSeconds(wavesWait); //Waiting untik wavesWait seconds to spawn next enemy
         }
     }
 }

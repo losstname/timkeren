@@ -20,7 +20,6 @@ public class HeroAttack : MonoBehaviour {
 		if(Enemies != null)
 		{
 			DistanceFromHero = Vector3.Distance(GameObject.FindGameObjectWithTag("Enemy").transform.position, transform.position);
-			//print (DistanceFromCastle);
 			if(DistanceFromHero <= protectionRadius)
 			{
 				attackEnemy();

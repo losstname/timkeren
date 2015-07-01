@@ -26,6 +26,7 @@ GameObject:
   - 212: {fileID: 21248454}
   - 61: {fileID: 6175128}
   - 114: {fileID: 11418438}
+  - 114: {fileID: 11425084}
   m_Layer: 0
   m_Name: Greengrunt
   m_TagString: Enemy
@@ -79,13 +80,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 148942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9b85ad137c82a4595a07203e760821, type: 3}
+  m_Script: {fileID: 11500000, guid: 267fa7193f0480e408e6c121da7d10af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
   sightStart: {fileID: 451688}
   sightEnd: {fileID: 405110}
   hitPoints: 3
+--- !u!114 &11425084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902f21c9117851e418b48e21d2dd5a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21248454
 SpriteRenderer:
   m_ObjectHideFlags: 1

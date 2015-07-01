@@ -7,8 +7,12 @@ public class GameController : MonoBehaviour {
     public float y2Pos;
     public float xPos;
     public float wavesWait;
-
+	public GameObject door;
     public GameObject Enemy;
+
+	void Awake(){
+
+	}
 
 	void Start () {
         //To Start Enemy Spawning waves using IEnumeratir function
@@ -17,7 +21,9 @@ public class GameController : MonoBehaviour {
 
     IEnumerator EnemySpawning(){
         //Enemy spawns when Base HP not zero
-		while(GameManager.instance.hitPoints > 0){
+		Door scriptDoor = (Door) door.GetComponent<Door>();
+		Debug.Log("HP nya "+scriptDoor.hitPoints);
+		while(true){
             Vector3 InstantiatePos = new Vector3(xPos, Random.Range(y1Pos, y2Pos), 0f); //Set spawning position
             Instantiate(Enemy, InstantiatePos, Quaternion.identity);
             yield return new WaitForSeconds(wavesWait); //Waiting untik wavesWait seconds to spawn next enemy

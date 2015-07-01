@@ -24,8 +24,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 451688}
   - 212: {fileID: 21248454}
-  - 114: {fileID: 11492192}
   - 61: {fileID: 6175128}
+  - 114: {fileID: 11418438}
   m_Layer: 0
   m_Name: Greengrunt
   m_TagString: Enemy
@@ -71,7 +71,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
---- !u!114 &11492192
+--- !u!114 &11418438
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,12 +79,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 148942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d83cd393f4e2e48b16cfa022743a1a, type: 3}
+  m_Script: {fileID: 11500000, guid: ed9b85ad137c82a4595a07203e760821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
   sightStart: {fileID: 451688}
   sightEnd: {fileID: 405110}
+  hitPoints: 3
 --- !u!212 &21248454
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -133,7 +134,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: sightEnd
       value: 
-      objectReference: {fileID: 448214, guid: c9bb16a95f46a8749a1ad7dbac9375b3, type: 2}
+      objectReference: {fileID: 405110}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 148942}

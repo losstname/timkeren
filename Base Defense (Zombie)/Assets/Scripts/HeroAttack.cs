@@ -2,25 +2,18 @@
 using System.Collections;
 
 public class HeroAttack : MonoBehaviour {
-	public static HeroAttack instance = null;
-
 	public float DistanceFromHero;
     public int protectionRadius = 10;
     public float CoolDown = 1;
 	public GameObject Enemies;
 	public GameObject Projectiles;
-    //public int bulletSpeed;
-
-	// Use this for initialization
 
 	void Awake () {
-		//Projectiles = GameObject.FindGameObjectWithTag ("Projectiles");
 	}
 
 	void Start () {
 	}
 
-	// Update is called once per frame
 	void Update () {
 		Enemies = GameObject.FindGameObjectWithTag("Enemy");
 
@@ -35,7 +28,6 @@ public class HeroAttack : MonoBehaviour {
 
 		}
 	}
-
 
 	public void attackEnemy () {
         //Set projectile to look at enemy

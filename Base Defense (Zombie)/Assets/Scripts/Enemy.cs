@@ -1,21 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMovement : MonoBehaviour {
-
+public class Enemy : MonoBehaviour {
 	public float speed = 1f;
-    private bool ableMove = true;
+//    private bool ableMove = true;
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
-	public int gghp = 3;
+	public int hitPoints = 3;
 
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
 	}
 
 	void Update () {
-		if(ableMove){
+//		if(ableMove){
 			float step = Time.deltaTime * speed;
 			//use LineCast to see if enemy get contact to invisWall
 			//if got contact to invisWall LayerMask then enemy will move to door instead move toward left
@@ -29,8 +28,8 @@ public class EnemyMovement : MonoBehaviour {
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
-		}
-        if (gghp <= 0)
+//		}
+        if (hitPoints <= 0)
         {
             Destroy(gameObject);
         }
@@ -38,8 +37,12 @@ public class EnemyMovement : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
-			GameManager.instance.AttackBase();
+			other.gameObject.GetComponent<Door>().AttackBase();
 			Destroy(gameObject);
 		}
     }
+
+	public void Attacked(){
+		hitPoints--;
+	}
 }

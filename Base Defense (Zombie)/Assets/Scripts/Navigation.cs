@@ -24,7 +24,6 @@ public class Navigation : MonoBehaviour {
     }
 
 	public void RestartApplication(){
-		//GameManager.instance.restartScene();
 		Application.LoadLevel(Application.loadedLevel);
 	}
 }

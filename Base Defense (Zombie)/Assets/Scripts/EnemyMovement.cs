@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour {
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
-	public static int gghp = 3;
+	public int gghp = 3;
 
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
@@ -30,6 +30,10 @@ public class EnemyMovement : MonoBehaviour {
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
 		}
+        if (gghp <= 0)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     void OnTriggerEnter2D(Collider2D other) {

@@ -1553,7 +1553,7 @@ MonoBehaviour:
   y1Pos: .200000003
   y2Pos: -3.76999998
   xPos: 10
-  wavesWait: 3
+  wavesWait: 1
   Enemy: {fileID: 148942, guid: 67aca8c1ffc4d84429b659a10350f469, type: 2}
 --- !u!4 &1450970476
 Transform:

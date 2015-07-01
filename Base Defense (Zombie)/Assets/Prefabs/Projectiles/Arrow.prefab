@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 491868}
   - 212: {fileID: 21259536}
-  - 114: {fileID: 11430368}
   - 61: {fileID: 6131054}
-  - 50: {fileID: 5075414}
+  - 50: {fileID: 5036898}
+  - 114: {fileID: 11470524}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Projectiles
@@ -25,13 +25,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.11296749, y: 1.16700006, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .193977565, w: .981005967}
+  m_LocalPosition: {x: -3.23000002, y: -2.1400001, z: 0}
+  m_LocalScale: {x: .400000006, y: .400000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5075414
+--- !u!50 &5036898
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
@@ -41,8 +41,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_IsKinematic: 0
+  m_GravityScale: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -57,10 +57,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: .346592486, y: -1.06170774e-05}
   serializedVersion: 2
-  m_Size: {x: .419999987, y: .170000002}
---- !u!114 &11430368
+  m_Size: {x: 1.40696502, y: .170000032}
+--- !u!114 &11470524
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -68,17 +68,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 165164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a8a4a9d717b33498acbd5908e5d1ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 972470d0e5ee0ff4dab23b46eed57e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceFromCastle: 0
-  CoolDown: 0
-  Enemies: {fileID: 0}
-  Projectiles: {fileID: 0}
-  protectionRadius: 0
-  bulletSpeed: 0
-  closestEnemy: {fileID: 0}
-  target1: {fileID: 0}
+  speed: 10
 --- !u!212 &21259536
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -102,8 +95,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec6dd356a9931e84aba6756d5d797152, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: cd33de6c653fb0b4c9b9b4b84b737647, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -136,6 +129,31 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd33de6c653fb0b4c9b9b4b84b737647,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165164}

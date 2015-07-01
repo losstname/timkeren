@@ -7,10 +7,19 @@ public class Enemy : MonoBehaviour {
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
+
+    public float CoolDown = 2f;
 	public int hitPoints = 3;
+
+    private Animator anim;
+    private int isAttackingHash = Animator.StringToHash("isAttacking");
+
+    //initialize when enemy touch the gate
+    private GameObject Base;
 
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
+        anim = GetComponent<Animator>();
 	}
 
 	void Update () {
@@ -37,9 +46,21 @@ public class Enemy : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
-			other.gameObject.GetComponent<Door>().AttackBase();
-			Destroy(gameObject);
+            Base = other.gameObject;
+            StartCoroutine(AttackingBase());
 		}
+    }
+
+    IEnumerator AttackingBase()
+    {
+        while (true)
+        {
+            //set animation to attacking base
+            anim.SetTrigger(isAttackingHash);
+            Base.GetComponent<Door>().AttackBase();
+            //Destroy(gameObject);
+            yield return new WaitForSeconds(CoolDown);
+        }
     }
 
 	public void Attacked(){

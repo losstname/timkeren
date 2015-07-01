@@ -8,11 +8,11 @@ public class GreengruntHP : MonoBehaviour {
 	void Start () {
 		unit = GameObject.FindGameObjectWithTag ("Enemy");
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
-}
+    }
 
 	//void OnTriggerEnter2D(Collider2D collision) {
 		//if(collision.gameObject.name == "LoS1"){

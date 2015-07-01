@@ -4,56 +4,50 @@ using System.Collections;
 public class HeroAttack : MonoBehaviour {
 	public static HeroAttack instance = null;
 
-	public float DistanceFromCastle,CoolDown;
+	public float DistanceFromHero;
+    public int protectionRadius = 10;
+    public float CoolDown = 1;
 	public GameObject Enemies;
 	public GameObject Projectiles;
-	public int protectionRadius,bulletSpeed;
+    //public int bulletSpeed;
 
 	// Use this for initialization
 
 	void Awake () {
-		Projectiles = GameObject.FindGameObjectWithTag ("Projectiles");
-
+		//Projectiles = GameObject.FindGameObjectWithTag ("Projectiles");
 	}
 
 	void Start () {
-		protectionRadius = 10;
-		bulletSpeed = 50;
-		CoolDown = 1;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		Enemies = GameObject.FindGameObjectWithTag("Enemy");
-		
+
 		if(Enemies != null)
 		{
-			DistanceFromCastle = Vector3.Distance(GameObject.FindGameObjectWithTag("Enemy").transform.position,GameObject.FindGameObjectWithTag("Hero").transform.position);
+			DistanceFromHero = Vector3.Distance(GameObject.FindGameObjectWithTag("Enemy").transform.position, transform.position);
 			//print (DistanceFromCastle);
-			if(DistanceFromCastle <= protectionRadius)
+			if(DistanceFromHero <= protectionRadius)
 			{
 				attackEnemy();
 			}
-			
+
 		}
 	}
 
 
 	public void attackEnemy () {
-		transform.LookAt(Enemies.transform);
+        //Set projectile to look at enemy
+        Quaternion direction = Quaternion.LookRotation(Enemies.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        transform.rotation = new Quaternion(0, 0, direction.z, direction.w);
+
+        //if cooldown finished -> fire
 		CoolDown -= Time.deltaTime;
 		if (CoolDown <= 0)
 		{
-
-			const int SPAWN_DISTANCE = 5;
-			Instantiate(Projectiles, transform.position + SPAWN_DISTANCE * transform.forward, transform.rotation);
-			if (EnemyMovement.gghp > 1) {
-			EnemyMovement.gghp -=1;
-			CoolDown = 1;
-			} else {
-				Destroy(Enemies);
-				CoolDown = 1;
-			}
+            Instantiate(Projectiles, transform.position, transform.rotation);
+            CoolDown = 1;
 		}
 	}
 }

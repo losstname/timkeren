@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: b00c2e876b2086c4cb4e162d6b13f462
+timeCreated: 1435778617
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: imp_dead_0
+    21300002: imp_dead_1
+    21300004: imp_dead_2
+    21300006: imp_dead_3
+    21300008: imp_dead_7
+    21300010: imp_dead_8
+    21300012: imp_dead_9
+    21300014: imp_dead_10
+    21300016: imp_dead_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: imp_dead_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 13
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 13
+        width: 60
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 13
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 13
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_7
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 13
+        width: 67
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_8
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 5
+        width: 78
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_9
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 13
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 5
+        width: 73
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: imp_dead_13
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 0
+        width: 85
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

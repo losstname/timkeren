@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 	public float speed = 1f;
-//    private bool ableMove = true;
+    //private bool ableMove = true;
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;

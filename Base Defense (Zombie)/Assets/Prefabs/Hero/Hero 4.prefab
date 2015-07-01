@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &158300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441478}
+  - 114: {fileID: 11456348}
+  m_Layer: 0
+  m_Name: ProjectilePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &188102
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +32,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &441478
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .540000021, y: -.319999993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 458406}
+  m_RootOrder: 0
 --- !u!4 &458406
 Transform:
   m_ObjectHideFlags: 1
@@ -25,9 +53,26 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.47000027, y: -3.07999992, z: 0}
   m_LocalScale: {x: .699999988, y: .699999988, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 441478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11456348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a8a4a9d717b33498acbd5908e5d1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceFromHero: 0
+  protectionRadius: 10
+  CoolDown: 3
+  Enemies: {fileID: 0}
+  Projectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
 --- !u!212 &21217458
 SpriteRenderer:
   m_ObjectHideFlags: 1

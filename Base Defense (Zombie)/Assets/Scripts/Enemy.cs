@@ -3,19 +3,16 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 	public float speed = 1f;
-    //private bool ableMove = true;
+//    private bool ableMove = true;
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
 
     public float CoolDown = 2f;
-	public int hitPoints = 3;
+	public int hitPoints = 10;
 
     private Animator anim;
     private int isAttackingHash = Animator.StringToHash("isAttacking");
-
-    //initialize when enemy touch the gate
-    private GameObject Base;
 
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
@@ -33,11 +30,13 @@ public class Enemy : MonoBehaviour {
 			if(moveToDoor){
 				//un-Comment debug below to see if Enemy will move to door
 				//Debug.Log("Enemy Move to Door");
-				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);
+				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);					
+//				ableMove = transform.position != targetBase.position;
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
 //		}
+
         if (hitPoints <= 0)
         {
 			Coin coin = GameObject.FindObjectOfType<Coin>();
@@ -48,14 +47,13 @@ public class Enemy : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
-            Base = other.gameObject;
             StartCoroutine(AttackingBase());
 		}
     }
 
     IEnumerator AttackingBase()
     {
-        while (true)
+		while (true)
         {
             //set animation to attacking base
             anim.SetTrigger(isAttackingHash);
@@ -65,7 +63,8 @@ public class Enemy : MonoBehaviour {
 
     public void BaseAttacked()
     {
-        Base.GetComponent<Door>().AttackBase();
+		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble())
+				ScriptableObject.FindObjectOfType<Door>().AttackBase();
     }
 
 	public void Attacked(){

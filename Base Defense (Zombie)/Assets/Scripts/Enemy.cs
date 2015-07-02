@@ -39,7 +39,9 @@ public class Enemy : MonoBehaviour {
 			}
 //		}
         if (hitPoints <= 0)
-        {
+        {			
+			Coin coin = GameObject.FindObjectOfType<Coin>();
+			coin.addCoin();
             Destroy(gameObject);
         }
 	}

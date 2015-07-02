@@ -11,7 +11,7 @@ GameObject:
   - 222: {fileID: 22243422}
   - 114: {fileID: 11442668}
   m_Layer: 5
-  m_Name: Text
+  m_Name: CoinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +44,7 @@ GameObject:
   - 224: {fileID: 22435220}
   - 222: {fileID: 22222628}
   - 114: {fileID: 11429518}
+  - 114: {fileID: 11453220}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -118,7 +119,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 0
+--- !u!114 &11453220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ba8a817f6bf8d4882d7fbbdd338a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &22222628
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -238,6 +250,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 38ea6869612db4d4d99a3bcc287d10b3,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: CoinText
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 176154}

@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour {
 			}
 //		}
         if (hitPoints <= 0)
-        {			
+        {
 			Coin coin = GameObject.FindObjectOfType<Coin>();
 			coin.addCoin();
             Destroy(gameObject);
@@ -59,10 +59,13 @@ public class Enemy : MonoBehaviour {
         {
             //set animation to attacking base
             anim.SetTrigger(isAttackingHash);
-            Base.GetComponent<Door>().AttackBase();
-            //Destroy(gameObject);
             yield return new WaitForSeconds(CoolDown);
         }
+    }
+
+    public void BaseAttacked()
+    {
+        Base.GetComponent<Door>().AttackBase();
     }
 
 	public void Attacked(){

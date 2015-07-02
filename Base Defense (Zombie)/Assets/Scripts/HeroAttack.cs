@@ -47,9 +47,14 @@ public class HeroAttack : MonoBehaviour {
 		{
             //change hero animation to attacking animation
             if(anim!=null) anim.SetTrigger(isAttackingHash);
-            //spawning projectile
-            Instantiate(Projectiles, ProjectilePosTr.position, ProjectilePosTr.rotation);
             CoolingDown = CoolDown;
 		}
 	}
+
+    public void spawnProjectile()
+    {
+        //spawning projectile
+        //called from animation
+        Instantiate(Projectiles, ProjectilePosTr.position, ProjectilePosTr.rotation);
+    }
 }

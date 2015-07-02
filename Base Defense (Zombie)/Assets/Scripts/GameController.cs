@@ -21,11 +21,11 @@ public class GameController : MonoBehaviour {
 
     IEnumerator EnemySpawning(){
         //Enemy spawns when Base HP not zero
-		while(countEnemies > 1){
+		while(countEnemies > 0){
 			countEnemies--;
             Vector3 InstantiatePos = new Vector3(xPos, Random.Range(y1Pos, y2Pos), 0f); //Set spawning position
             Instantiate(Enemy, InstantiatePos, Quaternion.identity);
-            yield return new WaitForSeconds(wavesWait); //Waiting untik wavesWait seconds to spawn next enemy
+            yield return new WaitForSeconds(wavesWait); //Waiting until wavesWait seconds to spawn next enemy
         }
     }
 }

@@ -24,6 +24,7 @@ public class Navigation : MonoBehaviour {
     }
 
 	public void RestartApplication(){
+		Time.timeScale = 1;
 		Application.LoadLevel(Application.loadedLevel);
 	}
 }

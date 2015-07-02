@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ebf5c8ea4e9a54c8109f581a2302b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 500
   hpPlayer: 5
   attackable: 1
   destroyable: 1

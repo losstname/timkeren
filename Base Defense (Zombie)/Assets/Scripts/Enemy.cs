@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 	public float speed = 1f;
-    //private bool ableMove = true;
+//    private bool ableMove = true;
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
@@ -14,16 +14,13 @@ public class Enemy : MonoBehaviour {
     private Animator anim;
     private int isAttackingHash = Animator.StringToHash("isAttacking");
 
-    //initialize when enemy touch the gate
-    private GameObject Base;
-
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
         anim = GetComponent<Animator>();
 	}
 
 	void Update () {
-		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble()){
+//		if(ableMove){
 			float step = Time.deltaTime * speed;
 			//use LineCast to see if enemy get contact to invisWall
 			//if got contact to invisWall LayerMask then enemy will move to door instead move toward left
@@ -33,11 +30,13 @@ public class Enemy : MonoBehaviour {
 			if(moveToDoor){
 				//un-Comment debug below to see if Enemy will move to door
 				//Debug.Log("Enemy Move to Door");
-				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);
+				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);					
+//				ableMove = transform.position != targetBase.position;
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
-		}
+//		}
+
         if (hitPoints <= 0)
         {
 			Coin coin = GameObject.FindObjectOfType<Coin>();
@@ -48,14 +47,13 @@ public class Enemy : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
-            Base = other.gameObject;
             StartCoroutine(AttackingBase());
 		}
     }
 
     IEnumerator AttackingBase()
     {
-		while (ScriptableObject.FindObjectOfType<Door>().isAttackAble())
+		while (true)
         {
             //set animation to attacking base
             anim.SetTrigger(isAttackingHash);

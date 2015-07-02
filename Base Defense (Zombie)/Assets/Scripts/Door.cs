@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
-	public int hitPoints = 100 ;
+	public int hitPoints = 5000 ;
 	public int hpPlayer = 5 ;
 	private Text gateHp;
 	private Text playerHp;
@@ -40,10 +40,15 @@ public class Door : MonoBehaviour
 		}else{
 			hpPlayer--;
 			playerHp.text = "Player HP: " + hpPlayer;
+			if(hpPlayer <=0){
+				playerHp.text = "You Loseee";
+				Time.timeScale = 0;
+			}
 		}
 	}
 
 	public bool isAttackAble(){
+		Debug.Log("Hitpoints "+ hpPlayer);
 		return hpPlayer > 0 ;
 	}
 }

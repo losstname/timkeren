@@ -6,8 +6,6 @@ public class Door : MonoBehaviour
 {
 	public int hitPoints = 10 ;
 	private Text levelText;
-	private Text attackText;
-	private Text destroyText;
 	public bool attackable = true;
 	public bool destroyable = true;
 

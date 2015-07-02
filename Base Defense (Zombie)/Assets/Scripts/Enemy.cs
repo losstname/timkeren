@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
 	private bool moveToDoor = false;
 
     public float CoolDown = 2f;
-	public int hitPoints = 3;
+	public int hitPoints = 10;
 
     private Animator anim;
     private int isAttackingHash = Animator.StringToHash("isAttacking");
@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void Update () {
-//		if(ableMove){
+		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble()){
 			float step = Time.deltaTime * speed;
 			//use LineCast to see if enemy get contact to invisWall
 			//if got contact to invisWall LayerMask then enemy will move to door instead move toward left
@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour {
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
-//		}
+		}
         if (hitPoints <= 0)
         {
 			Coin coin = GameObject.FindObjectOfType<Coin>();
@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour {
 
     IEnumerator AttackingBase()
     {
-        while (true)
+		while (ScriptableObject.FindObjectOfType<Door>().isAttackAble())
         {
             //set animation to attacking base
             anim.SetTrigger(isAttackingHash);
@@ -65,7 +65,8 @@ public class Enemy : MonoBehaviour {
 
     public void BaseAttacked()
     {
-        Base.GetComponent<Door>().AttackBase();
+		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble())
+				ScriptableObject.FindObjectOfType<Door>().AttackBase();
     }
 
 	public void Attacked(){

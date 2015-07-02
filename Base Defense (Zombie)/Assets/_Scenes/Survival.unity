@@ -227,6 +227,72 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22422104, guid: 2a4f9342cd9c40540ba0140517f7e9b1,
     type: 2}
   m_PrefabInternal: {fileID: 323647633}
+--- !u!1 &329674642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 329674643}
+  - 222: {fileID: 329674645}
+  - 114: {fileID: 329674644}
+  m_Layer: 5
+  m_Name: PlayerHPText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &329674643
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 329674642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1943896638}
+  m_RootOrder: 4
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -437, y: 119}
+  m_SizeDelta: {x: 383, y: 66}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &329674644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 329674642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .948529422, g: .892733574, b: .892733574, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Player HP : 5'
+--- !u!222 &329674645
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 329674642}
 --- !u!1001 &388396520
 Prefab:
   m_ObjectHideFlags: 0
@@ -1240,6 +1306,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1450970476}
   - 114: {fileID: 1450970475}
+  - 114: {fileID: 1450970477}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1275,6 +1342,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1450970477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1450970474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ebf5c8ea4e9a54c8109f581a2302b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+  hpPlayer: 5
+  attackable: 1
+  destroyable: 1
 --- !u!1 &1471054787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,7 +1399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Base HP : 10'
+  m_Text: 'Gate HP : 5000'
 --- !u!222 &1471054789
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1338,8 +1420,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -462, y: 198}
-  m_SizeDelta: {x: 331, y: 66}
+  m_AnchoredPosition: {x: -437, y: 198}
+  m_SizeDelta: {x: 383, y: 66}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &1502575151
 Prefab:
@@ -2365,6 +2447,7 @@ RectTransform:
   - {fileID: 1471054790}
   - {fileID: 606044521}
   - {fileID: 1871854363}
+  - {fileID: 329674643}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
@@ -2501,7 +2584,6 @@ GameObject:
   - 4: {fileID: 2083743363}
   - 212: {fileID: 2083743362}
   - 61: {fileID: 2083743364}
-  - 114: {fileID: 2083743365}
   m_Layer: 0
   m_Name: Door
   m_TagString: Base
@@ -2560,20 +2642,6 @@ BoxCollider2D:
   m_Offset: {x: -.125541985, y: .00680941343}
   serializedVersion: 2
   m_Size: {x: .448916256, y: 1.56580925}
---- !u!114 &2083743365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2083743361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13ebf5c8ea4e9a54c8109f581a2302b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 10
-  attackable: 1
-  destroyable: 1
 --- !u!1001 &2117005445
 Prefab:
   m_ObjectHideFlags: 0

@@ -4,33 +4,47 @@ using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
-	public int hitPoints = 10 ;
-	private Text levelText;
+	public int hitPoints = 100 ;
+	public int hpPlayer = 5 ;
+	private Text gateHp;
+	private Text playerHp;
+	private GameObject doorObject;
 	public bool attackable = true;
 	public bool destroyable = true;
 
 	void Awake()
 	{
-		levelText = GameObject.Find("BaseHPText").GetComponent<Text>();
-		levelText.text = "Base HP: " + hitPoints;
+		gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
+		gateHp.text = "Gate HP: " + hitPoints;
+		playerHp = GameObject.Find("PlayerHPText").GetComponent<Text>();
+		playerHp.text = "Player HP: " + hpPlayer;		
+		doorObject = GameObject.FindGameObjectWithTag("Base");
 	}
 	
 	public void AttackBase(){
 		if(attackable){
-			if(levelText == null)
-				levelText = GameObject.Find("BaseHPText").GetComponent<Text>();
-			hitPoints--;
+			if(gateHp == null)
+				gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
+			hitPoints -= 10;
 			if(hitPoints >0)
-				levelText.text = "Base HP:  " + hitPoints;
+				gateHp.text = "Gate HP:  " + hitPoints;
 			else{
-				levelText.text = "You Lose ";
+				gateHp.text = "Gate Broken";
 				if(destroyable){
-					gameObject.SetActive(false);
+					attackable = false;
 					GameController gameCtrl = GameObject.FindObjectOfType<GameController>();
 					gameCtrl.StopAllCoroutines();
+					doorObject.SetActive(false);
 				}
 			}
+		}else{
+			hpPlayer--;
+			playerHp.text = "Player HP: " + hpPlayer;
 		}
+	}
+
+	public bool isAttackAble(){
+		return hpPlayer > 0 ;
 	}
 }
 

@@ -90,6 +90,8 @@ MonoBehaviour:
   protectionRadius: 15
   CoolDown: 2
   CoolingDown: 0
+  SkillCoolDown: 5
+  SkillBoardNumber: 0
   Enemies: {fileID: 0}
   Projectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
 --- !u!212 &21262972

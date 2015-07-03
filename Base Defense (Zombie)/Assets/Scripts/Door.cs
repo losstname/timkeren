@@ -25,7 +25,7 @@ public class Door : MonoBehaviour
 		if(attackable){
 			if(gateHp == null)
 				gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
-			hitPoints -= 10;
+			hitPoints -= 50;
 			if(hitPoints >0)
 				gateHp.text = "Gate HP:  " + hitPoints;
 			else{

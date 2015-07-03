@@ -15,9 +15,14 @@ public class Enemy : MonoBehaviour {
     private int isDeadHash = Animator.StringToHash("isDead");
     private int isAttackingHash = Animator.StringToHash("isAttacking");
 
+    private SpriteRenderer enemySpriteRenderer;
+    public float fadeSpeed = 1f;
+    public float fadeDelay = 2f;
+
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
         anim = GetComponent<Animator>();
+        enemySpriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	void Update () {
@@ -38,22 +43,6 @@ public class Enemy : MonoBehaviour {
 			}
 		}
 	}
-
-    void Death()
-    {
-        //make the enemy to stop moving
-        ableMove = false;
-        //let the projectile get through
-        GetComponent<BoxCollider2D>().enabled = false;
-        //untagged this enemy
-        gameObject.tag = "DeadEnemy";
-        //add coin
-        Coin coin = GameObject.FindObjectOfType<Coin>();
-        coin.addCoin();
-        anim.SetTrigger(isDeadHash);
-        //Destory dead enemy after 2s
-        Destroy(gameObject, 3f);
-    }
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
@@ -84,4 +73,33 @@ public class Enemy : MonoBehaviour {
             Death();
         }
 	}
+
+    void Death()
+    {
+        //make the enemy to stop moving
+        ableMove = false;
+        //let the projectile get through
+        GetComponent<BoxCollider2D>().enabled = false;
+        //untagged this enemy
+        gameObject.tag = "DeadEnemy";
+        //add coin
+        Coin coin = GameObject.FindObjectOfType<Coin>();
+        coin.addCoin();
+        anim.SetTrigger(isDeadHash);
+        //Destory dead enemy after 2s
+        StartCoroutine(FadeOut());
+        Destroy(gameObject, 3f);
+    }
+
+    IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(fadeDelay);
+        while (true)
+        {
+            Color newColor = enemySpriteRenderer.color;
+            newColor.a -= (Time.deltaTime * fadeSpeed);
+            enemySpriteRenderer.color = newColor;
+            yield return new WaitForEndOfFrame();
+        }
+    }
 }

@@ -11,6 +11,7 @@ GameObject:
   - 222: {fileID: 22239922}
   - 114: {fileID: 11439810}
   - 114: {fileID: 11494828}
+  - 114: {fileID: 11470288}
   m_Layer: 5
   m_Name: SkillBtn
   m_TagString: Untagged
@@ -56,6 +57,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11470288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d356a6272f6d6040940b27c0edfcbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11478362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +132,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11439810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: heroSkill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!222 &22233868
@@ -150,7 +173,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -241, y: 9.53669996e-07}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22457450

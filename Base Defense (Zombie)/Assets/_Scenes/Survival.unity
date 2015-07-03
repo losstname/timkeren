@@ -91,6 +91,72 @@ NavMeshSettings:
 Transform:
   m_PrefabParentObject: {fileID: 410682, guid: 9190dbb652121fd4b801a1a1a8853b5d, type: 2}
   m_PrefabInternal: {fileID: 1504159585}
+--- !u!1 &25599739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 25599740}
+  - 222: {fileID: 25599742}
+  - 114: {fileID: 25599741}
+  m_Layer: 5
+  m_Name: TimeLimitText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &25599740
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25599739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1943896638}
+  m_RootOrder: 5
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 15, y: 190}
+  m_SizeDelta: {x: 383, y: 66}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &25599741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25599739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .948529422, g: .892733574, b: .892733574, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Time Limit : 180'
+--- !u!222 &25599742
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25599739}
 --- !u!1 &135172973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1423,7 @@ MonoBehaviour:
   xPos: 10
   wavesWait: 1
   Enemy: {fileID: 151198, guid: 26e6a66cbc12c9044abadb00c1d27fb5, type: 2}
+  timeLimit: 180
 --- !u!4 &1450970476
 Transform:
   m_ObjectHideFlags: 0
@@ -2432,6 +2499,7 @@ RectTransform:
   - {fileID: 606044521}
   - {fileID: 1871854363}
   - {fileID: 329674643}
+  - {fileID: 25599740}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}

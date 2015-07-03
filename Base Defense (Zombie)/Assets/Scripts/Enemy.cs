@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 	public float speed = 1f;
-//    private bool ableMove = true;
+    private bool ableMove = true;
 	private Transform targetBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
@@ -12,15 +12,21 @@ public class Enemy : MonoBehaviour {
 	public int hitPoints = 10;
 
     private Animator anim;
+    private int isDeadHash = Animator.StringToHash("isDead");
     private int isAttackingHash = Animator.StringToHash("isAttacking");
+
+    private SpriteRenderer enemySpriteRenderer;
+    public float fadeSpeed = 1f;
+    public float fadeDelay = 2f;
 
 	void Start(){
 		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
         anim = GetComponent<Animator>();
+        enemySpriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	void Update () {
-//		if(ableMove){
+		if(ableMove){
 			float step = Time.deltaTime * speed;
 			//use LineCast to see if enemy get contact to invisWall
 			//if got contact to invisWall LayerMask then enemy will move to door instead move toward left
@@ -30,19 +36,12 @@ public class Enemy : MonoBehaviour {
 			if(moveToDoor){
 				//un-Comment debug below to see if Enemy will move to door
 				//Debug.Log("Enemy Move to Door");
-				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);					
+				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);
 //				ableMove = transform.position != targetBase.position;
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
-//		}
-
-        if (hitPoints <= 0)
-        {
-			Coin coin = GameObject.FindObjectOfType<Coin>();
-			coin.addCoin();
-            Destroy(gameObject);
-        }
+		}
 	}
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -69,5 +68,38 @@ public class Enemy : MonoBehaviour {
 
 	public void Attacked(){
 		hitPoints--;
+        if (hitPoints <= 0)
+        {
+            Death();
+        }
 	}
+
+    void Death()
+    {
+        //make the enemy to stop moving
+        ableMove = false;
+        //let the projectile get through
+        GetComponent<BoxCollider2D>().enabled = false;
+        //untagged this enemy
+        gameObject.tag = "DeadEnemy";
+        //add coin
+        Coin coin = GameObject.FindObjectOfType<Coin>();
+        coin.addCoin();
+        anim.SetTrigger(isDeadHash);
+        //Destory dead enemy after 2s
+        StartCoroutine(FadeOut());
+        Destroy(gameObject, 3f);
+    }
+
+    IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(fadeDelay);
+        while (true)
+        {
+            Color newColor = enemySpriteRenderer.color;
+            newColor.a -= (Time.deltaTime * fadeSpeed);
+            enemySpriteRenderer.color = newColor;
+            yield return new WaitForEndOfFrame();
+        }
+    }
 }

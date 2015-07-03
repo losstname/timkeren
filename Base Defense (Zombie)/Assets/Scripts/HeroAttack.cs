@@ -3,7 +3,8 @@ using System.Collections;
 
 public class HeroAttack : MonoBehaviour {
 	public float DistanceFromHero;
-    public int protectionRadius = 10;
+    public float protectionRadius = 10f;
+//    public float nearRadius = 3f;
     public float CoolDown = 1;
     public float CoolingDown;
 
@@ -36,8 +37,8 @@ public class HeroAttack : MonoBehaviour {
 		if(Enemies != null)
 		{
 			DistanceFromHero = Vector3.Distance(GameObject.FindGameObjectWithTag("Enemy").transform.position, transform.position);
-			if(DistanceFromHero <= protectionRadius)
-			{
+            if (DistanceFromHero <= protectionRadius/* && DistanceFromHero > blindRadius*/)
+            {
                 //getting the anim state
                 AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
                 //if cooldown finished -> fire
@@ -47,7 +48,8 @@ public class HeroAttack : MonoBehaviour {
                     attackEnemy();
                     CoolingDown = CoolDown;
                 }
-			}
+            }
+            //else Enemies = null;
 		}
 	}
 

@@ -17,10 +17,10 @@ public class Door : MonoBehaviour
 		gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
 		gateHp.text = "Gate HP: " + hitPoints;
 		playerHp = GameObject.Find("PlayerHPText").GetComponent<Text>();
-		playerHp.text = "Player HP: " + hpPlayer;		
+		playerHp.text = "Player HP: " + hpPlayer;
 		doorObject = GameObject.FindGameObjectWithTag("Base");
 	}
-	
+
 	public void AttackBase(){
 		if(attackable){
 			if(gateHp == null)
@@ -48,7 +48,7 @@ public class Door : MonoBehaviour
 	}
 
 	public bool isAttackAble(){
-		Debug.Log("Hitpoints "+ hpPlayer);
+		//Debug.Log("Hitpoints "+ hpPlayer);
 		return hpPlayer > 0 ;
 	}
 }

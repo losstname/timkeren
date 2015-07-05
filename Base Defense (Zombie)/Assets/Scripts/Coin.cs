@@ -10,10 +10,13 @@ public class Coin : MonoBehaviour {
 	void Awake()
 	{
 		coinText = GameObject.Find("CoinText").GetComponent<Text>();
+		countCoin =	DataPlayer.getInstance().coin;
+		coinText.text = countCoin.ToString();
 	}
 
 	public void addCoin(){
 		countCoin += 10;
+		DataPlayer.getInstance().coin = countCoin;
 		coinText.text = countCoin.ToString();
 	}
 }

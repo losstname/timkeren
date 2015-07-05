@@ -9,10 +9,14 @@ public static class SaveData {
 
 	//it's static so we can call it from anywhere
 	public static void Save() {
+		//using binaryformatter to format serialiazable class to binary file
 		BinaryFormatter bf = new BinaryFormatter();
 		//Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
+		//using filestream to create a new file/replace in persistent data path
 		FileStream file = File.Create (Application.persistentDataPath + saveDataFileName); //you can call it anything you want
+		//save class in data file
 		bf.Serialize(file, DataPlayer.getInstance());
+		//close the stream
 		file.Close();
 	}   
 	

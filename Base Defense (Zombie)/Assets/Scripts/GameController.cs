@@ -14,14 +14,14 @@ public class GameController : MonoBehaviour {
 
 	void Start () {
         timeLimitText = GameObject.Find("TimeLimitText").GetComponent<Text>();
-        timeLimitText.text = "Time Limit : " + timeLimit;
+        timeLimitText.text = timeLimit.ToString();
         //To Start Enemy Spawning waves using IEnumeratir function
 	    StartCoroutine(EnemySpawning());
 	}
 
     void Update() {
         timeLimit -= Time.deltaTime;
-        timeLimitText.text = "Time Limit : " + ((int)timeLimit);
+        timeLimitText.text = ((int)timeLimit).ToString();
     }
 
     IEnumerator EnemySpawning(){

@@ -4,10 +4,8 @@ using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
-	public int hitPoints = 5000 ;
-	public int hpPlayer = 5 ;
+	public int hitPoints = 100 ;
 	private Text gateHp;
-	private Text playerHp;
 	private GameObject doorObject;
 	public bool attackable = true;
 	public bool destroyable = true;
@@ -16,8 +14,6 @@ public class Door : MonoBehaviour
 	{
 		gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
 		gateHp.text = "Gate HP: " + hitPoints;
-		playerHp = GameObject.Find("PlayerHPText").GetComponent<Text>();
-		playerHp.text = "Player HP: " + hpPlayer;
 		doorObject = GameObject.FindGameObjectWithTag("Base");
 	}
 
@@ -37,19 +33,11 @@ public class Door : MonoBehaviour
 					doorObject.SetActive(false);
 				}
 			}
-		}else{
-			hpPlayer--;
-			playerHp.text = "Player HP: " + hpPlayer;
-			if(hpPlayer <=0){
-				playerHp.text = "You Loseee";
-				Time.timeScale = 0;
-			}
 		}
 	}
 
 	public bool isAttackAble(){
-		//Debug.Log("Hitpoints "+ hpPlayer);
-		return hpPlayer > 0 ;
+		return hitPoints > 0 ;
 	}
 }
 

@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Projectiles
   - DeadEnemy
+  - PlayerBase
   layers:
   - Default
   - TransparentFX

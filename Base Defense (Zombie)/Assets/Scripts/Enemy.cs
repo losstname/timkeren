@@ -4,9 +4,11 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 	public float speed = 1f;
     private bool ableMove = true;
-	private Transform targetBase;
+	private Transform gateBase;
+	private Transform playerBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
+	private bool foundGate = false;
 
     public float CoolDown = 2f;
 	public int hitPoints = 10;
@@ -20,7 +22,8 @@ public class Enemy : MonoBehaviour {
     public float fadeDelay = 2f;
 
 	void Start(){
-		targetBase = GameObject.FindGameObjectWithTag ("Base").transform;
+		gateBase = GameObject.FindGameObjectWithTag ("Base").transform;
+		playerBase = GameObject.Find ("PlayerBase").transform;
         anim = GetComponent<Animator>();
         enemySpriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -33,19 +36,26 @@ public class Enemy : MonoBehaviour {
 			moveToDoor = Physics2D.Linecast (sightStart.position, sightEnd.position, 1 << LayerMask.NameToLayer ("InvisWall"));
 			//un-Comment debug below to see LineCast on Enemy
 			//Debug.DrawLine (sightStart.position, sightEnd.position, Color.green);
-			if(moveToDoor){
-				//un-Comment debug below to see if Enemy will move to door
-				//Debug.Log("Enemy Move to Door");
-				transform.position = Vector3.MoveTowards(transform.position, targetBase.position, step);
-//				ableMove = transform.position != targetBase.position;
+			if(moveToDoor && !foundGate){
+				transform.position = Vector3.MoveTowards(transform.position, gateBase.position, step);
+			}else if(foundGate){
+				if(!ScriptableObject.FindObjectOfType<Door>().isAttackAble()){
+					transform.position = Vector3.MoveTowards(transform.position, playerBase.position, step);
+				}
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
+		}
+		if(transform.position == playerBase.position && gameObject.tag != "DeadEnemy"){
+			ScriptableObject.FindObjectOfType<PlayerBase>().AttackPlayer();
+			Death();
 		}
 	}
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
+			foundGate = true;
+			moveToDoor = false;
             StartCoroutine(AttackingBase());
 		}
     }
@@ -64,6 +74,7 @@ public class Enemy : MonoBehaviour {
     {
 		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble())
 				ScriptableObject.FindObjectOfType<Door>().AttackBase();
+
     }
 
 	public void Attacked(){

@@ -17,11 +17,11 @@ public class Door : MonoBehaviour
 		doorObject = GameObject.FindGameObjectWithTag("Base");
 	}
 
-	public void AttackBase(){
+	public void AttackBase(int hpDecrease){
 		if(attackable){
 			if(gateHp == null)
 				gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
-			hitPoints -= 50;
+			hitPoints -= hpDecrease;
 			if(hitPoints >0)
 				gateHp.text = "Gate HP:  " + hitPoints;
 			else{

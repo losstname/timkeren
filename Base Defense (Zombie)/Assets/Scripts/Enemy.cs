@@ -20,6 +20,13 @@ public class Enemy : MonoBehaviour {
     private SpriteRenderer enemySpriteRenderer;
     public float fadeSpeed = 1f;
     public float fadeDelay = 2f;
+	public int ImpAttack = 70;
+	public int ImpDefense = 70;
+	
+	public int HPDecrease;
+	private int attackX;
+	private int defenseY;
+	public int ImphitPoints = 200;
 
 	void Start(){
 		gateBase = GameObject.FindGameObjectWithTag ("Base").transform;
@@ -72,17 +79,22 @@ public class Enemy : MonoBehaviour {
 
     public void BaseAttacked()
     {
+		attackX = Random.Range(1,30);
+		int baseHpDecrease = ImpAttack - ((ImpAttack * attackX) / 100);
 		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble())
-				ScriptableObject.FindObjectOfType<Door>().AttackBase();
+				ScriptableObject.FindObjectOfType<Door>().AttackBase(baseHpDecrease);
 
     }
 
 	public void Attacked(){
-		hitPoints--;
-        if (hitPoints <= 0)
-        {
-            Death();
-        }
+		attackX = Random.Range(1,20);
+		defenseY = Random.Range(31, 80);
+		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((ImpDefense *defenseY) / 100);
+		ImphitPoints -= HPDecrease;
+		if (ImphitPoints <= 0)
+		{
+			Death();
+		}
 	}
 
     void Death()

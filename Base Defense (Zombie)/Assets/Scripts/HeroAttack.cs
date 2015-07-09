@@ -7,7 +7,6 @@ public class HeroAttack : MonoBehaviour {
 //    public float nearRadius = 3f;
     public float CoolDown = 1;
     public float CoolingDown;
-
     public float SkillCoolDown = 5f;
     public int SkillBoardNumber;
 
@@ -18,7 +17,9 @@ public class HeroAttack : MonoBehaviour {
     private Animator anim;
     private int isAttackingHash = Animator.StringToHash("isAttacking");
     private int useSkillHash = Animator.StringToHash("useSkill");
-    private int idleStateHash = Animator.StringToHash("Base Layer.Archer-Idle-Anim");
+	private int idleStateHash = Animator.StringToHash("Base Layer.Archer-Idle-Anim");
+
+	public static int archerAtk = 100;
 
 	void Awake () {
 	}

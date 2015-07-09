@@ -24,5 +24,12 @@ public class PlayerBase : MonoBehaviour
 	public bool isAttackAble(){
 		return hpPlayer > 0 ;
 	}
+
+	public void PlayerWin ()
+	{
+		playerHp = GameObject.Find("PlayerHPText").GetComponent<Text>();
+		playerHp.text = "You Wiiiin";
+		Time.timeScale = 0;
+	}
 }
 

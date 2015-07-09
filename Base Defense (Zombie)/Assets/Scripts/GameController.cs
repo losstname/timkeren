@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour {
     void Update() {
         timeLimit -= Time.deltaTime;
         timeLimitText.text = ((int)timeLimit).ToString();
+		if(timeLimit <= 0) {
+			ScriptableObject.FindObjectOfType<PlayerBase>().PlayerWin();
+		}
     }
 
     IEnumerator EnemySpawning(){

@@ -6,13 +6,14 @@ public class Door : MonoBehaviour
 {
 	public int hitPoints = 100 ;
 	private Text gateHp;
+    private Slider gateHpSlider;
 	private GameObject doorObject;
 	public bool attackable = true;
 	public bool destroyable = true;
 
-	void Awake()
-	{
+	void Awake(){
 		gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
+        gateHpSlider = GameObject.Find("GateHP").GetComponent<Slider>();
 		gateHp.text = "Gate HP: " + hitPoints;
 		doorObject = GameObject.FindGameObjectWithTag("Base");
 	}
@@ -22,8 +23,10 @@ public class Door : MonoBehaviour
 			if(gateHp == null)
 				gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
 			hitPoints -= hpDecrease;
-			if(hitPoints >0)
-				gateHp.text = "Gate HP:  " + hitPoints;
+			if(hitPoints >0){
+                gateHp.text = "Gate HP:  " + hitPoints;
+                gateHpSlider.value = hitPoints;
+            }
 			else{
 				gateHp.text = "Gate Broken";
 				if(destroyable){
@@ -40,4 +43,3 @@ public class Door : MonoBehaviour
 		return hitPoints > 0 ;
 	}
 }
-

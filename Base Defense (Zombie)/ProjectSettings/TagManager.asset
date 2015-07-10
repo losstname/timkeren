@@ -7,7 +7,7 @@ TagManager:
   - Enemy
   - Base
   - Wall
-  - Projectiles
+  - Projectile
   - DeadEnemy
   - PlayerBase
   - Hero

@@ -7,6 +7,7 @@ public class ProjectileCollides : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
+            GetComponent<ProjectileSound>().hitTargetSound();
             other.gameObject.GetComponent<Enemy>().Attacked();
             Destroy(gameObject);
         }

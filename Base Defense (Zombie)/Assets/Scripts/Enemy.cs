@@ -60,6 +60,11 @@ public class Enemy : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Projectile")
+        {
+            //Debug.Log("Found Projectile");
+            other.GetComponent<ProjectileSound>().hitTargetSound();
+        }
 		if(other.tag == "Base"){
 			foundGate = true;
 			moveToDoor = false;

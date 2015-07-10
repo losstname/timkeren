@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour {
     public float fadeDelay = 2f;
 	public int ImpAttack = 70;
 	public int ImpDefense = 70;
-	
+
 	public int HPDecrease;
 	private int attackX;
 	private int defenseY;
@@ -123,6 +123,17 @@ public class Enemy : MonoBehaviour {
             newColor.a -= (Time.deltaTime * fadeSpeed);
             enemySpriteRenderer.color = newColor;
             yield return new WaitForEndOfFrame();
+        }
+    }
+
+
+    void OnMouseDown()
+    {
+        //order heroes to target self
+        GameObject[] heroes = GameObject.FindGameObjectsWithTag("Hero");
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i].GetComponent<HeroAttack>().changeEnemy(this.gameObject);
         }
     }
 }

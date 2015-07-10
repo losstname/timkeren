@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .460000008, y: -.0120000001, z: 0}
+  m_LocalPosition: {x: .432999998, y: .0520000011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 458406}
@@ -94,6 +94,7 @@ MonoBehaviour:
   SkillBoardNumber: 3
   Enemies: {fileID: 0}
   Projectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+  animSpeed: 100
 --- !u!212 &21217458
 SpriteRenderer:
   m_ObjectHideFlags: 1

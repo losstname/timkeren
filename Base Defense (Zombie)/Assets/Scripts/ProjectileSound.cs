@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ProjectileSound : MonoBehaviour {
 
-    AudioSource audioSfx;
+    private AudioSource audioSfx;
     public AudioClip initSound;
     public AudioClip hitSound;
 
@@ -18,5 +18,10 @@ public class ProjectileSound : MonoBehaviour {
     {
         audioSfx.clip = hitSound;
         audioSfx.Play();
+    }
+
+    public float getSoundClipLength()
+    {
+        return audioSfx.clip.length;
     }
 }

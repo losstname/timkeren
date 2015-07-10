@@ -24,8 +24,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 470044}
   - 212: {fileID: 21211220}
-  - 114: {fileID: 11407156}
   - 95: {fileID: 9552952}
+  - 114: {fileID: 11407156}
   m_Layer: 0
   m_Name: Hero 2
   m_TagString: Untagged
@@ -94,6 +94,7 @@ MonoBehaviour:
   SkillBoardNumber: 1
   Enemies: {fileID: 0}
   Projectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+  animSpeed: 100
 --- !u!212 &21211220
 SpriteRenderer:
   m_ObjectHideFlags: 1

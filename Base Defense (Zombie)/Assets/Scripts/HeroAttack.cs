@@ -15,6 +15,7 @@ public class HeroAttack : MonoBehaviour {
 
     private Transform ProjectilePosTr;
     private Animator anim;
+    public float attackSpeed = 100f;
     private int isAttackingHash = Animator.StringToHash("isAttacking");
     private int useSkillHash = Animator.StringToHash("useSkill");
 	private int idleStateHash = Animator.StringToHash("Base Layer.Archer-Idle-Anim");
@@ -27,6 +28,7 @@ public class HeroAttack : MonoBehaviour {
 	void Start () {
         ProjectilePosTr = transform.GetChild(0);
         anim = GetComponent<Animator>();
+        setAttackSpeed(attackSpeed);
         CoolingDown = CoolDown;
         //set skill cool down to skillboard
         GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setSkillCoolDown(SkillCoolDown);
@@ -42,9 +44,13 @@ public class HeroAttack : MonoBehaviour {
             {
                 //getting the anim state
                 AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-                //if cooldown finished -> fire
-                CoolingDown -= Time.deltaTime;
-                if (CoolingDown <= 0 && stateInfo.nameHash == idleStateHash)
+                if (stateInfo.nameHash == idleStateHash)
+                {
+                    //if cooldown finished -> fire
+                    CoolingDown -= Time.deltaTime;
+                }
+                //if cool down finish then attack the enemy
+                if (CoolingDown <= 0)
                 {
                     attackEnemy();
                     CoolingDown = CoolDown;
@@ -72,6 +78,13 @@ public class HeroAttack : MonoBehaviour {
         if (anim != null)
             anim.SetTrigger(useSkillHash);
         GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().resetCoolingDown();
+    }
+
+    public void setAttackSpeed(float speed)
+    {
+        //default anim scale speed is 100
+        anim.speed = speed/100f;
+        CoolDown = CoolDown / (speed / 100f);
     }
 
     public void skillArcher()

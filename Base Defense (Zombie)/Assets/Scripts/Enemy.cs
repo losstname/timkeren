@@ -55,9 +55,18 @@ public class Enemy : MonoBehaviour {
 		}
 		if(transform.position == playerBase.position && gameObject.tag != "DeadEnemy"){
 			ScriptableObject.FindObjectOfType<PlayerBase>().AttackPlayer();
-			Death();
+            Death();
 		}
 	}
+
+    void disableBeingTargeted()
+    {
+        GameObject[] heroes = GameObject.FindGameObjectsWithTag("Hero");
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i].GetComponent<HeroAttack>().autoChangeEnemy();
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
@@ -94,6 +103,7 @@ public class Enemy : MonoBehaviour {
 		if (ImphitPoints <= 0)
 		{
 			Death();
+            disableBeingTargeted();
 		}
 	}
 

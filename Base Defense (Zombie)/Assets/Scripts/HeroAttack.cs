@@ -39,7 +39,7 @@ public class HeroAttack : MonoBehaviour {
 
 	void Update () {
         if (Enemies == null) {
-            Enemies = GameObject.FindGameObjectWithTag("Enemy");
+            autoChangeEnemy();
         }
 
 		if(Enemies != null)
@@ -67,6 +67,10 @@ public class HeroAttack : MonoBehaviour {
 
     public void changeEnemy(GameObject newEnemy){
         Enemies = newEnemy;
+    }
+
+    public void autoChangeEnemy(){
+        Enemies = GameObject.FindGameObjectWithTag("Enemy");
     }
 
 	public void attackEnemy () {

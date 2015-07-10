@@ -1531,7 +1531,7 @@ MonoBehaviour:
   y1Pos: .200000003
   y2Pos: -3.76999998
   xPos: 10
-  wavesWait: 2.5
+  wavesWait: 2
   Enemy: {fileID: 151198, guid: 26e6a66cbc12c9044abadb00c1d27fb5, type: 2}
   timeLimit: 180
 --- !u!4 &1450970476

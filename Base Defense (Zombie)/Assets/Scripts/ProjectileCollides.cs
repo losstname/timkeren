@@ -7,8 +7,21 @@ public class ProjectileCollides : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
+            //Projectile hit enemy
+            disableProjectileVisulization();
             other.gameObject.GetComponent<Enemy>().Attacked();
-            Destroy(gameObject);
+            GetComponent<ProjectileSound>().hitTargetSound();
+            float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
+            Destroy(gameObject, waitToDestroy);
         }
+    }
+
+    private void disableProjectileVisulization()
+    {
+        //disabling projectile existence to maintain hit sound
+        //while the proectile didn't affect anything in game world
+        Destroy(GetComponent<Rigidbody2D>());
+        Destroy(GetComponent<BoxCollider2D>());
+        Destroy(GetComponent<SpriteRenderer>());
     }
 }

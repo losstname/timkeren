@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour {
     public float fadeDelay = 2f;
 	public int ImpAttack = 70;
 	public int ImpDefense = 70;
-	
+
 	public int HPDecrease;
 	private int attackX;
 	private int defenseY;
@@ -55,9 +55,18 @@ public class Enemy : MonoBehaviour {
 		}
 		if(transform.position == playerBase.position && gameObject.tag != "DeadEnemy"){
 			ScriptableObject.FindObjectOfType<PlayerBase>().AttackPlayer();
-			Death();
+            Death();
 		}
 	}
+
+    void disableBeingTargeted()
+    {
+        GameObject[] heroes = GameObject.FindGameObjectsWithTag("Hero");
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i].GetComponent<HeroAttack>().autoChangeEnemy();
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag == "Base"){
@@ -94,6 +103,7 @@ public class Enemy : MonoBehaviour {
 		if (ImphitPoints <= 0)
 		{
 			Death();
+            disableBeingTargeted();
 		}
 	}
 
@@ -123,6 +133,17 @@ public class Enemy : MonoBehaviour {
             newColor.a -= (Time.deltaTime * fadeSpeed);
             enemySpriteRenderer.color = newColor;
             yield return new WaitForEndOfFrame();
+        }
+    }
+
+
+    void OnMouseDown()
+    {
+        //order heroes to target self
+        GameObject[] heroes = GameObject.FindGameObjectsWithTag("Hero");
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i].GetComponent<HeroAttack>().changeEnemy(this.gameObject);
         }
     }
 }

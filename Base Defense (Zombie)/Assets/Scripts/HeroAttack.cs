@@ -15,7 +15,10 @@ public class HeroAttack : MonoBehaviour {
 
     private Transform ProjectilePosTr;
     private Animator anim;
+
     public float attackSpeed = 100f;
+    private float speedScaleRatio = 100f;   //Speed Scaling ratio is 1:100
+
     private int isAttackingHash = Animator.StringToHash("isAttacking");
     private int useSkillHash = Animator.StringToHash("useSkill");
 	private int idleStateHash = Animator.StringToHash("Base Layer.Archer-Idle-Anim");
@@ -35,7 +38,9 @@ public class HeroAttack : MonoBehaviour {
 	}
 
 	void Update () {
-		Enemies = GameObject.FindGameObjectWithTag("Enemy");
+        if (Enemies == null) {
+            autoChangeEnemy();
+        }
 
 		if(Enemies != null)
 		{
@@ -60,6 +65,14 @@ public class HeroAttack : MonoBehaviour {
 		}
 	}
 
+    public void changeEnemy(GameObject newEnemy){
+        Enemies = newEnemy;
+    }
+
+    public void autoChangeEnemy(){
+        Enemies = GameObject.FindGameObjectWithTag("Enemy");
+    }
+
 	public void attackEnemy () {
         //Set projectile object to look at enemy
         //Projectile object is a child of hero object
@@ -83,8 +96,8 @@ public class HeroAttack : MonoBehaviour {
     public void setAttackSpeed(float speed)
     {
         //default anim scale speed is 100
-        anim.speed = speed/100f;
-        CoolDown = CoolDown / (speed / 100f);
+        anim.speed = speed/speedScaleRatio;
+        CoolDown = CoolDown / (speed / speedScaleRatio);
     }
 
     public void skillArcher()

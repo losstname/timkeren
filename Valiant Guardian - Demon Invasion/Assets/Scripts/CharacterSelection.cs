@@ -16,6 +16,8 @@ public class CharacterSelection : MonoBehaviour {
     private GameObject SelectedHeroPanel;
     private GameObject HeroesPositionPanel;
 
+    private int selectedHero;
+
     void Awake()
     {
         //to get character list panel
@@ -42,8 +44,26 @@ public class CharacterSelection : MonoBehaviour {
     {
         for (int i = 0; i < 4; i++)
         {
-            HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().sprite = Heroes[i];
+            HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled = false;
         }
+    }
+
+    public void setHeroPosition() {
+        for (int i = 0; i < 4; i++)
+        {
+            if (HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled == false)
+            {
+                HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().sprite = Heroes[selectedHero];
+                HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled = true;
+                break;
+            }
+        }
+    }
+
+    public void setSelectedHero(int index)
+    {
+        selectedHero = index;
+        setPreviewCharacterToThis(index);
     }
 
     void initHeroPreview()

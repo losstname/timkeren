@@ -5,7 +5,11 @@ using AssemblyCSharp;
 public class SaveToPlayerPrefs : ISave
 {
 	public SaveToPlayerPrefs(){
-
+        if (PlayerPrefs.HasKey("savedData"))
+        {
+            //key used before will be deleted...sorry
+            PlayerPrefs.DeleteKey("savedData");
+        }
 	}
 
 	public void doSave (object data,string savedName)

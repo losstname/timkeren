@@ -1,19 +1,20 @@
 ﻿using UnityEngine;
+static class SaveData {
 
-public static class SaveData {
-	private const string saveDataFileName =  "savedData";
-
-	public static void Save() {
+    internal static void Save(string saveDataFileName)
+    {
 		SaveToPlayerPrefs save = new SaveToPlayerPrefs();
 		save.doSave(DataPlayer.getInstance(),saveDataFileName);
-	}   
-	
-	public static DataPlayer Load() {
+	}
+
+    internal static DataPlayer Load(string saveDataFileName)
+    {
 		SaveToPlayerPrefs save = new SaveToPlayerPrefs();
 		return (DataPlayer)save.doLoad(saveDataFileName);
 	}
 
-	public static bool isHaveData(){
+    internal static bool isHaveData(string saveDataFileName)
+    {
 		SaveToPlayerPrefs save = new SaveToPlayerPrefs();
 		return save.isHaveData(saveDataFileName);
 	}

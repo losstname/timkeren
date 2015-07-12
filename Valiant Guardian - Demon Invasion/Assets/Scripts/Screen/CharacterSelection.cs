@@ -15,8 +15,10 @@ public class CharacterSelection : MonoBehaviour {
     private GameObject CharacterListPanel;
     private GameObject SelectedHeroPanel;
     private GameObject HeroesPositionPanel;
+    private GameObject useFourHeroesPromptGO;
 
     private int selectedHero;
+    private bool isFourHeroesSet = false;
 
     void Awake()
     {
@@ -27,6 +29,10 @@ public class CharacterSelection : MonoBehaviour {
         //to get heroes position panel
         HeroesPositionPanel = gameObject.transform.GetChild(0).FindChild("HeroesPositionPanel").gameObject;
         //set the initial character list
+        //get the use 4 heroes prompt and disable it
+        useFourHeroesPromptGO = GameObject.Find("useFourHeroesPromptBox");
+        //use four heroes prompt box must be set active in editor!
+        useFourHeroesPromptGO.SetActive(false);
         initHeroesList();
         initHeroPreview();
         initHeroesPositioning();
@@ -58,6 +64,10 @@ public class CharacterSelection : MonoBehaviour {
                 break;
             }
         }
+        //check if the fourth hero has been set, of course it is third index
+        if (HeroesPositionPanel.transform.GetChild(3).GetComponent<Image>().enabled == true) {
+            isFourHeroesSet = true;
+        }
     }
 
     public void setSelectedHero(int index)
@@ -76,5 +86,25 @@ public class CharacterSelection : MonoBehaviour {
     {
         //index sent by button's parameter
         SelectedHeroPanel.transform.GetChild(0).GetComponent<Image>().sprite = Heroes[index];
+    }
+
+    public void fourHeroUsedValidate()
+    {
+        //if four heroes is selected then go to survival
+        if (isFourHeroesSet) {
+            ScriptableObject.FindObjectOfType<Navigation>().GoToSurvival();
+        }
+        //if heroes selected less then 4, cannot continue
+        else {
+            showUseFourHeroesPrompt();
+        }
+    }
+
+    public void showUseFourHeroesPrompt(){
+        useFourHeroesPromptGO.SetActive(true);
+    }
+
+    public void hideUseFourHeroesPrompt(){
+        useFourHeroesPromptGO.SetActive(false);
     }
 }

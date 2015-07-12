@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour {
 	private bool foundGate = false;
 
     public float CoolDown = 2f;
-	public int hitPoints = 10;
+//	public int hitPoints = 10;
 
     private Animator anim;
     private int isDeadHash = Animator.StringToHash("isDead");
@@ -135,7 +135,6 @@ public class Enemy : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
     }
-
 
     void OnMouseDown()
     {

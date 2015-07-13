@@ -955,7 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 064d3b1e4b1ddf14ea4d81d5ebf86682, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02431fa7c30510647912d17243374b4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   EnemiesThumb: []
   Heroes:
   - {fileID: 21300000, guid: 644e3b89d59eb4c41a33c0360b464c19, type: 3}
-  - {fileID: 21300000, guid: e66b71b01a0bf6549876770acfebb66c, type: 3}
+  - {fileID: 21300000, guid: 2e79d74918cd4c84e84fcab6c5f30b02, type: 3}
   - {fileID: 21300000, guid: a5234bdef6b0e7940975c8ad26b6e5d3, type: 3}
   - {fileID: 21300000, guid: de7779310a35a2141afaa8e297cf4f02, type: 3}
   - {fileID: 21300000, guid: 6b4a674b141b75649adb67fb62c54ce1, type: 3}
@@ -1975,7 +1975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e66b71b01a0bf6549876770acfebb66c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e79d74918cd4c84e84fcab6c5f30b02, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

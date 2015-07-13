@@ -27,6 +27,8 @@ GameObject:
   - 95: {fileID: 9591958}
   - 114: {fileID: 11408174}
   - 61: {fileID: 6136750}
+  - 114: {fileID: 11424228}
+  - 114: {fileID: 11487806}
   m_Layer: 0
   m_Name: Hero 1
   m_TagString: Hero
@@ -100,14 +102,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a8a4a9d717b33498acbd5908e5d1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+--- !u!114 &11424228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3032ccefadaa06e4d8ef1e0b714d9d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   DistanceFromHero: 0
   protectionRadius: 15
-  CoolDown: 2
-  CoolingDown: 0
-  SkillCoolDown: 5
+  normSkillCoolDown: 5
+  ultiSkillCooldown: 20
   SkillBoardNumber: 0
+  Enemies: {fileID: 0}
+  ProjectilePosTr: {fileID: 0}
+  anim: {fileID: 0}
+  idleTime: 1
+  coolDown: 0
+  heroSpeed: 100
+  isAttackingHash: 973584577
+  useSkillHash: 1576347820
+  idleStateHash: 1146448895
+--- !u!114 &11487806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4b3fce5e000ef4694b7f6e38393696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Projectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
-  attackSpeed: 50
 --- !u!212 &21262972
 SpriteRenderer:
   m_ObjectHideFlags: 1

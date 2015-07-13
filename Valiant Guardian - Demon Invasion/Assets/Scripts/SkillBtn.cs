@@ -35,7 +35,7 @@ public class SkillBtn : MonoBehaviour {
         normSkillBtn.interactable = false;
     }
 
-    public void setSkillCoolDown(float cd)
+    public void setNormSkillCoolDown(float cd)
     {
         coolDown = cd;
     }

@@ -4,44 +4,61 @@ using System.Collections;
 
 public class SkillBtn : MonoBehaviour {
 
-    private float coolDown;
-    private float coolingDown;
+    private float normCoolDown;
+    private float normCoolingDown;
+
+    private float ultiCoolDown;
+    private float ultiCoolingDown;
 
     private GameObject skillsHolder;
     private Button normSkillBtn;
+    private Button ultiSkillBtn;
 
     void Start()
     {
         skillsHolder = transform.GetChild(0).gameObject;
         normSkillBtn = skillsHolder.transform.GetChild(0).GetComponent<Button>();
+        ultiSkillBtn = skillsHolder.transform.GetChild(1).GetComponent<Button>();
         //skillsHolder must be set active in unity editor
         skillsHolder.SetActive(false);
-        coolingDown = coolDown;
+        normCoolingDown = normCoolDown;
     }
 
 	// Update is called once per frame
 	void Update () {
 
-        coolingDown -= Time.deltaTime;
-        if (coolingDown <= 0.0f)
-        {
+        normCoolingDown -= Time.deltaTime;
+        ultiCoolingDown -= Time.deltaTime;
+        if (normCoolingDown <= 0.0f) {
             normSkillBtn.interactable = true;
+        }
+        if (ultiCoolingDown <= 0.0f) {
+            ultiSkillBtn.interactable = true;
         }
 	}
 
-    public void resetCoolingDown()
+    public void resetNormCoolingDown()
     {
-        coolingDown = coolDown;
+        normCoolingDown = normCoolDown;
         normSkillBtn.interactable = false;
     }
 
-    public void setSkillCoolDown(float cd)
-    {
-        coolDown = cd;
+    public void setNormSkillCoolDown(float cd) {
+        normCoolDown = cd;
     }
 
-    public void toogleHeroSkillsHolder()
+    public void resetUltiCoolingDown()
     {
+        ultiCoolingDown = ultiCoolDown;
+        ultiSkillBtn.interactable = false;
+    }
+
+    public void setUltiSkillCoolDown(float cd)
+    {
+        ultiCoolDown = cd;
+    }
+
+    public void toogleHeroSkillsHolder() {
         if (skillsHolder.active == true) {
             skillsHolder.SetActive(false);
         }

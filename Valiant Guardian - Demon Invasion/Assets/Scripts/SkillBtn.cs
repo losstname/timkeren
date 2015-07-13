@@ -7,31 +7,45 @@ public class SkillBtn : MonoBehaviour {
     private float coolDown;
     private float coolingDown;
 
-    private Button btn;
+    private GameObject skillsHolder;
+    private Button normSkillBtn;
 
     void Start()
     {
-        btn = GetComponent<Button>();
+        skillsHolder = transform.GetChild(0).gameObject;
+        normSkillBtn = skillsHolder.transform.GetChild(0).GetComponent<Button>();
+        //skillsHolder must be set active in unity editor
+        skillsHolder.SetActive(false);
         coolingDown = coolDown;
     }
 
 	// Update is called once per frame
 	void Update () {
+
         coolingDown -= Time.deltaTime;
         if (coolingDown <= 0.0f)
         {
-            btn.interactable = true;
+            normSkillBtn.interactable = true;
         }
 	}
 
     public void resetCoolingDown()
     {
         coolingDown = coolDown;
-        btn.interactable = false;
+        normSkillBtn.interactable = false;
     }
 
     public void setSkillCoolDown(float cd)
     {
         coolDown = cd;
+    }
+
+    public void toogleHeroSkillsHolder()
+    {
+        if (skillsHolder.active == true) {
+            skillsHolder.SetActive(false);
+        }
+        else
+            skillsHolder.SetActive(true);
     }
 }

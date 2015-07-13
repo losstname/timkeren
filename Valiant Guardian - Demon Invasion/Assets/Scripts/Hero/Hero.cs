@@ -25,6 +25,7 @@ public class Hero : MonoBehaviour
 
     public int isAttackingHash = Animator.StringToHash("isAttacking");
     public int useSkillHash = Animator.StringToHash("useSkill");
+    public int useUltiSkillHash = Animator.StringToHash("useUltiSkill");
     public int idleStateHash = Animator.StringToHash("Base Layer.Archer-Idle-Anim");
 
     void Start()

@@ -48,7 +48,7 @@ public class HeroAttack : MonoBehaviour
             Debug.Log(this.gameObject.name + " Doesn't has Atk animation");
     }
 
-    public void spawnNormProjectile()
+    public void spawnProjectile()
     {
         //spawning projectile
         //called from animation

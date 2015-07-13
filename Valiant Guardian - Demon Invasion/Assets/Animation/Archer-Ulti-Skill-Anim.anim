@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Archer-Atk-Anim
+  m_Name: Archer-Ulti-Skill-Anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -106,8 +106,8 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: .75
-    functionName: spawnProjectile
+  - time: .625
+    functionName: ultiSkillArcher
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

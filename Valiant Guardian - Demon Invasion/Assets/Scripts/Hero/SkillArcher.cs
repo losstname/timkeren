@@ -20,7 +20,14 @@ public class SkillArcher : MonoBehaviour {
         GameObject.Find("SkillPanel").transform.GetChild(hero.SkillBoardNumber).GetComponent<SkillBtn>().resetNormCoolingDown();
     }
 
-    public void skillArcher()
+    public void heroUltiSkill() {
+        if (hero.anim != null)
+            hero.anim.SetTrigger(hero.useUltiSkillHash);
+        //reset skill button cooldown
+        GameObject.Find("SkillPanel").transform.GetChild(hero.SkillBoardNumber).GetComponent<SkillBtn>().resetUltiCoolingDown();
+    }
+
+    public void normSkillArcher()
     {
         StartCoroutine(rapidArrow());
     }
@@ -36,6 +43,17 @@ public class SkillArcher : MonoBehaviour {
             spawnNormProjectile();
             yield return new WaitForSeconds(0.05f);
         }
+    }
+
+    public void ultiSkillArcher() {
+        spawnUltiProjectile();
+    }
+
+    public void spawnUltiProjectile()
+    {
+        //spawning projectile for ultimate skill
+        //called from animation
+        Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
     }
 
     public void spawnNormProjectile()

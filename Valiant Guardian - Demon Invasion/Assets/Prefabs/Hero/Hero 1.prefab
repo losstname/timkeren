@@ -127,6 +127,7 @@ MonoBehaviour:
   heroSpeed: 100
   isAttackingHash: 973584577
   useSkillHash: 1576347820
+  useUltiSkillHash: 1186065476
   idleStateHash: 1146448895
 --- !u!114 &11487806
 MonoBehaviour:
@@ -139,7 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4b3fce5e000ef4694b7f6e38393696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+  normProjectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+  ultiProjectiles: {fileID: 180930, guid: 7dd20129556ba38429bf6fa82f6c6241, type: 2}
 --- !u!212 &21262972
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -107,7 +107,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: .75
-    functionName: spawnProjectile
+    functionName: spawnNormProjectile
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

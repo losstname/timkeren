@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour {
         GameObject[] heroes = GameObject.FindGameObjectsWithTag("Hero");
         for (int i = 0; i < heroes.Length; i++)
         {
-            heroes[i].GetComponent<HeroAttack>().autoChangeEnemy();
+            heroes[i].GetComponent<Hero>().autoChangeEnemy();
         }
     }
 
@@ -142,7 +142,7 @@ public class Enemy : MonoBehaviour {
         GameObject[] heroes = GameObject.FindGameObjectsWithTag("Hero");
         for (int i = 0; i < heroes.Length; i++)
         {
-            heroes[i].GetComponent<HeroAttack>().changeEnemy(this.gameObject);
+            heroes[i].GetComponent<Hero>().changeEnemy(this.gameObject);
         }
     }
 }

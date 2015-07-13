@@ -33,6 +33,7 @@ public class Hero : MonoBehaviour
         anim = GetComponent<Animator>();
         //set skill cool down to skillboard
         GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setNormSkillCoolDown(normSkillCoolDown);
+        GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setUltiSkillCoolDown(ultiSkillCooldown);
         coolDown = idleTime;
     }
 

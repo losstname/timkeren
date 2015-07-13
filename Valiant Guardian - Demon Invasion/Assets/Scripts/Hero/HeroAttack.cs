@@ -10,8 +10,7 @@ public class HeroAttack : MonoBehaviour
 
     private Hero hero;
 
-    void Awake()
-    {
+    void Awake() {
         hero = GetComponent<Hero>();
     }
 

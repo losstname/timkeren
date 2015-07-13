@@ -3,12 +3,12 @@ using System.Collections;
 
 public class SkillArcher : MonoBehaviour {
 
-    public GameObject Projectiles;
+    public GameObject normProjectiles;
+    public GameObject ultiProjectiles;
 
     private Hero hero;
 
-    void Awake()
-    {
+    void Awake() {
         hero = GetComponent<Hero>();
     }
 
@@ -16,7 +16,8 @@ public class SkillArcher : MonoBehaviour {
     {
         if (hero.anim != null)
             hero.anim.SetTrigger(hero.useSkillHash);
-        GameObject.Find("SkillPanel").transform.GetChild(hero.SkillBoardNumber).GetComponent<SkillBtn>().resetCoolingDown();
+        //reset skill button cooldown
+        GameObject.Find("SkillPanel").transform.GetChild(hero.SkillBoardNumber).GetComponent<SkillBtn>().resetNormCoolingDown();
     }
 
     public void skillArcher()
@@ -41,6 +42,6 @@ public class SkillArcher : MonoBehaviour {
     {
         //spawning projectile
         //called from animation
-        Instantiate(Projectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+        Instantiate(normProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
     }
 }

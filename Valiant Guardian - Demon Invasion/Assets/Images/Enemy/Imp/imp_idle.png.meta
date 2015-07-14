@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: bc6859026b3d88f4e87253987ac843bb
-timeCreated: 1436866454
+guid: 0fab8dd3b14affe4785be9101f48191c
+timeCreated: 1436866544
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: imp_atk_0
-    21300002: imp_atk_1
-    21300004: imp_atk_2
-    21300006: imp_atk_3
+    21300000: imp_idle_0
+    21300002: imp_idle_1
+    21300004: imp_idle_2
+    21300006: imp_idle_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,43 +53,43 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: imp_atk_0
+    - name: imp_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 135
-        height: 115
+        width: 69
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: imp_atk_1
+    - name: imp_idle_1
       rect:
         serializedVersion: 2
-        x: 135
+        x: 69
         y: 0
-        width: 135
-        height: 115
+        width: 69
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: imp_atk_2
+    - name: imp_idle_2
       rect:
         serializedVersion: 2
-        x: 270
+        x: 138
         y: 0
-        width: 135
-        height: 115
+        width: 69
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: imp_atk_3
+    - name: imp_idle_3
       rect:
         serializedVersion: 2
-        x: 405
+        x: 207
         y: 0
-        width: 135
-        height: 115
+        width: 69
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

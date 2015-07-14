@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour {
     private Animator anim;
     private int isDeadHash = Animator.StringToHash("isDead");
     private int isAttackingHash = Animator.StringToHash("isAttacking");
+    private int isStayingHash = Animator.StringToHash("isStaying");
 
     private SpriteRenderer enemySpriteRenderer;
     public float fadeSpeed = 1f;
@@ -48,6 +49,7 @@ public class Enemy : MonoBehaviour {
 			}else if(foundGate){
 				if(!ScriptableObject.FindObjectOfType<Door>().isAttackAble()){
 					transform.position = Vector3.MoveTowards(transform.position, playerBase.position, step);
+                    anim.SetBool(isStayingHash, false);
 				}
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
@@ -69,7 +71,9 @@ public class Enemy : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+        //when found the door
 		if(other.tag == "Base"){
+            anim.SetBool(isStayingHash, true);
 			foundGate = true;
 			moveToDoor = false;
             StartCoroutine(AttackingBase());

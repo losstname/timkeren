@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cd4fa66438f31e8438b42316e7e21768
-timeCreated: 1435778656
+timeCreated: 1436866394
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,60 +58,60 @@ TextureImporter:
     - name: imp_walk_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 4
-        width: 61
-        height: 55
+        x: 0
+        y: 0
+        width: 81
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: imp_walk_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 2
-        width: 51
-        height: 63
+        x: 81
+        y: 0
+        width: 81
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: imp_walk_2
       rect:
         serializedVersion: 2
-        x: 172
+        x: 162
         y: 0
-        width: 46
-        height: 74
+        width: 81
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: imp_walk_3
       rect:
         serializedVersion: 2
-        x: 261
-        y: 2
-        width: 63
-        height: 64
+        x: 243
+        y: 0
+        width: 81
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: imp_walk_4
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2
-        width: 49
-        height: 66
+        x: 324
+        y: 0
+        width: 81
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: imp_walk_5
       rect:
         serializedVersion: 2
-        x: 414
-        y: 3
-        width: 52
-        height: 69
+        x: 405
+        y: 0
+        width: 81
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

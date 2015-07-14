@@ -26,15 +26,15 @@ AnimationClip:
     - time: .333333343
       value: {fileID: 21300006, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - time: .444444448
-      value: {fileID: 21300008, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+      value: {fileID: 21300018, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - time: .555555582
-      value: {fileID: 21300010, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+      value: {fileID: 21300020, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - time: .666666687
-      value: {fileID: 21300012, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+      value: {fileID: 21300022, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - time: .777777791
-      value: {fileID: 21300014, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+      value: {fileID: 21300008, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - time: .888888896
-      value: {fileID: 21300016, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+      value: {fileID: 21300010, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -57,11 +57,11 @@ AnimationClip:
     - {fileID: 21300002, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - {fileID: 21300004, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - {fileID: 21300006, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+    - {fileID: 21300018, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+    - {fileID: 21300020, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
+    - {fileID: 21300022, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - {fileID: 21300008, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
     - {fileID: 21300010, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
-    - {fileID: 21300012, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
-    - {fileID: 21300014, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
-    - {fileID: 21300016, guid: b00c2e876b2086c4cb4e162d6b13f462, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0

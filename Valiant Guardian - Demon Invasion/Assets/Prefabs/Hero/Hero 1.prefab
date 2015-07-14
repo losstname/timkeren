@@ -24,10 +24,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 410682}
   - 212: {fileID: 21262972}
-  - 95: {fileID: 9591958}
-  - 114: {fileID: 11408174}
   - 61: {fileID: 6136750}
+  - 95: {fileID: 9591958}
   - 114: {fileID: 11424228}
+  - 114: {fileID: 11408174}
   - 114: {fileID: 11487806}
   m_Layer: 0
   m_Name: Hero 1

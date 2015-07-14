@@ -9,7 +9,7 @@ public class Coin : MonoBehaviour {
 
 	void Awake()
 	{
-		coinText = GameObject.Find("CoinText").GetComponent<Text>();
+        coinText = transform.FindChild("CoinText").GetComponent<Text>();
 		//Always load coin from dataPlayer
 		countCoin =	DataPlayer.getInstance().Coin;
 		coinText.text = countCoin.ToString();
@@ -24,4 +24,8 @@ public class Coin : MonoBehaviour {
 		//todo in Future will be improved, because can (maybe) be a killer performance
 		//because every state coin will access disk to write file
 	}
+
+    public int getCoin(){
+        return DataPlayer.getInstance().Coin;
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 //attach to CharacterSelectionCanvas
 //do not rename the panel inside this canvas
@@ -19,6 +20,9 @@ public class CharacterSelection : MonoBehaviour {
 
     private int selectedHero;
     private bool isFourHeroesSet = false;
+    //used only to temporary save CURRENT selected hero. not hero saved before.
+    //for saved hero before , get data from Data player
+    private bool[] listSelectedHero;
 
     void Awake()
     {
@@ -33,6 +37,12 @@ public class CharacterSelection : MonoBehaviour {
         useFourHeroesPromptGO = GameObject.Find("useFourHeroesPromptBox");
         //use four heroes prompt box must be set active in editor!
         useFourHeroesPromptGO.SetActive(false);
+
+        //initialize selected hero
+        listSelectedHero = new bool[6] { false, false, false, false, false,false };
+        //Todo -->  load last selected hero
+        //set active hero automatically based on this selected hero
+
         initHeroesList();
         initHeroPreview();
         initHeroesPositioning();
@@ -61,6 +71,8 @@ public class CharacterSelection : MonoBehaviour {
             {
                 HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().sprite = Heroes[selectedHero];
                 HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled = true;
+                //set selected hero to true
+                listSelectedHero[selectedHero] = true;
                 break;
             }
         }
@@ -93,6 +105,8 @@ public class CharacterSelection : MonoBehaviour {
         //if four heroes is selected then go to survival
         if (isFourHeroesSet) {
             ScriptableObject.FindObjectOfType<Navigation>().GoToSurvival();
+            //save current selected hero to database
+            DataPlayer.getInstance().LastHeroUsed = listSelectedHero;
         }
         //if heroes selected less then 4, cannot continue
         else {

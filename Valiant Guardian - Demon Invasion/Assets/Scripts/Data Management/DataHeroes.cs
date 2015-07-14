@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Assets.Scripts.Temp_Databases.Heroes;
 
 [System.Serializable]
 public class DataHeroes {
@@ -12,6 +13,9 @@ public class DataHeroes {
     private bool rogueLocked;
     private bool dukunLocked;
     private static DataHeroes instance;
+    private Dukun dukunModel;
+    private Archer archerModel;
+    private Rogue rogueModel;
 
     private DataHeroes() {
         if (SaveData.isHaveData(saveDataFileName))
@@ -32,6 +36,9 @@ public class DataHeroes {
             rogueLocked = true;
             dukunLocked = true;
         }
+        dukunModel = new Dukun(dukunExp, dukunLocked);
+        archerModel = new Archer(archerExp, archerLocked);
+        rogueModel = new Rogue(rogueExp, rogueLocked);
     }
     public static DataHeroes getInstance()
     {
@@ -40,6 +47,23 @@ public class DataHeroes {
 
         return instance;
     }
+
+    public Dukun DataDukun
+    {
+        get { return dukunModel; }
+        private set { dukunModel = value; }
+    }
+    public Archer DataArcher
+    {
+        get { return archerModel; }
+        private set { archerModel = value; }
+    }
+    public Rogue DataRogue
+    {
+        get { return rogueModel; }
+        private set { rogueModel = value; }
+    }
+
     public Int32 ArcherExp
     {
         get { return archerExp; }

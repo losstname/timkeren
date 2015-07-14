@@ -24,8 +24,4 @@ public class Coin : MonoBehaviour {
 		//todo in Future will be improved, because can (maybe) be a killer performance
 		//because every state coin will access disk to write file
 	}
-
-    public int getCoin(){
-        return DataPlayer.getInstance().Coin;
-    }
 }

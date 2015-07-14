@@ -9,7 +9,7 @@ public class ProjectileAttack : MonoBehaviour {
         {
             //Projectile hit enemy
             disableProjectileVisulization();
-            other.gameObject.GetComponent<Enemy>().Attacked();
+            other.gameObject.GetComponent<MeleeImp>().Attacked();
             GetComponent<ProjectileSound>().hitTargetSound();
             float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
             Destroy(gameObject, waitToDestroy);

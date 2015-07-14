@@ -79,13 +79,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 148942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267fa7193f0480e408e6c121da7d10af, type: 3}
+  m_Script: {fileID: 11500000, guid: a66ea346a4a67ca468fcdab62f6a4aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
   sightStart: {fileID: 451688}
   sightEnd: {fileID: 405110}
-  hitPoints: 3
+  CoolDown: 2
+  fadeSpeed: 1
+  fadeDelay: 2
 --- !u!212 &21248454
 SpriteRenderer:
   m_ObjectHideFlags: 1

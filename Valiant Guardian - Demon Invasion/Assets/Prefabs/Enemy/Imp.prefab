@@ -97,7 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 151198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267fa7193f0480e408e6c121da7d10af, type: 3}
+  m_Script: {fileID: 11500000, guid: a66ea346a4a67ca468fcdab62f6a4aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
@@ -106,10 +106,6 @@ MonoBehaviour:
   CoolDown: 2
   fadeSpeed: 1
   fadeDelay: 2
-  ImpAttack: 70
-  ImpDefense: 70
-  HPDecrease: 0
-  ImphitPoints: 200
 --- !u!212 &21257390
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -151,6 +147,14 @@ Prefab:
       propertyPath: hitPoints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sightStart
+      value: 
+      objectReference: {fileID: 453302}
+    - target: {fileID: 0}
+      propertyPath: sightEnd
+      value: 
+      objectReference: {fileID: 408322}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151198}

@@ -4748,6 +4748,7 @@ GameObject:
   - 4: {fileID: 2083743363}
   - 212: {fileID: 2083743362}
   - 60: {fileID: 2083743364}
+  - 50: {fileID: 2083743365}
   m_Layer: 0
   m_Name: Door
   m_TagString: Base
@@ -4801,7 +4802,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2083743361}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -4820,6 +4821,22 @@ PolygonCollider2D:
     - - {x: .00999999978, y: .49000001}
       - {x: .0799999982, y: .340000004}
       - {x: .100000001, y: .379999995}
+--- !u!50 &2083743365
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2083743361}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2104182821
 GameObject:
   m_ObjectHideFlags: 0

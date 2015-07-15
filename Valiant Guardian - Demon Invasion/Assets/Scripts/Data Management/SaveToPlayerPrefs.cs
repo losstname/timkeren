@@ -10,6 +10,18 @@ public class SaveToPlayerPrefs : ISave
             //key used before will be deleted...sorry
             PlayerPrefs.DeleteKey("savedData");
         }
+
+        if (PlayerPrefs.HasKey("savedHeroes"))
+        {
+            //key used before will be deleted...sorry
+            PlayerPrefs.DeleteKey("savedHeroes");
+        }
+
+        if (PlayerPrefs.HasKey("savedPlayer"))
+        {
+            //key used before will be deleted...sorry
+            PlayerPrefs.DeleteKey("savedPlayer");
+        }
 	}
 
 	public void doSave (object data,string savedName)

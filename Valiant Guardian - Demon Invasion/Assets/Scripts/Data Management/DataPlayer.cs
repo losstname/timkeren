@@ -3,7 +3,7 @@ using System.Collections;
 
 [System.Serializable]
 public class DataPlayer {
-    private const string saveDataFileName = "savedPlayer";
+    private const string saveDataFileName = "player";
 //this class is serializeable, it means can be save and load through data stream like binary file.
 	//instance variable for main access to this class, singleton class
 	private static DataPlayer instance;
@@ -18,14 +18,16 @@ public class DataPlayer {
 			//set coin from loaded data
 			coin = instance.coin;
 			//set last hero used from loaded data
+            /* because still experimentation , this line below will not used for now
             if (instance.lastHeroUsed != null)
 			    lastHeroUsed = instance.lastHeroUsed;
             else
                 lastHeroUsed = new bool[6] { false, false, false, false, false, false };
+             */
 		}else{
 			//if there are no save data , then 
 			coin = 0;
-			lastHeroUsed = new bool[6]{false,false,false,false,false,false};
+			//lastHeroUsed = new bool[6]{false,false,false,false,false,false};
 		}
 	}
 
@@ -48,7 +50,7 @@ public class DataPlayer {
             SaveData.Save(saveDataFileName);
         } 
     }
-
+    /*
     public bool[] LastHeroUsed { 
         //get last hero used from local database
         get{
@@ -58,8 +60,8 @@ public class DataPlayer {
         set {
             //use this to save current last hero used to local database.
             lastHeroUsed = value;
-            SaveData.Save(saveDataFileName);
+            //SaveData.Save(saveDataFileName);
         }
-    }
+    }*/
 
 }

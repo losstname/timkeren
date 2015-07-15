@@ -25,9 +25,9 @@ namespace Assets.Scripts.Temp_Databases.Heroes
         public AttackModel SkillAttack { get; private set; }
         public AttackModel UltSkillAttack { get; private set; }
         public int AttackSpeed { get; private set; }
-        public bool Locked { get; private set; }
+        public bool Locked { get; set; }
         public int Price { get; private set; }
-        public Int32 Experience { get; private set; }
+        public Int32 Experience { get; set; }
 
         public void increaseExperience(int addition) {
             experience += addition;

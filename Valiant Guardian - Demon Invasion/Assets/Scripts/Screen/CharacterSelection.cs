@@ -22,7 +22,7 @@ public class CharacterSelection : MonoBehaviour {
     private bool isFourHeroesSet = false;
     //used only to temporary save CURRENT selected hero. not hero saved before.
     //for saved hero before , get data from Data player
-    private bool[] listSelectedHero;
+    //private bool[] listSelectedHero;
 
     void Awake()
     {
@@ -39,7 +39,7 @@ public class CharacterSelection : MonoBehaviour {
         useFourHeroesPromptGO.SetActive(false);
 
         //initialize selected hero
-        listSelectedHero = new bool[6] { false, false, false, false, false,false };
+       // listSelectedHero = new bool[6] { false, false, false, false, false,false };
         //Todo -->  load last selected hero
         //set active hero automatically based on this selected hero
 
@@ -72,7 +72,7 @@ public class CharacterSelection : MonoBehaviour {
                 HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().sprite = Heroes[selectedHero];
                 HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled = true;
                 //set selected hero to true
-                listSelectedHero[selectedHero] = true;
+               // listSelectedHero[selectedHero] = true;
                 break;
             }
         }
@@ -106,7 +106,7 @@ public class CharacterSelection : MonoBehaviour {
         if (isFourHeroesSet) {
             ScriptableObject.FindObjectOfType<Navigation>().GoToSurvival();
             //save current selected hero to database
-            DataPlayer.getInstance().LastHeroUsed = listSelectedHero;
+           // DataPlayer.getInstance().LastHeroUsed = listSelectedHero;
         }
         //if heroes selected less then 4, cannot continue
         else {

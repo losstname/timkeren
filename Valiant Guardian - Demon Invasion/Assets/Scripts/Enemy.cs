@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MeleeImp : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 	public float speed = 1f;
     private bool ableMove = true;
 	private Transform gateBase;
@@ -11,6 +11,7 @@ public class MeleeImp : MonoBehaviour {
 	private bool foundGate = false;
 
     public float CoolDown = 2f;
+//	public int hitPoints = 10;
 
     private Animator anim;
     private int isDeadHash = Animator.StringToHash("isDead");
@@ -20,15 +21,13 @@ public class MeleeImp : MonoBehaviour {
     private SpriteRenderer enemySpriteRenderer;
     public float fadeSpeed = 1f;
     public float fadeDelay = 2f;
+	public int ImpAttack = 70;
+	public int ImpDefense = 70;
 
+	public int HPDecrease;
 	private int attackX;
 	private int defenseY;
-    private int hitPoints;
-
-    void Awake() {
-        //get hitpoints from databases
-        hitPoints = DataEnemy.getInstance().MeleeImp.Hitpoints;
-    }
+	public int ImphitPoints = 200;
 
 	void Start(){
 		gateBase = GameObject.FindGameObjectWithTag ("Base").transform;
@@ -93,23 +92,19 @@ public class MeleeImp : MonoBehaviour {
 
     public void BaseAttacked()
     {
-        //get attack damage from databases
-        int attackDamage = DataEnemy.getInstance().MeleeImp.AttackDamage;
 		attackX = Random.Range(1,30);
-        int baseHpDecrease = attackDamage - ((attackDamage * attackX) / 100);
+		int baseHpDecrease = ImpAttack - ((ImpAttack * attackX) / 100);
 		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble())
 				ScriptableObject.FindObjectOfType<Door>().AttackBase(baseHpDecrease);
 
     }
 
 	public void Attacked(){
-        //get defense from databases
-        int defense = DataEnemy.getInstance().MeleeImp.Defense;
 		attackX = Random.Range(1,20);
 		defenseY = Random.Range(31, 80);
-        int hpDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((defense * defenseY) / 100);
-        hitPoints -= hpDecrease;
-        if (hitPoints <= 0)
+		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((ImpDefense *defenseY) / 100);
+		ImphitPoints -= HPDecrease;
+		if (ImphitPoints <= 0)
 		{
 			Death();
             disableBeingTargeted();

@@ -7,8 +7,8 @@ using AssemblyCSharp;
 
 public class SaveToFile : ISave
 {
-	//const string name used before
-    //private const string saveDataFileName =  "/savedData.gd";
+	//don't change this const ever.. this const for fileName in filesystem
+//	private const string saveDataFileName =  "/savedData.gd";
 	public SaveToFile(){
 
 	}

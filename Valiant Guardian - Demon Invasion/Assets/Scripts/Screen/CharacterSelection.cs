@@ -40,7 +40,7 @@ public class CharacterSelection : MonoBehaviour {
 
         //initialize selected hero
         listSelectedHero = new bool[6] { false, false, false, false, false,false };
-        //Todo -->  load last selected hero from databases...
+        //Todo -->  load last selected hero
         //set active hero automatically based on this selected hero
 
         initHeroesList();

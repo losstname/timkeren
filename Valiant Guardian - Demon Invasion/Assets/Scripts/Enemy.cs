@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 	public float speed = 1f;
     private bool ableMove = true;
-	private Transform gateBase;
+	private Transform baseDoor;
 	private Transform playerBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour {
 	public int ImphitPoints = 200;
 
 	void Start(){
-		gateBase = GameObject.FindGameObjectWithTag ("Base").transform;
+		baseDoor = GameObject.FindGameObjectWithTag ("Base").transform;
 		playerBase = GameObject.Find ("PlayerBase").transform;
         anim = GetComponent<Animator>();
         enemySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour {
 			//un-Comment debug below to see LineCast on Enemy
 			//Debug.DrawLine (sightStart.position, sightEnd.position, Color.green);
 			if(moveToDoor && !foundGate){
-				transform.position = Vector3.MoveTowards(transform.position, gateBase.position, step);
+				transform.position = Vector3.MoveTowards(transform.position, baseDoor.position, step);
 			}else if(foundGate){
 				if(!ScriptableObject.FindObjectOfType<Door>().isAttackAble()){
 					transform.position = Vector3.MoveTowards(transform.position, playerBase.position, step);

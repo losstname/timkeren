@@ -4804,7 +4804,7 @@ GameObject:
   - 60: {fileID: 2083743364}
   - 50: {fileID: 2083743365}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Base
   m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2673,7 +2673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a0aec54151e654ab9833f615e96833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  y1Pos: .200000003
+  y1Pos: .699999988
   y2Pos: -3.76999998
   xPos: 10
   wavesWait: 2

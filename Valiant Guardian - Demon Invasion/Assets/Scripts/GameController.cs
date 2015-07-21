@@ -11,8 +11,12 @@ public class GameController : MonoBehaviour {
     public GameObject Enemy;
 
     public float timeLimit = 180.0f;
-    private Text timeLimitText;
+    private float timeLeft;
+    private Text timeLeftText;
 
+    public float preparationTime = 60.0f;
+    private float preparationTimeLeft;
+    private bool isPreparationTime = false;
     private GameObject preparationPanel;
 
     void Awake()
@@ -22,28 +26,66 @@ public class GameController : MonoBehaviour {
     }
 
 	void Start () {
-        timeLimitText = GameObject.Find("TimeLimitText").GetComponent<Text>();
-        timeLimitText.text = timeLimit.ToString();
+        timeLeft = timeLimit;
+        timeLeftText = GameObject.Find("TimeLeftText").GetComponent<Text>();
+        timeLeftText.text = timeLeft.ToString();
         //To Start Enemy Spawning waves using IEnumeratir function
-	    StartCoroutine(EnemySpawning());
+        StartCoroutine(EnemySpawning());
 	}
 
     void Update() {
-        timeLimit -= Time.deltaTime;
-        timeLimitText.text = ((int)timeLimit).ToString();
-		if(timeLimit <= 0) {
-			ScriptableObject.FindObjectOfType<PlayerBase>().PlayerWin();
+        //time is decreasing when there is time left
+        //prevent minus time when enemy not spawning
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            timeLeftText.text = ((int)timeLeft).ToString();
+        }
+		else{
+            //No player win in survival mode
+			//ScriptableObject.FindObjectOfType<PlayerBase>().PlayerWin();
+            if(GameObject.FindGameObjectWithTag("Enemy")==null && isPreparationTime==false)
+                StartCoroutine(PreparationTime());
 		}
-        if (Input.GetKeyDown(KeyCode.T))
-            TooglePrepPanel();
     }
 
     IEnumerator EnemySpawning(){
-		while(timeLimit > 0){
+		while(timeLeft > 0){
             Vector3 InstantiatePos = new Vector3(xPos, Random.Range(y1Pos, y2Pos), 0f); //Set spawning position
             Instantiate(Enemy, InstantiatePos, Quaternion.identity);
             yield return new WaitForSeconds(wavesWait); //Waiting until wavesWait seconds to spawn next enemy
         }
+    }
+
+    IEnumerator PreparationTime()
+    {
+        Text preparationTimeLeftText = preparationPanel.transform.FindChild("Time").GetChild(0).GetComponent<Text>();
+        TooglePrepPanel();
+        isPreparationTime = true;
+        setHeroesAttackCapability(false);
+        preparationTimeLeft = preparationTime;
+        while (preparationTimeLeft >= 0.0f)
+        {
+            preparationTimeLeftText.text = preparationTimeLeft.ToString();
+            yield return new WaitForSeconds(1.0f);
+            preparationTimeLeft--;
+        }
+        if (preparationTimeLeft < 0.0f && isPreparationTime)
+        {
+            EndPreparationTime();
+        }
+    }
+
+    public void EndPreparationTime()
+    {
+        //to make sure the panel don't show up when the ready button used
+        preparationTimeLeft = -1.0f;
+        TooglePrepPanel();
+        isPreparationTime = false;
+        timeLeft = timeLimit;
+        //When preparation time ends start spawning enemies again
+        StartCoroutine(EnemySpawning());
+        setHeroesAttackCapability(true);
     }
 
     void TooglePrepPanel()
@@ -52,5 +94,14 @@ public class GameController : MonoBehaviour {
             preparationPanel.SetActive(true);
         else
             preparationPanel.SetActive(false);
+    }
+
+    void setHeroesAttackCapability(bool capability)
+    {
+        GameObject[] heroes = GameObject.FindGameObjectsWithTag("Hero");
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i].GetComponent<HeroAttack>().setHeroAttackCapability(capability);
+        }
     }
 }

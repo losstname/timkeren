@@ -10,6 +10,7 @@ public class HeroAttack : MonoBehaviour
 
     private Hero hero;
 
+    private bool ableAttack = true;
     void Awake() {
         hero = GetComponent<Hero>();
     }
@@ -26,7 +27,7 @@ public class HeroAttack : MonoBehaviour
                 hero.coolDown -= Time.deltaTime;
             }
             //if cool down finish then attack the enemy
-            if (hero.coolDown <= 0)
+            if (hero.coolDown <= 0 && ableAttack)
             {
                 attackEnemy();
                 hero.coolDown = hero.idleTime;
@@ -53,5 +54,10 @@ public class HeroAttack : MonoBehaviour
         //spawning projectile
         //called from animation
         Instantiate(Projectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+    }
+
+    public void setHeroAttackCapability(bool capability)
+    {
+        ableAttack = capability;
     }
 }

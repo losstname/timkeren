@@ -5,10 +5,11 @@ public class Enemy : MonoBehaviour {
 	public float speed = 1f;
     private bool ableMove = true;
 	private Transform baseDoor;
+    private Vector3 baseDoorPositionOffset;
 	private Transform playerBase;
 	public Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
-	private bool foundGate = false;
+	private bool foundDoor = false;
 
     public float CoolDown = 2f;
 //	public int hitPoints = 10;
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour {
 
 	void Start(){
 		baseDoor = GameObject.FindGameObjectWithTag ("Base").transform;
+        baseDoorPositionOffset = new Vector3(0.0f, 0.6f, 0.0f);
 		playerBase = GameObject.Find ("PlayerBase").transform;
         anim = GetComponent<Animator>();
         enemySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -44,12 +46,17 @@ public class Enemy : MonoBehaviour {
 			moveToDoor = Physics2D.Linecast (sightStart.position, sightEnd.position, 1 << LayerMask.NameToLayer ("InvisWall"));
 			//un-Comment debug below to see LineCast on Enemy
 			//Debug.DrawLine (sightStart.position, sightEnd.position, Color.green);
-			if(moveToDoor && !foundGate){
-				transform.position = Vector3.MoveTowards(transform.position, baseDoor.position, step);
-			}else if(foundGate){
+			if(moveToDoor && !foundDoor){
+				transform.position = Vector3.MoveTowards(transform.position, baseDoor.position - baseDoorPositionOffset, step);
+			}else if(foundDoor){
 				if(!ScriptableObject.FindObjectOfType<Door>().isAttackAble()){
+                    //Door is destroyed
+                    //Move inside wall
 					transform.position = Vector3.MoveTowards(transform.position, playerBase.position, step);
+                    //Not staying anymore
                     anim.SetBool(isStayingHash, false);
+                    //Of course door is not there anymore
+                    foundDoor = false;
 				}
 			}else{
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
@@ -73,8 +80,9 @@ public class Enemy : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other) {
         //when found the door
 		if(other.tag == "Base"){
+            anim.SetTrigger(isAttackingHash);
             anim.SetBool(isStayingHash, true);
-			foundGate = true;
+			foundDoor = true;
 			moveToDoor = false;
             StartCoroutine(AttackingBase());
 		}

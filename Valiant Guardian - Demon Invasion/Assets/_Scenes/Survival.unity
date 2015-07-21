@@ -4804,7 +4804,7 @@ GameObject:
   - 60: {fileID: 2083743364}
   - 50: {fileID: 2083743365}
   m_Layer: 0
-  m_Name: Base
+  m_Name: Door
   m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4856,16 +4856,15 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2083743361}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .0680416003, y: .77643317}
-      - {x: .173432484, y: .0854502395}
-      - {x: -.238440037, y: -.400764793}
-      - {x: -.344777465, y: .0366486832}
-      - {x: -.29979673, y: .415940374}
+    - - {x: -.0714087486, y: .671845198}
+      - {x: .0223609377, y: -.0540002771}
+      - {x: -.284923494, y: -.400764942}
+      - {x: -.368019193, y: .245824799}
 --- !u!50 &2083743365
 Rigidbody2D:
   serializedVersion: 2

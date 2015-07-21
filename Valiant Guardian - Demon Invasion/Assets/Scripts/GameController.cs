@@ -9,8 +9,17 @@ public class GameController : MonoBehaviour {
     public float xPos;
     public float wavesWait;
     public GameObject Enemy;
+
     public float timeLimit = 180.0f;
     private Text timeLimitText;
+
+    private GameObject preparationPanel;
+
+    void Awake()
+    {
+        preparationPanel = GameObject.Find("PreparationPanel");
+        preparationPanel.SetActive(false);
+    }
 
 	void Start () {
         timeLimitText = GameObject.Find("TimeLimitText").GetComponent<Text>();
@@ -25,6 +34,8 @@ public class GameController : MonoBehaviour {
 		if(timeLimit <= 0) {
 			ScriptableObject.FindObjectOfType<PlayerBase>().PlayerWin();
 		}
+        if (Input.GetKeyDown(KeyCode.T))
+            TooglePrepPanel();
     }
 
     IEnumerator EnemySpawning(){
@@ -33,5 +44,13 @@ public class GameController : MonoBehaviour {
             Instantiate(Enemy, InstantiatePos, Quaternion.identity);
             yield return new WaitForSeconds(wavesWait); //Waiting until wavesWait seconds to spawn next enemy
         }
+    }
+
+    void TooglePrepPanel()
+    {
+        if (preparationPanel.active == false)
+            preparationPanel.SetActive(true);
+        else
+            preparationPanel.SetActive(false);
     }
 }

@@ -14,13 +14,11 @@ public class SkillBtn : MonoBehaviour {
     private Button normSkillBtn;
     private Button ultiSkillBtn;
 
-    void Start()
+    void Awake()
     {
         skillsHolder = transform.GetChild(0).gameObject;
         normSkillBtn = skillsHolder.transform.GetChild(0).GetComponent<Button>();
         ultiSkillBtn = skillsHolder.transform.GetChild(1).GetComponent<Button>();
-        //skillsHolder must be set active in unity editor
-        skillsHolder.SetActive(false);
         normCoolingDown = normCoolDown;
     }
 

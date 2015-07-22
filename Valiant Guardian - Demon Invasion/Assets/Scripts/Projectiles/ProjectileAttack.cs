@@ -5,8 +5,10 @@ public class ProjectileAttack : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.name + "hit");
         if (other.gameObject.tag == "Enemy")
         {
+            Debug.Log("Enemy hit");
             //Projectile hit enemy
             disableProjectileVisulization();
             other.gameObject.GetComponent<Enemy>().Attacked();

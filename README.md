@@ -1,3 +1,3 @@
-# timkeren
+# Valiant Guardian - Demon Invasion
 
-tutorial dipidahkan ke doc Google Drive.
+To see current progress in web unity player. open rom-bar.github.io/timkeren/

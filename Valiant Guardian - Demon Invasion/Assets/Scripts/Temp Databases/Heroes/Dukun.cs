@@ -8,7 +8,7 @@ namespace Assets.Scripts.Temp_Databases.Heroes
     public class Dukun : Heroes
     {
         public Dukun(Int32 experience, bool locked)
-            : base(experience, locked)
+            : base(experience, locked, 2)//dukun ID =2
         {
             preparingData();   
         }

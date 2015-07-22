@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Assets.Scripts.Temp_Databases.Heroes
 {
-    public class Archer : Heroes
+    public class Sniper : Heroes
     {
-        public Archer(Int32 experience, bool locked)
-            : base(experience, locked, 0)//archer ID = 0
+        public Sniper(Int32 experience, bool locked)
+            : base(experience, locked, 1)//sniper ID = 1
         {
             preparingData();
         }

@@ -8,7 +8,7 @@ public class DataPlayer {
 	//instance variable for main access to this class, singleton class
 	private static DataPlayer instance;
     private int coin;
-    private bool[] lastHeroUsed;
+    private int[] lastHeroUsed;
 
 	private DataPlayer () {
 		//in every Application Load, this data player will be load and check to SaveData. is there any save data or not
@@ -18,16 +18,14 @@ public class DataPlayer {
 			//set coin from loaded data
 			coin = instance.coin;
 			//set last hero used from loaded data
-            /* because still experimentation , this line below will not used for now
             if (instance.lastHeroUsed != null)
 			    lastHeroUsed = instance.lastHeroUsed;
             else
-                lastHeroUsed = new bool[6] { false, false, false, false, false, false };
-             */
+                lastHeroUsed = new int[4] { 0,0,0,0 };
 		}else{
 			//if there are no save data , then 
 			coin = 0;
-			//lastHeroUsed = new bool[6]{false,false,false,false,false,false};
+            lastHeroUsed = new int[4] { 0, 0, 0, 0 };
 		}
 	}
 
@@ -50,9 +48,8 @@ public class DataPlayer {
             SaveData.Save(saveDataFileName);
         } 
     }
-    /*
-    public bool[] LastHeroUsed { 
-        //get last hero used from local database
+    public int[] LastHeroUsed { 
+        //Load last hero used from local database
         get{
             return lastHeroUsed;        
         }
@@ -60,8 +57,12 @@ public class DataPlayer {
         set {
             //use this to save current last hero used to local database.
             lastHeroUsed = value;
-            //SaveData.Save(saveDataFileName);
+            //un-Comment below debug to see selected hero
+           /*foreach(int e in lastHeroUsed){
+                Debug.Log("hehe " + e);
+            }*/
+            SaveData.Save(saveDataFileName);
         }
-    }*/
+    }
 
 }

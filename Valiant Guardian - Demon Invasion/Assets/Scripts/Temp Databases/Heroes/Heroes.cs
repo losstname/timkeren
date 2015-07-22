@@ -14,12 +14,16 @@ namespace Assets.Scripts.Temp_Databases.Heroes
         protected bool locked;
         protected int price;
         protected Int32 experience;
+        protected int heroesID;
 
-        public Heroes(Int32 experience, bool locked)
+        public Heroes(Int32 experience, bool locked, int heroesID)
         {
             this.experience = experience;
             this.locked = locked;
+            this.heroesID = heroesID;
         }
+
+        public int HeroesID { get; private set; }
 
         public AttackModel MainAttack { get; private set; }
         public AttackModel SkillAttack { get; private set; }

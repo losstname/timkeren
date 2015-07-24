@@ -6,6 +6,8 @@ using System.Collections;
 //do not rename the panel inside this canvas
 public class StageSelection : MonoBehaviour {
 
+    private CharacterList characterList;
+
     public Sprite[] Stages;         //Collections of stage image
 
     private GameObject StageListPanel;
@@ -14,13 +16,19 @@ public class StageSelection : MonoBehaviour {
     private int topIndex;
     public int bottomIndex;
     public float rangePerStagesBoard = 160f;
+
+    private GameObject LastUsedHeroPanel;
+
     void Awake()
     {
+        characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
+        LastUsedHeroPanel = gameObject.transform.GetChild(0).FindChild("StageHistoryPanel").FindChild("LastUsedHeroPanel").gameObject;
         //to get stage list panel
         StageListPanel = gameObject.transform.GetChild(0).FindChild("StageListPanel").gameObject;
         //to get selected stage panel
         SelectedStagePanel = gameObject.transform.GetChild(0).FindChild("SelectedStagePanel").gameObject;
         StageListImageComp = new Image[StageListPanel.transform.GetChild(0).childCount];
+        setLastUsedHeroPanel();
         //set the initial stage list
         initStagesList();
         initStagePreview();
@@ -33,6 +41,15 @@ public class StageSelection : MonoBehaviour {
         for (int i = 0; i < StageListImageComp.Length; i++)
         {
             StageListPanel.transform.GetChild(0).GetChild(i).GetChild(0).GetChild(0).GetComponent<Image>().sprite = Stages[i];
+        }
+    }
+
+    void setLastUsedHeroPanel()
+    {
+        int[] lastHeroes = DataPlayer.getInstance().LastHeroUsed;
+        for (int i=0; i < 4; i++)
+        {
+            LastUsedHeroPanel.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesSprite[lastHeroes[i]];
         }
     }
 

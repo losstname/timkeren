@@ -39,7 +39,7 @@ public class CharacterSelection : MonoBehaviour {
         useFourHeroesPromptGO.SetActive(false);
 
         //initialize selected hero
-       listSelectedHero = new int[4] { 0,0,0,0 };
+        listSelectedHero = new int[4] { 0,0,0,0 };
         //Todo -->  load last selected hero
         //set active hero automatically based on this selected hero
 

@@ -62,10 +62,6 @@ public class Enemy : MonoBehaviour {
 				gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
 			}
 		}
-		if(transform.position == playerBase.position && gameObject.tag != "DeadEnemy"){
-			ScriptableObject.FindObjectOfType<PlayerBase>().AttackPlayer();
-            Death();
-		}
 	}
 
     void disableBeingTargeted()
@@ -86,6 +82,14 @@ public class Enemy : MonoBehaviour {
 			moveToDoor = false;
             StartCoroutine(AttackingBase());
 		}
+
+        //When reach the back side of the wall (PlayerBase Object)
+        //Reduce the enemies limit
+        if (other.tag == "PlayerBase" && gameObject.tag != "DeadEnemy")
+        {
+            other.GetComponent<PlayerBase>().AttackBase();
+            Death();
+        }
     }
 
     IEnumerator AttackingBase()

@@ -4,31 +4,31 @@ using UnityEngine.UI;
 
 public class PlayerBase : MonoBehaviour
 {
-	private Text playerHp;
-	public int hpPlayer = 5 ;
+	private Text enemyLimitText;
+	public int enemyLimit = 5 ;
 
 	void Awake(){
-		playerHp = GameObject.Find("PlayerHPText").GetComponent<Text>();
-		playerHp.text = "Player HP: " + hpPlayer;
+        enemyLimitText = GameObject.Find("EnemyLimitText").GetComponent<Text>();
+		enemyLimitText.text = "Enemy Limit : " + enemyLimit;
 	}
 
-	public void AttackPlayer(){		
-		hpPlayer--;
-		playerHp.text = "Player HP: " + hpPlayer;
-		if(hpPlayer <=0){
-			playerHp.text = "You Loseee";
+	public void AttackBase(){
+		enemyLimit--;
+		enemyLimitText.text = "Enemy Limit : " + enemyLimit;
+		if(enemyLimit <=0){
+			enemyLimitText.text = "You Loseee";
 			Time.timeScale = 0;
 		}
 	}
 
 	public bool isAttackAble(){
-		return hpPlayer > 0 ;
+		return enemyLimit > 0 ;
 	}
 
 	public void PlayerWin ()
 	{
-		playerHp = GameObject.Find("PlayerHPText").GetComponent<Text>();
-		playerHp.text = "You Wiiiin";
+        enemyLimitText = GameObject.Find("EnemyLimitText").GetComponent<Text>();
+		enemyLimitText.text = "You Wiiiin";
 		Time.timeScale = 0;
 	}
 }

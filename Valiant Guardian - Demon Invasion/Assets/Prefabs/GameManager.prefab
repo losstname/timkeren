@@ -52,7 +52,7 @@ MonoBehaviour:
   EnemiesSprite: []
   HeroesThumbnail:
   - {fileID: 21300000, guid: d23e3988b085b5d479d39e57544fde92, type: 3}
-  - {fileID: 21300000, guid: 78b08b329f273b64a99fccec705d186f, type: 3}
+  - {fileID: 21300000, guid: ea1a4d5d8d1d2f14f85ba03f9ea0e105, type: 3}
   - {fileID: 21300000, guid: 4e64f2e9075d2d0428881de1e84aaffe, type: 3}
   - {fileID: 21300000, guid: 78b08b329f273b64a99fccec705d186f, type: 3}
   - {fileID: 21300000, guid: 24b5fa359eb8f8446b5300714c4c8e5c, type: 3}

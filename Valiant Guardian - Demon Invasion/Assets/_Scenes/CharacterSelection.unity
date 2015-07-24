@@ -1089,22 +1089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f17620e6929c7a45a37833cca9d62ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeroesThumb:
-  - {fileID: 21300000, guid: 4e64f2e9075d2d0428881de1e84aaffe, type: 3}
-  - {fileID: 21300000, guid: d23e3988b085b5d479d39e57544fde92, type: 3}
-  - {fileID: 21300000, guid: 24b5fa359eb8f8446b5300714c4c8e5c, type: 3}
-  - {fileID: 21300000, guid: 701e49bffc4beac4c89faca76a3ac6be, type: 3}
-  - {fileID: 21300000, guid: 78b08b329f273b64a99fccec705d186f, type: 3}
-  - {fileID: 21300000, guid: ea1a4d5d8d1d2f14f85ba03f9ea0e105, type: 3}
-  EnemiesThumb: []
-  Heroes:
-  - {fileID: 21300000, guid: 644e3b89d59eb4c41a33c0360b464c19, type: 3}
-  - {fileID: 21300000, guid: 2e79d74918cd4c84e84fcab6c5f30b02, type: 3}
-  - {fileID: 21300000, guid: a5234bdef6b0e7940975c8ad26b6e5d3, type: 3}
-  - {fileID: 21300000, guid: de7779310a35a2141afaa8e297cf4f02, type: 3}
-  - {fileID: 21300000, guid: 6b4a674b141b75649adb67fb62c54ce1, type: 3}
-  - {fileID: 21300000, guid: 397d1039aa4fc5c4aababb8e0ced88a0, type: 3}
-  Enemies: []
 --- !u!1 &812379347
 GameObject:
   m_ObjectHideFlags: 0

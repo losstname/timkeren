@@ -7,11 +7,7 @@ using System;
 //do not rename the panel inside this canvas
 public class CharacterSelection : MonoBehaviour {
 
-    public Sprite[] HeroesThumb;    //face thumbnail for listing
-    public Sprite[] EnemiesThumb;   //face thumbnail for listing
-
-    public Sprite[] Heroes;         //full body image for preview
-    public Sprite[] Enemies;        //full body image for preview
+    private CharacterList characterList;
 
     private GameObject CharacterListPanel;
     private GameObject SelectedHeroPanel;
@@ -26,6 +22,7 @@ public class CharacterSelection : MonoBehaviour {
 
     void Awake()
     {
+        characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
         //to get character list panel
         CharacterListPanel = gameObject.transform.GetChild(0).FindChild("CharacterListPanel").gameObject;
         //to get selected hero panel
@@ -50,9 +47,9 @@ public class CharacterSelection : MonoBehaviour {
 
     void initHeroesList()
     {
-        for (int i = 0; i < HeroesThumb.Length; i++)
+        for (int i = 0; i < characterList.HeroesThumbnail.Length; i++)
         {   //changing the sprite as array defined
-            CharacterListPanel.transform.GetChild(i).GetChild(0).GetChild(0).GetComponent<Image>().sprite = HeroesThumb[i];
+            CharacterListPanel.transform.GetChild(i).GetChild(0).GetChild(0).GetComponent<Image>().sprite = characterList.HeroesThumbnail[i];
         }
     }
 
@@ -69,7 +66,7 @@ public class CharacterSelection : MonoBehaviour {
         {
             if (HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled == false)
             {
-                HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().sprite = Heroes[selectedHero];
+                HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
                 HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled = true;
                 //set current selected hero to new index
                 listSelectedHero[i] = selectedHero;
@@ -91,13 +88,13 @@ public class CharacterSelection : MonoBehaviour {
     void initHeroPreview()
     {
         //set the first heroes in array as default preview
-        SelectedHeroPanel.transform.GetChild(0).GetComponent<Image>().sprite = Heroes[0];
+        SelectedHeroPanel.transform.GetChild(0).GetComponent<Image>().sprite = characterList.HeroesSprite[0];
     }
 
     public void setPreviewCharacterToThis(int index)
     {
         //index sent by button's parameter
-        SelectedHeroPanel.transform.GetChild(0).GetComponent<Image>().sprite = Heroes[index];
+        SelectedHeroPanel.transform.GetChild(0).GetComponent<Image>().sprite = characterList.HeroesSprite[index];
     }
 
     public void fourHeroUsedValidate()

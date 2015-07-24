@@ -23,7 +23,7 @@ public class DataPlayer {
             else
                 lastHeroUsed = new int[4] { 0,0,0,0 };
 		}else{
-			//if there are no save data , then 
+			//if there are no save data , then
 			coin = 0;
             lastHeroUsed = new int[4] { 0, 0, 0, 0 };
 		}
@@ -40,18 +40,18 @@ public class DataPlayer {
         //get coin used from local database
         get {
             return coin;
-        } 
+        }
 
         set{
             //use this to save current coin to local database.
             coin = value;
             SaveData.Save(saveDataFileName);
-        } 
+        }
     }
-    public int[] LastHeroUsed { 
+    public int[] LastHeroUsed {
         //Load last hero used from local database
         get{
-            return lastHeroUsed;        
+            return lastHeroUsed;
         }
 
         set {

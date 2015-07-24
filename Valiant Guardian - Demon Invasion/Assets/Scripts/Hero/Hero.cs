@@ -6,7 +6,7 @@ public class Hero : MonoBehaviour
 
     public float DistanceFromHero;
     public float protectionRadius = 10f;
-    //    public float nearRadius = 3f;
+    //public float nearRadius = 3f;
 
     public float normSkillCoolDown = 5f;
     public float ultiSkillCooldown = 20f;

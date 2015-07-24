@@ -12,21 +12,6 @@ public class SkillArcher : MonoBehaviour {
         hero = GetComponent<Hero>();
     }
 
-    public void heroSkill()
-    {
-        if (hero.anim != null)
-            hero.anim.SetTrigger(hero.useSkillHash);
-        //reset skill button cooldown
-        GameObject.Find("SkillPanel").transform.GetChild(hero.SkillBoardNumber).GetComponent<SkillBtn>().resetNormCoolingDown();
-    }
-
-    public void heroUltiSkill() {
-        if (hero.anim != null)
-            hero.anim.SetTrigger(hero.useUltiSkillHash);
-        //reset skill button cooldown
-        GameObject.Find("SkillPanel").transform.GetChild(hero.SkillBoardNumber).GetComponent<SkillBtn>().resetUltiCoolingDown();
-    }
-
     public void normSkillArcher()
     {
         StartCoroutine(rapidArrow());

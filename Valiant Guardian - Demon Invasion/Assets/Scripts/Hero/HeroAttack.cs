@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//Put on the hero
 public class HeroAttack : MonoBehaviour
 {
 
@@ -17,7 +17,7 @@ public class HeroAttack : MonoBehaviour
 
     void Update()
     {
-        if (hero.DistanceFromHero <= hero.protectionRadius)
+        if (hero.DistanceFromHero <= hero.protectionRadius && hero.Enemies != null)
         {
             //getting the anim state
             AnimatorStateInfo stateInfo = hero.anim.GetCurrentAnimatorStateInfo(0);

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//Put on the hero
 public class Hero : MonoBehaviour
 {
 
@@ -32,9 +32,11 @@ public class Hero : MonoBehaviour
     {
         ProjectilePosTr = transform.GetChild(0);
         anim = GetComponent<Animator>();
-        //set skill cool down to skillboard
-        GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setNormSkillCoolDown(normSkillCoolDown);
-        GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setUltiSkillCoolDown(ultiSkillCooldown);
+        //set skill cool down to skill trigger
+        GetComponent<HeroSkillTrigger>().setNormalSkillCoolDown(normSkillCoolDown);
+        GetComponent<HeroSkillTrigger>().setUltimateSkillCoolDown(ultiSkillCooldown);
+        //GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setNormSkillCoolDown(normSkillCoolDown);
+        //GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setUltiSkillCoolDown(ultiSkillCooldown);
         coolDown = idleTime;
     }
 
@@ -43,7 +45,7 @@ public class Hero : MonoBehaviour
         if (Enemies == null) {
             autoChangeEnemy();
         }
-        else {
+        else if(Enemies != null) {
             DistanceFromHero = Vector3.Distance(GameObject.FindGameObjectWithTag("Enemy").transform.position, transform.position);
         }
     }

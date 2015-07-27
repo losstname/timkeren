@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
     public float y2Pos;
     public float xPos;
     public float wavesWait;
-    public GameObject Enemy;
+    public GameObject[] Enemies;
 
     public float timeLimit = 180.0f;
     private float timeLeft;
@@ -52,7 +52,8 @@ public class GameController : MonoBehaviour {
     IEnumerator EnemySpawning(){
 		while(timeLeft > 0){
             Vector3 InstantiatePos = new Vector3(xPos, Random.Range(y1Pos, y2Pos), 0f); //Set spawning position
-            Instantiate(Enemy, InstantiatePos, Quaternion.identity);
+            int EnemyToSpawnIndex = Random.Range(0, Enemies.Length);
+            Instantiate(Enemies[EnemyToSpawnIndex], InstantiatePos, Quaternion.identity);
             yield return new WaitForSeconds(wavesWait); //Waiting until wavesWait seconds to spawn next enemy
         }
     }

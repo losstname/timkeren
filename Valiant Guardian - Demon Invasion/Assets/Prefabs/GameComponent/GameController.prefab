@@ -58,7 +58,9 @@ MonoBehaviour:
   y2Pos: -3
   xPos: 7
   wavesWait: 2
-  Enemy: {fileID: 151198, guid: 26e6a66cbc12c9044abadb00c1d27fb5, type: 2}
+  Enemies:
+  - {fileID: 151198, guid: 26e6a66cbc12c9044abadb00c1d27fb5, type: 2}
+  - {fileID: 167876, guid: 5197fd554cf3395488151afac132ce60, type: 2}
   timeLimit: 180
   preparationTime: 60
 --- !u!1001 &100100000

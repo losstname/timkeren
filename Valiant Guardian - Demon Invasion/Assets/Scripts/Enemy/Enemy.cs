@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour {
 	private bool foundDoor = false;
 
     public float CoolDown = 2f;
-//	public int hitPoints = 10;
 
     private Animator anim;
     private int isDeadHash = Animator.StringToHash("isDead");
@@ -28,7 +27,7 @@ public class Enemy : MonoBehaviour {
 	public int HPDecrease;
 	private int attackX;
 	private int defenseY;
-	public int ImphitPoints = 200;
+    public int hitPoints = 200;
 
 	void Start(){
 		baseDoor = GameObject.FindGameObjectWithTag ("Base").transform;
@@ -115,8 +114,8 @@ public class Enemy : MonoBehaviour {
 		attackX = Random.Range(1,20);
 		defenseY = Random.Range(31, 80);
 		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((ImpDefense *defenseY) / 100);
-		ImphitPoints -= HPDecrease;
-		if (ImphitPoints <= 0)
+		hitPoints -= HPDecrease;
+		if (hitPoints <= 0)
 		{
 			Death();
             disableBeingTargeted();

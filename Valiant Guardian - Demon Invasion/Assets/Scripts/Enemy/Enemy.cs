@@ -32,6 +32,8 @@ public class Enemy : MonoBehaviour {
     private Transform dmgFloaterSpawnPoint;
     public GameObject dmgFloaterGO;
 
+    private HealthBar healthBar;
+
 	void Start(){
 		baseDoor = GameObject.FindGameObjectWithTag ("Base").transform;
         baseDoorPositionOffset = new Vector3(0.0f, 0.6f, 0.0f);
@@ -41,6 +43,7 @@ public class Enemy : MonoBehaviour {
         sightEnd = transform.FindChild("EndSight");
         enemySpriteRenderer = GetComponent<SpriteRenderer>();
         dmgFloaterSpawnPoint = transform.FindChild("DmgFloaterSpawnPoint");
+        healthBar = transform.FindChild("HealthBar").GetComponent<HealthBar>();
 	}
 
 	void Update () {
@@ -123,6 +126,8 @@ public class Enemy : MonoBehaviour {
 		hitPoints -= HPDecrease;
         //Spawn damage floater
         SpawnDamageFloater(HPDecrease);
+        //set health bar
+        healthBar.setHitPoints(HPDecrease);
 		if (hitPoints <= 0)
 		{
 			Death();

@@ -1,23 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SkillArcher : MonoBehaviour {
+public class SkillDukun : MonoBehaviour {
 
     public GameObject normProjectiles;
     public GameObject ultiProjectiles;
 
     private Hero hero;
 
-    void Awake() {
+    void Awake()
+    {
         hero = GetComponent<Hero>();
     }
 
     public void normalSkill()
     {
-        StartCoroutine(rapidArrow());
+        StartCoroutine(bulletBurst());
     }
 
-    IEnumerator rapidArrow()
+    IEnumerator bulletBurst()
     {
         for (int i = 0; i < 3; i++)
         {
@@ -30,7 +31,8 @@ public class SkillArcher : MonoBehaviour {
         }
     }
 
-    public void ultimateSkill() {
+    public void ultimateSkill()
+    {
         spawnUltiProjectile();
     }
 

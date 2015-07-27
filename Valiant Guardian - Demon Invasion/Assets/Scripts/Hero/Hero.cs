@@ -10,7 +10,6 @@ public class Hero : MonoBehaviour
 
     public float normSkillCoolDown = 5f;
     public float ultiSkillCooldown = 20f;
-    public int SkillBoardNumber;
 
     public GameObject Enemies;
 
@@ -27,6 +26,7 @@ public class Hero : MonoBehaviour
     public int useSkillHash = Animator.StringToHash("useSkill");
     public int useUltiSkillHash = Animator.StringToHash("useUltiSkill");
     public int idleStateHash = Animator.StringToHash("Base Layer.Archer-Idle-Anim");
+    public string heroIdleAnimName;
 
     void Start()
     {
@@ -35,9 +35,8 @@ public class Hero : MonoBehaviour
         //set skill cool down to skill trigger
         GetComponent<HeroSkillTrigger>().setNormalSkillCoolDown(normSkillCoolDown);
         GetComponent<HeroSkillTrigger>().setUltimateSkillCoolDown(ultiSkillCooldown);
-        //GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setNormSkillCoolDown(normSkillCoolDown);
-        //GameObject.Find("SkillPanel").transform.GetChild(SkillBoardNumber).GetComponent<SkillBtn>().setUltiSkillCoolDown(ultiSkillCooldown);
         coolDown = idleTime;
+        idleStateHash = Animator.StringToHash("Base Layer." + heroIdleAnimName);
     }
 
     void Update()

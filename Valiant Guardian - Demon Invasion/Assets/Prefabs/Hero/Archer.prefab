@@ -79,9 +79,9 @@ GameObject:
   - 95: {fileID: 9591958}
   - 114: {fileID: 11424228}
   - 114: {fileID: 11408174}
+  - 114: {fileID: 11453072}
   - 114: {fileID: 11417702}
   - 114: {fileID: 11487806}
-  - 114: {fileID: 11453072}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Hero
@@ -247,7 +247,6 @@ MonoBehaviour:
   protectionRadius: 15
   normSkillCoolDown: 5
   ultiSkillCooldown: 20
-  SkillBoardNumber: 0
   Enemies: {fileID: 0}
   ProjectilePosTr: {fileID: 0}
   anim: {fileID: 0}
@@ -258,6 +257,7 @@ MonoBehaviour:
   useSkillHash: 1576347820
   useUltiSkillHash: 1186065476
   idleStateHash: 1146448895
+  heroIdleAnimName: Archer-Idle-Anim
 --- !u!114 &11430942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,7 +354,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300014, guid: 2e79d74918cd4c84e84fcab6c5f30b02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e79d74918cd4c84e84fcab6c5f30b02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21288080
 SpriteRenderer:

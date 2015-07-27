@@ -49,9 +49,9 @@ GameObject:
   - 95: {fileID: 9529508}
   - 114: {fileID: 11441826}
   - 114: {fileID: 11452298}
-  - 114: {fileID: 11418926}
-  - 114: {fileID: 11490988}
   - 114: {fileID: 11440758}
+  - 114: {fileID: 11418926}
+  - 114: {fileID: 11433292}
   m_Layer: 0
   m_Name: Sniper
   m_TagString: Hero
@@ -201,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 152812}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 603be3684993dc94a81627b434a944c1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7af9c2433e478b841bc55c4d608a4342, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -231,6 +231,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac3a30117c502f4fba59c4ddb4652c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11433292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e33b34d4a07dca47b47279b858e8096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normProjectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+  ultiProjectiles: {fileID: 180930, guid: 7dd20129556ba38429bf6fa82f6c6241, type: 2}
 --- !u!114 &11440758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,7 +270,6 @@ MonoBehaviour:
   protectionRadius: 10
   normSkillCoolDown: 5
   ultiSkillCooldown: 20
-  SkillBoardNumber: 1
   Enemies: {fileID: 0}
   ProjectilePosTr: {fileID: 421844}
   anim: {fileID: 0}
@@ -268,6 +280,7 @@ MonoBehaviour:
   useSkillHash: 1576347820
   useUltiSkillHash: 1186065476
   idleStateHash: 1146448895
+  heroIdleAnimName: Sniper-Idle-Anim
 --- !u!114 &11452298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,19 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dcd1c9933fbdd48b0b77350058532c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11490988
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a4b3fce5e000ef4694b7f6e38393696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normProjectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
-  ultiProjectiles: {fileID: 180930, guid: 7dd20129556ba38429bf6fa82f6c6241, type: 2}
 --- !u!212 &21251490
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -388,7 +388,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: normProjectiles
+      value: 
+      objectReference: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ultiProjectiles
+      value: 
+      objectReference: {fileID: 180930, guid: 7dd20129556ba38429bf6fa82f6c6241, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 152812}

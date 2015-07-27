@@ -11,9 +11,9 @@ GameObject:
   - 212: {fileID: 21284556}
   - 61: {fileID: 6167044}
   - 50: {fileID: 5094428}
+  - 82: {fileID: 8287758}
   - 114: {fileID: 11411924}
   - 114: {fileID: 11441270}
-  - 82: {fileID: 8287758}
   - 114: {fileID: 11444920}
   m_Layer: 0
   m_Name: BombArrow

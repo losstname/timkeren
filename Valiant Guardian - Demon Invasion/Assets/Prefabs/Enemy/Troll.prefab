@@ -15,6 +15,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &121408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 484166}
+  m_Layer: 0
+  m_Name: DmgFloaterSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &167876
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,12 +68,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1758287, y: -1.88564026, z: 0}
+  m_LocalPosition: {x: 3.96753287, y: -2.96327424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407244}
+  - {fileID: 484166}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &484166
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 427396}
+  m_RootOrder: 1
 --- !u!61 &6103178
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -101,8 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .5
-  sightStart: {fileID: 427396}
-  sightEnd: {fileID: 407244}
   CoolDown: 2
   fadeSpeed: 1
   fadeDelay: 2
@@ -110,6 +136,7 @@ MonoBehaviour:
   ImpDefense: 70
   HPDecrease: 0
   hitPoints: 200
+  dmgFloaterGO: {fileID: 159370, guid: 8513563fa0a8be1449979e551e8ee3e9, type: 2}
 --- !u!212 &21299156
 SpriteRenderer:
   m_ObjectHideFlags: 1

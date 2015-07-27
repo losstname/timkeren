@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour {
 	private Transform baseDoor;
     private Vector3 baseDoorPositionOffset;
 	private Transform playerBase;
-	public Transform sightStart, sightEnd;
+	private Transform sightStart, sightEnd;
 	private bool moveToDoor = false;
 	private bool foundDoor = false;
 
@@ -29,12 +29,18 @@ public class Enemy : MonoBehaviour {
 	private int defenseY;
     public int hitPoints = 200;
 
+    private Transform dmgFloaterSpawnPoint;
+    public GameObject dmgFloaterGO;
+
 	void Start(){
 		baseDoor = GameObject.FindGameObjectWithTag ("Base").transform;
         baseDoorPositionOffset = new Vector3(0.0f, 0.6f, 0.0f);
 		playerBase = GameObject.Find ("PlayerBase").transform;
         anim = GetComponent<Animator>();
+        sightStart = this.transform;
+        sightEnd = transform.FindChild("EndSight");
         enemySpriteRenderer = GetComponent<SpriteRenderer>();
+        dmgFloaterSpawnPoint = transform.FindChild("DmgFloaterSpawnPoint");
 	}
 
 	void Update () {
@@ -115,12 +121,20 @@ public class Enemy : MonoBehaviour {
 		defenseY = Random.Range(31, 80);
 		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((ImpDefense *defenseY) / 100);
 		hitPoints -= HPDecrease;
+        //Spawn damage floater
+        SpawnDamageFloater(HPDecrease);
 		if (hitPoints <= 0)
 		{
 			Death();
             disableBeingTargeted();
 		}
 	}
+
+    void SpawnDamageFloater(float dmg)
+    {
+        dmgFloaterGO.GetComponent<TextMesh>().text = dmg.ToString();
+        Instantiate(dmgFloaterGO, dmgFloaterSpawnPoint.position, dmgFloaterSpawnPoint.rotation);
+    }
 
     void Death()
     {

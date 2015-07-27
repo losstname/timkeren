@@ -21,16 +21,16 @@ public class SkillArcher : MonoBehaviour {
     {
         for (int i = 0; i < 3; i++)
         {
-            //Set projectile object to look at enemy
-            //Projectile object is a child of hero object
-            Quaternion direction = Quaternion.LookRotation(hero.Enemies.transform.position - hero.ProjectilePosTr.position, hero.ProjectilePosTr.TransformDirection(Vector3.up));
-            hero.ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
+            //make sure the projectile aiming at enemy
+            hero.aimAtEnemy();
             spawnNormProjectile();
             yield return new WaitForSeconds(0.05f);
         }
     }
 
     public void ultimateSkill() {
+        //make sure the projectile aiming at enemy
+        hero.aimAtEnemy();
         spawnUltiProjectile();
     }
 

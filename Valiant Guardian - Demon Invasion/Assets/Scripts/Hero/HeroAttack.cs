@@ -37,11 +37,6 @@ public class HeroAttack : MonoBehaviour
 
     public void attackEnemy()
     {
-        //Set projectile object to look at enemy
-        //Projectile object is a child of hero object
-        Quaternion direction = Quaternion.LookRotation(hero.Enemies.transform.position - hero.ProjectilePosTr.position, hero.ProjectilePosTr.TransformDirection(Vector3.up));
-        hero.ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
-
         //change hero animation to attacking animation
         if (hero.anim != null)
             hero.anim.SetTrigger(hero.isAttackingHash);
@@ -51,6 +46,8 @@ public class HeroAttack : MonoBehaviour
 
     public void spawnProjectile()
     {
+        //make sure the projectile aiming at enemy
+        hero.aimAtEnemy();
         //spawning projectile
         //called from animation
         Instantiate(Projectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);

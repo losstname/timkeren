@@ -25,7 +25,7 @@ public class Hero : MonoBehaviour
     public int isAttackingHash = Animator.StringToHash("isAttacking");
     public int useSkillHash = Animator.StringToHash("useSkill");
     public int useUltiSkillHash = Animator.StringToHash("useUltiSkill");
-    public int idleStateHash = Animator.StringToHash("Base Layer.Archer-Idle-Anim");
+    public int idleStateHash;
     public string heroIdleAnimName;
 
     void Start()
@@ -64,5 +64,13 @@ public class Hero : MonoBehaviour
         //default anim scale speed is 100
         anim.speed = speed / speedScaleRatio;
         idleTime = idleTime / (speed / speedScaleRatio);
+    }
+
+    public void aimAtEnemy()
+    {
+        //Set projectile object to look at enemy
+        //Projectile object is a child of hero object
+        Quaternion direction = Quaternion.LookRotation(Enemies.transform.position - ProjectilePosTr.position, ProjectilePosTr.TransformDirection(Vector3.up));
+        ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
     }
 }

@@ -127,7 +127,7 @@ public class Enemy : MonoBehaviour {
         //Spawn damage floater
         SpawnDamageFloater(HPDecrease);
         //set health bar
-        healthBar.setHitPoints(HPDecrease);
+        healthBar.OnAttacked(HPDecrease);
 		if (hitPoints <= 0)
 		{
 			Death();

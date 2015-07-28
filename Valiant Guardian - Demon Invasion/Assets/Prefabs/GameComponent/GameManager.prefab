@@ -40,7 +40,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571a4cdecd0395343a80936be1e94724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeroesPrefab: []
+  HeroesPrefab:
+  - {fileID: 185694, guid: 9190dbb652121fd4b801a1a1a8853b5d, type: 2}
+  - {fileID: 152812, guid: 87419dc28679b2c438aea737b213b8b6, type: 2}
+  - {fileID: 194816, guid: 81d125e7b786d454497c9de4e80f078f, type: 2}
+  - {fileID: 132674, guid: 4cd9a8796c7588e4f86b1b642fe5dd35, type: 2}
   EnemiesPrefab: []
   HeroesSprite:
   - {fileID: 21300000, guid: 2e79d74918cd4c84e84fcab6c5f30b02, type: 3}

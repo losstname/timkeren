@@ -4,6 +4,8 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
+    CharacterList characterList;
+
     public float y1Pos;
     public float y2Pos;
     public float xPos;
@@ -21,11 +23,13 @@ public class GameController : MonoBehaviour {
 
     void Awake()
     {
+        characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
         preparationPanel = GameObject.Find("PreparationPanel");
         preparationPanel.SetActive(false);
     }
 
 	void Start () {
+        SpawnHeroes();
         timeLeft = timeLimit;
         timeLeftText = GameObject.Find("TimeLeftText").GetComponent<Text>();
         timeLeftText.text = timeLeft.ToString();
@@ -47,6 +51,16 @@ public class GameController : MonoBehaviour {
             if(GameObject.FindGameObjectWithTag("Enemy")==null && isPreparationTime==false)
                 StartCoroutine(PreparationTime());
 		}
+    }
+
+    private void SpawnHeroes(){
+        GameObject heroesHolder = GameObject.Find("Hero");
+        int[] heroesOrder = DataPlayer.getInstance().LastHeroUsed;
+        for (int i = 0; i < heroesHolder.transform.childCount; i++)
+        {
+            GameObject tempHero = Instantiate(characterList.HeroesPrefab[heroesOrder[i]], heroesHolder.transform.GetChild(i).position, Quaternion.identity) as GameObject;
+            tempHero.transform.parent = heroesHolder.transform.GetChild(i).transform;
+        }
     }
 
     IEnumerator EnemySpawning(){

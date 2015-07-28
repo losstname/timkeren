@@ -9,9 +9,9 @@ public class CharacterSelection : MonoBehaviour {
 
     private CharacterList characterList;
 
-    private GameObject CharacterListPanel;
-    private GameObject SelectedHeroPanel;
-    private GameObject HeroesPositionPanel;
+    private GameObject CharacterImagesHolder;
+    private GameObject PreviewHeroPanel;
+    private GameObject HeroesPlacementHolder;
     private GameObject useFourHeroesPromptGO;
 
     private int selectedHero;
@@ -19,16 +19,24 @@ public class CharacterSelection : MonoBehaviour {
     //used only to temporary save CURRENT selected hero. not hero saved before.
     //for saved hero before , get data from Data player
     private int[] listSelectedHero;
+    private RectTransform selectedHeroFrameTr;
+    public float frameMovementSpeed = 1f;
+    private bool frameCanMove = true;
 
     void Awake()
     {
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
+
         //to get character list panel
-        CharacterListPanel = gameObject.transform.GetChild(0).FindChild("CharacterListPanel").gameObject;
+        CharacterImagesHolder = GameObject.Find("CharactersImages").gameObject;
+        selectedHeroFrameTr = GameObject.Find("SelectedFrame").GetComponent<RectTransform>();
+
         //to get selected hero panel
-        SelectedHeroPanel = gameObject.transform.GetChild(0).FindChild("SelectedHeroPanel").gameObject;
+        PreviewHeroPanel = GameObject.Find("PreviewHeroPanel").gameObject;
+
         //to get heroes position panel
-        HeroesPositionPanel = gameObject.transform.GetChild(0).FindChild("HeroesPositionPanel").gameObject;
+        HeroesPlacementHolder = GameObject.Find("HeroesHolder").gameObject;
+
         //set the initial character list
         //get the use 4 heroes prompt and disable it
         useFourHeroesPromptGO = GameObject.Find("useFourHeroesPromptBox");
@@ -40,6 +48,7 @@ public class CharacterSelection : MonoBehaviour {
         //Todo -->  load last selected hero
         //set active hero automatically based on this selected hero
 
+        selectedHero = 0;
         initHeroesList();
         initHeroPreview();
         initHeroesPositioning();
@@ -47,34 +56,35 @@ public class CharacterSelection : MonoBehaviour {
 
     void initHeroesList()
     {
-        for (int i = 0; i < characterList.HeroesThumbnail.Length; i++)
+        for (int i = 0; i < CharacterImagesHolder.transform.childCount; i++)
         {   //changing the sprite as array defined
-            CharacterListPanel.transform.GetChild(i).GetChild(0).GetChild(0).GetComponent<Image>().sprite = characterList.HeroesThumbnail[i];
+            CharacterImagesHolder.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesThumbnail[i];
         }
     }
 
     void initHeroesPositioning()
     {
-        for (int i = 0; i < 4; i++)
+        //disable all empty sprite
+        for (int i = 0; i < HeroesPlacementHolder.transform.childCount; i++)
         {
-            HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled = false;
+            HeroesPlacementHolder.transform.GetChild(i).GetComponent<Image>().enabled = false;
         }
     }
 
     public void setHeroPosition() {
         for (int i = 0; i < 4; i++)
         {
-            if (HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled == false)
+            if (HeroesPlacementHolder.transform.GetChild(i).GetComponent<Image>().enabled == false)
             {
-                HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
-                HeroesPositionPanel.transform.GetChild(i).GetComponent<Image>().enabled = true;
+                HeroesPlacementHolder.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
+                HeroesPlacementHolder.transform.GetChild(i).GetComponent<Image>().enabled = true;
                 //set current selected hero to new index
                 listSelectedHero[i] = selectedHero;
                 break;
             }
         }
         //check if the fourth hero has been set, of course it is third index
-        if (HeroesPositionPanel.transform.GetChild(3).GetComponent<Image>().enabled == true) {
+        if (HeroesPlacementHolder.transform.GetChild(HeroesPlacementHolder.transform.childCount-1).GetComponent<Image>().enabled == true) {
             isFourHeroesSet = true;
         }
     }
@@ -85,16 +95,57 @@ public class CharacterSelection : MonoBehaviour {
         setPreviewCharacterToThis(index);
     }
 
+    public void selectNextHero()
+    {
+        if (selectedHero + 1 < CharacterImagesHolder.transform.childCount && frameCanMove)
+        {
+            Vector3 TargetPosition = CharacterImagesHolder.transform.GetChild(selectedHero + 1).GetComponent<RectTransform>().anchoredPosition;
+            StartCoroutine(moveSelectedHeroFrame(TargetPosition));
+            //selectedHeroFrameTr.anchoredPosition = TargetPosition;
+            setSelectedHero(selectedHero + 1);
+        }
+    }
+
+    public void selectPreviousHero()
+    {
+        if (selectedHero - 1 >= 0 && frameCanMove)
+        {
+            Vector2 TargetPosition = CharacterImagesHolder.transform.GetChild(selectedHero - 1).GetComponent<RectTransform>().anchoredPosition;
+            StartCoroutine(moveSelectedHeroFrame(TargetPosition));
+            //selectedHeroFrameTr.anchoredPosition = TargetPosition;
+            setSelectedHero(selectedHero - 1);
+        }
+    }
+
+    IEnumerator moveSelectedHeroFrame(Vector2 TargetPosition)
+    {
+        frameCanMove = false;
+        Vector2 StartPosition = selectedHeroFrameTr.anchoredPosition;
+        float StartTime = Time.time;
+        float distance = Vector2.Distance(StartPosition, TargetPosition);
+        while (true)
+        {
+            Debug.Log("inside looping");
+            float distCovered = (Time.time - StartTime) * frameMovementSpeed;
+            float step = distCovered / distance;
+            selectedHeroFrameTr.anchoredPosition = Vector3.Lerp(StartPosition, TargetPosition, step);
+            yield return new WaitForEndOfFrame();
+            if (selectedHeroFrameTr.anchoredPosition==TargetPosition)
+                break;
+        }
+        frameCanMove = true;
+    }
+
     void initHeroPreview()
     {
         //set the first heroes in array as default preview
-        SelectedHeroPanel.transform.GetChild(0).GetComponent<Image>().sprite = characterList.HeroesSprite[0];
+        PreviewHeroPanel.transform.FindChild("HeroPreview").GetComponent<Image>().sprite = characterList.HeroesSprite[0];
     }
 
     public void setPreviewCharacterToThis(int index)
     {
         //index sent by button's parameter
-        SelectedHeroPanel.transform.GetChild(0).GetComponent<Image>().sprite = characterList.HeroesSprite[index];
+        PreviewHeroPanel.transform.FindChild("HeroPreview").GetComponent<Image>().sprite = characterList.HeroesSprite[index];
     }
 
     public void fourHeroUsedValidate()

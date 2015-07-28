@@ -42,13 +42,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroesPrefab:
   - {fileID: 185694, guid: 9190dbb652121fd4b801a1a1a8853b5d, type: 2}
-  - {fileID: 152812, guid: 87419dc28679b2c438aea737b213b8b6, type: 2}
+  - {fileID: 101914, guid: 93b711e048889b443983b05d3ce63b32, type: 2}
   - {fileID: 194816, guid: 81d125e7b786d454497c9de4e80f078f, type: 2}
   - {fileID: 132674, guid: 4cd9a8796c7588e4f86b1b642fe5dd35, type: 2}
   EnemiesPrefab: []
   HeroesSprite:
   - {fileID: 21300000, guid: 2e79d74918cd4c84e84fcab6c5f30b02, type: 3}
-  - {fileID: 21300000, guid: 7419326c3e23a6a4e81bf2c2fa3ebff5, type: 3}
+  - {fileID: 21300000, guid: 44440be05d8e7ef4a93929c45a20db0d, type: 3}
   - {fileID: 21300000, guid: cdcc264e35f2e334aabea345b3e83cc2, type: 3}
   - {fileID: 21300000, guid: 6b98ba1b49bd7874188b371990cc4e24, type: 3}
   - {fileID: 21300000, guid: a5234bdef6b0e7940975c8ad26b6e5d3, type: 3}

@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: 79965e1c4092f34418bff02b0e01cb18
+timeCreated: 1438086329
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniper_normal_attack_0
+    21300002: sniper_normal_attack_1
+    21300004: sniper_normal_attack_2
+    21300006: sniper_normal_attack_3
+    21300008: sniper_normal_attack_4
+    21300010: sniper_normal_attack_5
+    21300012: sniper_normal_attack_6
+    21300014: sniper_normal_attack_7
+    21300016: sniper_normal_attack_8
+    21300018: sniper_normal_attack_9
+    21300020: sniper_normal_attack_10
+    21300022: sniper_normal_attack_11
+    21300024: sniper_normal_attack_12
+    21300026: sniper_normal_attack_13
+    21300028: sniper_normal_attack_14
+    21300030: sniper_normal_attack_15
+    21300032: sniper_normal_attack_16
+    21300034: sniper_normal_attack_17
+    21300036: sniper_normal_attack_18
+    21300038: sniper_normal_attack_19
+    21300040: sniper_normal_attack_20
+    21300042: sniper_normal_attack_21
+    21300044: sniper_normal_attack_22
+    21300046: sniper_normal_attack_23
+    21300048: sniper_normal_attack_24
+    21300050: sniper_normal_attack_25
+    21300052: sniper_normal_attack_26
+    21300054: sniper_normal_attack_27
+    21300056: sniper_normal_attack_28
+    21300058: sniper_normal_attack_29
+    21300060: sniper_normal_attack_30
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniper_normal_attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_2
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_3
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_4
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_5
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_6
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_7
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 309
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_9
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_10
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_11
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_12
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_13
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_14
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_15
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 208
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_17
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_18
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_19
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_20
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_21
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_22
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_23
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 107
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_25
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 6
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_26
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 6
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_27
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 6
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_28
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 6
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_29
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 6
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_normal_attack_30
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 6
+        width: 151
+        height: 101
+      alignment: 4
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

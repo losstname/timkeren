@@ -15,7 +15,7 @@ public class CharacterSelection : MonoBehaviour {
     private GameObject useFourHeroesPromptGO;
 
     private int selectedHero;
-    private bool isFourHeroesSet = false;
+    private int filledHeroesPosition;
     //used only to temporary save CURRENT selected hero. not hero saved before.
     //for saved hero before , get data from Data player
     private int[] listSelectedHero;
@@ -49,6 +49,7 @@ public class CharacterSelection : MonoBehaviour {
         //set active hero automatically based on this selected hero
 
         selectedHero = 0;
+        filledHeroesPosition = -1;
         initHeroesList();
         initHeroPreview();
         initHeroesPositioning();
@@ -72,21 +73,14 @@ public class CharacterSelection : MonoBehaviour {
     }
 
     public void setHeroPosition() {
-        for (int i = 0; i < 4; i++)
-        {
-            if (HeroesPlacementHolder.transform.GetChild(i).GetComponent<Image>().enabled == false)
-            {
-                HeroesPlacementHolder.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
-                HeroesPlacementHolder.transform.GetChild(i).GetComponent<Image>().enabled = true;
-                //set current selected hero to new index
-                listSelectedHero[i] = selectedHero;
-                break;
-            }
-        }
-        //check if the fourth hero has been set, of course it is third index
-        if (HeroesPlacementHolder.transform.GetChild(HeroesPlacementHolder.transform.childCount-1).GetComponent<Image>().enabled == true) {
-            isFourHeroesSet = true;
-        }
+        HeroesPlacementHolder.transform.GetChild(++filledHeroesPosition).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
+        HeroesPlacementHolder.transform.GetChild(filledHeroesPosition).GetComponent<Image>().enabled = true;
+        listSelectedHero[filledHeroesPosition] = selectedHero;
+    }
+
+    public void undoHeroPosition()
+    {
+        HeroesPlacementHolder.transform.GetChild(filledHeroesPosition--).GetComponent<Image>().enabled = false;
     }
 
     public void setSelectedHero(int index)
@@ -125,7 +119,6 @@ public class CharacterSelection : MonoBehaviour {
         float distance = Vector2.Distance(StartPosition, TargetPosition);
         while (true)
         {
-            Debug.Log("inside looping");
             float distCovered = (Time.time - StartTime) * frameMovementSpeed;
             float step = distCovered / distance;
             selectedHeroFrameTr.anchoredPosition = Vector3.Lerp(StartPosition, TargetPosition, step);
@@ -151,7 +144,7 @@ public class CharacterSelection : MonoBehaviour {
     public void fourHeroUsedValidate()
     {
         //if four heroes is selected then go to survival
-        if (isFourHeroesSet) {
+        if (filledHeroesPosition == HeroesPlacementHolder.transform.childCount - 1) {
             ScriptableObject.FindObjectOfType<Navigation>().GoToSurvival();
             //save current selected hero to database
             DataPlayer.getInstance().LastHeroUsed = listSelectedHero;

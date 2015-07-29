@@ -32,4 +32,3 @@ public class PlayerBase : MonoBehaviour
 		Time.timeScale = 0;
 	}
 }
-

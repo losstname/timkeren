@@ -63,6 +63,17 @@ MonoBehaviour:
   - {fileID: 167876, guid: 5197fd554cf3395488151afac132ce60, type: 2}
   timeLimit: 180
   preparationTime: 60
+  waveTextList:
+  - {fileID: 21300000, guid: 0f9c527528e1acc4db473d487e6bad6a, type: 3}
+  - {fileID: 21300000, guid: 1fc9298c9d8c3a446a16703bdeaff6be, type: 3}
+  - {fileID: 21300000, guid: e2a6123cb4ddfd14ab941d0a6b989775, type: 3}
+  - {fileID: 21300000, guid: 4671a4ca6e39ae94bb419fc9e8cfbba8, type: 3}
+  - {fileID: 21300000, guid: 11ca5318dc01a5943b4c07a7b53b5eb9, type: 3}
+  - {fileID: 21300000, guid: acca08160def5574ba5a6b3b206506cf, type: 3}
+  - {fileID: 21300000, guid: 7876ee98948c645448119b7f41dd0e01, type: 3}
+  - {fileID: 21300000, guid: ecc69ecdcb5d6424fbff98cc63b23c7c, type: 3}
+  - {fileID: 21300000, guid: 3857f54d02b89744785fd925045c0b67, type: 3}
+  - {fileID: 21300000, guid: 45c3ed8da9e05e247885030590f45431, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

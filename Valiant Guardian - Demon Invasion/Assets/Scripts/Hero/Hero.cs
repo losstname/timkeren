@@ -70,7 +70,10 @@ public class Hero : MonoBehaviour
     {
         //Set projectile object to look at enemy
         //Projectile object is a child of hero object
-        Quaternion direction = Quaternion.LookRotation(Enemies.transform.position - ProjectilePosTr.position, ProjectilePosTr.TransformDirection(Vector3.up));
-        ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
+        if (Enemies != null)
+        {
+            Quaternion direction = Quaternion.LookRotation(Enemies.transform.position - ProjectilePosTr.position, ProjectilePosTr.TransformDirection(Vector3.up));
+            ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
+        }
     }
 }

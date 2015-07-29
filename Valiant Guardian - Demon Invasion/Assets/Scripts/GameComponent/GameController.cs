@@ -21,6 +21,11 @@ public class GameController : MonoBehaviour {
     private bool isPreparationTime = false;
     private GameObject preparationPanel;
 
+    //wave board info management using these three variables
+    private int wave;
+    public Sprite[] waveTextList;
+    private Image[] waveTextUnit = new Image[2];
+
     void Awake()
     {
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
@@ -29,10 +34,20 @@ public class GameController : MonoBehaviour {
     }
 
 	void Start () {
+        //set wave board number from set of sprite numbers
+        wave = 1;
+        waveTextUnit[0] = GameObject.Find("WaveBoard").transform.FindChild("Unit").GetComponent<Image>();
+        waveTextUnit[1] = GameObject.Find("WaveBoard").transform.FindChild("Dozens").GetComponent<Image>();
+        setWaveBoardNumber(wave);
+
+        //spawn heroes which have been selected in character selection screen
         SpawnHeroes();
+
+        //manage time left for each wave
         timeLeft = timeLimit;
         timeLeftText = GameObject.Find("TimeLeftText").GetComponent<Text>();
         timeLeftText.text = timeLeft.ToString();
+
         //To Start Enemy Spawning waves using IEnumeratir function
         StartCoroutine(EnemySpawning());
 	}
@@ -91,16 +106,22 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    //make this public function so the ready button can trigger it
     public void EndPreparationTime()
     {
         //to make sure the panel don't show up when the ready button used
         preparationTimeLeft = -1.0f;
+
         TooglePrepPanel();
         isPreparationTime = false;
         timeLeft = timeLimit;
+
         //When preparation time ends start spawning enemies again
         StartCoroutine(EnemySpawning());
         setHeroesAttackCapability(true);
+
+        //update the Wave information
+        setWaveBoardNumber(++wave);
     }
 
     void TooglePrepPanel()
@@ -118,5 +139,13 @@ public class GameController : MonoBehaviour {
         {
             heroes[i].GetComponent<HeroAttack>().setHeroAttackCapability(capability);
         }
+    }
+
+    void setWaveBoardNumber(int wave)
+    {
+        int a = wave % 10;
+        waveTextUnit[0].sprite = waveTextList[a];
+        int b = wave / 10;
+        waveTextUnit[1].sprite = waveTextList[b];
     }
 }

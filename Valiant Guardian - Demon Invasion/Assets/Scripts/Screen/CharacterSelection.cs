@@ -83,10 +83,17 @@ public class CharacterSelection : MonoBehaviour {
         HeroesPlacementHolder.transform.GetChild(filledHeroesPosition--).GetComponent<Image>().enabled = false;
     }
 
-    public void setSelectedHero(int index)
+    private void setSelectedHero(int index)
     {
         selectedHero = index;
         setPreviewCharacterToThis(index);
+    }
+
+    public void selectThisHero(int index)
+    {
+        Vector3 TargetPosition = CharacterImagesHolder.transform.GetChild(index).GetComponent<RectTransform>().anchoredPosition;
+        StartCoroutine(moveSelectedHeroFrame(TargetPosition));
+        setSelectedHero(index);
     }
 
     public void selectNextHero()
@@ -95,7 +102,6 @@ public class CharacterSelection : MonoBehaviour {
         {
             Vector3 TargetPosition = CharacterImagesHolder.transform.GetChild(selectedHero + 1).GetComponent<RectTransform>().anchoredPosition;
             StartCoroutine(moveSelectedHeroFrame(TargetPosition));
-            //selectedHeroFrameTr.anchoredPosition = TargetPosition;
             setSelectedHero(selectedHero + 1);
         }
     }
@@ -106,7 +112,6 @@ public class CharacterSelection : MonoBehaviour {
         {
             Vector2 TargetPosition = CharacterImagesHolder.transform.GetChild(selectedHero - 1).GetComponent<RectTransform>().anchoredPosition;
             StartCoroutine(moveSelectedHeroFrame(TargetPosition));
-            //selectedHeroFrameTr.anchoredPosition = TargetPosition;
             setSelectedHero(selectedHero - 1);
         }
     }

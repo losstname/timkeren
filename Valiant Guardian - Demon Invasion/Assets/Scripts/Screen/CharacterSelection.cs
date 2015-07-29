@@ -13,6 +13,7 @@ public class CharacterSelection : MonoBehaviour {
     private GameObject PreviewHeroPanel;
     private GameObject HeroesPlacementHolder;
     private GameObject useFourHeroesPromptGO;
+    private GameObject LockImageGO;
 
     private int selectedHero;
     private int filledHeroesPosition;
@@ -33,6 +34,10 @@ public class CharacterSelection : MonoBehaviour {
 
         //to get selected hero panel
         PreviewHeroPanel = GameObject.Find("PreviewHeroPanel").gameObject;
+
+        //get lock image to show if the hero is locked
+        LockImageGO = GameObject.Find("Lock").gameObject;
+        LockImageGO.SetActive(false);
 
         //to get heroes position panel
         HeroesPlacementHolder = GameObject.Find("HeroesHolder").gameObject;

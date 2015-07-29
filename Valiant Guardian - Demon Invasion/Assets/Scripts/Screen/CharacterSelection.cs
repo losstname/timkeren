@@ -24,6 +24,9 @@ public class CharacterSelection : MonoBehaviour {
     public float frameMovementSpeed = 1f;
     private bool frameCanMove = true;
 
+    //momentarily locked status for heroes while connection with database on progress
+    public bool[] lockedStat;
+
     void Awake()
     {
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
@@ -37,7 +40,6 @@ public class CharacterSelection : MonoBehaviour {
 
         //get lock image to show if the hero is locked
         LockImageGO = GameObject.Find("Lock").gameObject;
-        LockImageGO.SetActive(false);
 
         //to get heroes position panel
         HeroesPlacementHolder = GameObject.Find("HeroesHolder").gameObject;
@@ -53,11 +55,13 @@ public class CharacterSelection : MonoBehaviour {
         //Todo -->  load last selected hero
         //set active hero automatically based on this selected hero
 
+        //initialize things in character selection
         selectedHero = 0;
         filledHeroesPosition = -1;
         initHeroesList();
         initHeroPreview();
         initHeroesPositioning();
+        validateLockedHero(0);
     }
 
     void initHeroesList()
@@ -77,10 +81,15 @@ public class CharacterSelection : MonoBehaviour {
         }
     }
 
+    //this function called when the assign button is clicked
     public void setHeroPosition() {
-        HeroesPlacementHolder.transform.GetChild(++filledHeroesPosition).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
-        HeroesPlacementHolder.transform.GetChild(filledHeroesPosition).GetComponent<Image>().enabled = true;
-        listSelectedHero[filledHeroesPosition] = selectedHero;
+        //to validate whether the hero can be use or not
+        if (!lockedStat[selectedHero])
+        {
+            HeroesPlacementHolder.transform.GetChild(++filledHeroesPosition).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
+            HeroesPlacementHolder.transform.GetChild(filledHeroesPosition).GetComponent<Image>().enabled = true;
+            listSelectedHero[filledHeroesPosition] = selectedHero;
+        }
     }
 
     public void undoHeroPosition()
@@ -88,12 +97,7 @@ public class CharacterSelection : MonoBehaviour {
         HeroesPlacementHolder.transform.GetChild(filledHeroesPosition--).GetComponent<Image>().enabled = false;
     }
 
-    private void setSelectedHero(int index)
-    {
-        selectedHero = index;
-        setPreviewCharacterToThis(index);
-    }
-
+    //this function called when the hero image in character list is clicked
     public void selectThisHero(int index)
     {
         Vector3 TargetPosition = CharacterImagesHolder.transform.GetChild(index).GetComponent<RectTransform>().anchoredPosition;
@@ -101,24 +105,50 @@ public class CharacterSelection : MonoBehaviour {
         setSelectedHero(index);
     }
 
+    private void setSelectedHero(int index)
+    {
+        selectedHero = index;
+        setPreviewCharacterToThis(index);
+        validateLockedHero(index);
+    }
+
+    //validate hero is locked or not
+    private void validateLockedHero(int index)
+    {
+        //if locked, show lock image
+        //to do: show purchase button when heroes is available to purchase
+        if (lockedStat[index])
+        {
+            LockImageGO.SetActive(true);
+        }
+        else
+        {
+            LockImageGO.SetActive(false);
+        }
+    }
+
     public void selectNextHero()
     {
+        /*
         if (selectedHero + 1 < CharacterImagesHolder.transform.childCount && frameCanMove)
         {
             Vector3 TargetPosition = CharacterImagesHolder.transform.GetChild(selectedHero + 1).GetComponent<RectTransform>().anchoredPosition;
             StartCoroutine(moveSelectedHeroFrame(TargetPosition));
             setSelectedHero(selectedHero + 1);
         }
+        */
     }
 
     public void selectPreviousHero()
     {
+        /*
         if (selectedHero - 1 >= 0 && frameCanMove)
         {
             Vector2 TargetPosition = CharacterImagesHolder.transform.GetChild(selectedHero - 1).GetComponent<RectTransform>().anchoredPosition;
             StartCoroutine(moveSelectedHeroFrame(TargetPosition));
             setSelectedHero(selectedHero - 1);
         }
+        */
     }
 
     IEnumerator moveSelectedHeroFrame(Vector2 TargetPosition)

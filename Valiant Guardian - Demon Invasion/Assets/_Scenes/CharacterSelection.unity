@@ -1707,6 +1707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameMovementSpeed: 300
+  lockedStat: 0000000001
 --- !u!1 &812379347
 GameObject:
   m_ObjectHideFlags: 0

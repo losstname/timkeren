@@ -8,8 +8,9 @@ using System;
 public class CharacterSelection : MonoBehaviour {
 
     private CharacterList characterList;
+    private float distanceBetweenCharThumbList;
 
-    private GameObject CharacterImagesHolder;
+    private GameObject CharThumbnailHolder;
     private GameObject PreviewHeroPanel;
     private GameObject HeroesPlacementHolder;
     private GameObject useFourHeroesPromptGO;
@@ -21,6 +22,9 @@ public class CharacterSelection : MonoBehaviour {
     //for saved hero before , get data from Data player
     private int[] listSelectedHero;
     private RectTransform selectedHeroFrameTr;
+    private RectTransform charThumbnailHolderRect;
+    private int[] charThumbnailHolderMovementRange = new int[2];
+    private int charThumbnailHolderCurrentPosition = 0;
     public float frameMovementSpeed = 1f;
     private bool frameCanMove = true;
 
@@ -32,8 +36,14 @@ public class CharacterSelection : MonoBehaviour {
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
 
         //to get character list panel
-        CharacterImagesHolder = GameObject.Find("CharactersImages").gameObject;
+        CharThumbnailHolder = GameObject.Find("CharThumbnailHolder").gameObject;
+        charThumbnailHolderRect = GameObject.Find("CharThumbnailHolder").GetComponent<RectTransform>();
         selectedHeroFrameTr = GameObject.Find("SelectedFrame").GetComponent<RectTransform>();
+        charThumbnailHolderMovementRange[0] = 0;
+        charThumbnailHolderMovementRange[1] = CharThumbnailHolder.transform.childCount - 5;
+
+        distanceBetweenCharThumbList = Vector2.Distance(CharThumbnailHolder.transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition,
+            CharThumbnailHolder.transform.GetChild(1).GetComponent<RectTransform>().anchoredPosition);
 
         //to get selected hero panel
         PreviewHeroPanel = GameObject.Find("PreviewHeroPanel").gameObject;
@@ -66,9 +76,9 @@ public class CharacterSelection : MonoBehaviour {
 
     void initHeroesList()
     {
-        for (int i = 0; i < CharacterImagesHolder.transform.childCount; i++)
+        for (int i = 0; i < CharThumbnailHolder.transform.childCount; i++)
         {   //changing the sprite as array defined
-            CharacterImagesHolder.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesThumbnail[i];
+            CharThumbnailHolder.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesThumbnail[i];
         }
     }
 
@@ -84,7 +94,7 @@ public class CharacterSelection : MonoBehaviour {
     //this function called when the assign button is clicked
     public void setHeroPosition() {
         //to validate whether the hero can be use or not
-        if (!lockedStat[selectedHero])
+        if (!lockedStat[selectedHero] && filledHeroesPosition!=HeroesPlacementHolder.transform.childCount-1)
         {
             HeroesPlacementHolder.transform.GetChild(++filledHeroesPosition).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
             HeroesPlacementHolder.transform.GetChild(filledHeroesPosition).GetComponent<Image>().enabled = true;
@@ -100,7 +110,7 @@ public class CharacterSelection : MonoBehaviour {
     //this function called when the hero image in character list is clicked
     public void selectThisHero(int index)
     {
-        Vector3 TargetPosition = CharacterImagesHolder.transform.GetChild(index).GetComponent<RectTransform>().anchoredPosition;
+        Vector3 TargetPosition = CharThumbnailHolder.transform.GetChild(index).GetComponent<RectTransform>().anchoredPosition;
         StartCoroutine(moveSelectedHeroFrame(TargetPosition));
         setSelectedHero(index);
     }
@@ -127,7 +137,7 @@ public class CharacterSelection : MonoBehaviour {
         }
     }
 
-    public void selectNextHero()
+    public void translateNextHeroList()
     {
         /*
         if (selectedHero + 1 < CharacterImagesHolder.transform.childCount && frameCanMove)
@@ -137,9 +147,18 @@ public class CharacterSelection : MonoBehaviour {
             setSelectedHero(selectedHero + 1);
         }
         */
+        if (charThumbnailHolderCurrentPosition + 1 <= charThumbnailHolderMovementRange[1])
+        {
+            //move holder right
+            float xTarget = charThumbnailHolderRect.anchoredPosition.x - distanceBetweenCharThumbList;
+            Vector2 TargetPosition = new Vector2(xTarget, charThumbnailHolderRect.anchoredPosition.y);
+            StartCoroutine(moveCharThumbnailHolder(TargetPosition));
+            setSelectedHero(selectedHero + 1);
+            charThumbnailHolderCurrentPosition++;
+        }
     }
 
-    public void selectPreviousHero()
+    public void translatePreviousHeroList()
     {
         /*
         if (selectedHero - 1 >= 0 && frameCanMove)
@@ -149,10 +168,22 @@ public class CharacterSelection : MonoBehaviour {
             setSelectedHero(selectedHero - 1);
         }
         */
+        if (charThumbnailHolderCurrentPosition - 1 >= charThumbnailHolderMovementRange[0])
+        {
+            //move holder left
+            float xTarget = charThumbnailHolderRect.anchoredPosition.x + distanceBetweenCharThumbList;
+            Vector2 TargetPosition = new Vector2(xTarget, charThumbnailHolderRect.anchoredPosition.y);
+            StartCoroutine(moveCharThumbnailHolder(TargetPosition));
+            setSelectedHero(selectedHero - 1);
+            charThumbnailHolderCurrentPosition--;
+        }
     }
 
     IEnumerator moveSelectedHeroFrame(Vector2 TargetPosition)
     {
+        //calculate offset if the char thumb holder moved/scrolled
+        float xOffset = charThumbnailHolderCurrentPosition * distanceBetweenCharThumbList;
+        TargetPosition = new Vector2(TargetPosition.x - xOffset, TargetPosition.y);
         frameCanMove = false;
         Vector2 StartPosition = selectedHeroFrameTr.anchoredPosition;
         float StartTime = Time.time;
@@ -167,6 +198,22 @@ public class CharacterSelection : MonoBehaviour {
                 break;
         }
         frameCanMove = true;
+    }
+
+    IEnumerator moveCharThumbnailHolder(Vector2 TargetPosition)
+    {
+        Vector2 StartPosition = charThumbnailHolderRect.anchoredPosition;
+        float StartTime = Time.time;
+        float distance = Vector2.Distance(StartPosition, TargetPosition);
+        while (true)
+        {
+            float distCovered = (Time.time - StartTime) * frameMovementSpeed;
+            float step = distCovered / distance;
+            charThumbnailHolderRect.anchoredPosition = Vector3.Lerp(StartPosition, TargetPosition, step);
+            yield return new WaitForEndOfFrame();
+            if (charThumbnailHolderRect.anchoredPosition == TargetPosition)
+                break;
+        }
     }
 
     void initHeroPreview()

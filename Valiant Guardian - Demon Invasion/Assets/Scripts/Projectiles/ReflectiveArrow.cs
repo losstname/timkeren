@@ -8,10 +8,21 @@ public class ReflectiveArrow : MonoBehaviour {
     private string enemiesHitName;
     public string targetName;
 
+    private CircleCollider2D circleCollider;
+    public float enemyDetectionTime = 0.5f;
+
+    void Awake()
+    {
+        circleCollider = GetComponent<CircleCollider2D>();
+        circleCollider.enabled = false;
+    }
+
     void Start()
     {
         countEnemiesHit = 0;
         enemiesHitName = "ReflectiveArrowVictim";
+        circleCollider.enabled = true;                              //Only for testing
+        Invoke("DisableDetectionCollider", enemyDetectionTime);     //Only for testing
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +33,19 @@ public class ReflectiveArrow : MonoBehaviour {
             other.gameObject.name = enemiesHitName + countEnemiesHit;
             countEnemiesHit++;
             other.gameObject.GetComponent<Enemy>().Attacked();
+            circleCollider.enabled = true;
+            Invoke("DisableDetectionCollider", enemyDetectionTime);
         }
+
+        if (other.tag == "Enemy")
+        {
+
+        }
+    }
+
+    void DisableDetectionCollider()
+    {
+        circleCollider.radius = 0.1f;
+        circleCollider.enabled = false;
     }
 }

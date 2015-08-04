@@ -3,6 +3,8 @@ using System.Collections;
 //Put on the hero with skillsholder set
 public class HeroSkillTrigger : MonoBehaviour {
 
+    Hero hero;
+
     private GameObject SkillsHolder;
 
     private float normalSkillCoolDown;
@@ -16,6 +18,8 @@ public class HeroSkillTrigger : MonoBehaviour {
 
     void Awake()
     {
+        hero = GetComponent<Hero>();
+
         SkillsHolder = transform.FindChild("SkillsHolder").gameObject;
         SkillsHolder.SetActive(false);
         normalSkillCollider = SkillsHolder.transform.FindChild("NormalSkill").GetComponent<Collider2D>();
@@ -74,5 +78,15 @@ public class HeroSkillTrigger : MonoBehaviour {
     public void HideSkillsHolder()
     {
         SkillsHolder.SetActive(false);
+    }
+
+    public void PauseHeroAnimation()
+    {
+        hero.anim.enabled = false;
+    }
+
+    public void ResumeHeroAnimation()
+    {
+        hero.anim.enabled = true;
     }
 }

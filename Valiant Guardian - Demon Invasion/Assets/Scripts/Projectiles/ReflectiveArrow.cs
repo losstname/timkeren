@@ -3,23 +3,34 @@ using System.Collections;
 
 public class ReflectiveArrow : MonoBehaviour {
 
+    SpriteRenderer spriteRenderer;
+
     public GameObject target;
     HeroSkillTrigger heroSkillTrigger;
 
+    public int enemyHitLimit = 4;
     private int countEnemiesHit;
-    private string[] enemiesRealName = new string[4];
-    public GameObject[] enemiesCaught = new GameObject[4];
+    private string[] enemiesRealName;
+    public GameObject[] enemiesCaught;
     private string markedTargetName;    //All targeted enemies marked by this name
 
     public float radius;
     public float speed;
 
-    private bool readyLaunch = false;
+    private bool isFindingTarget = false;
+    private bool projectileVisible = false;
 
     public GameObject[] enemiesOnRadius;
     void Start()
     {
-        heroSkillTrigger = transform.parent.parent.GetComponent<HeroSkillTrigger>();
+        //To mark the arrow not visible before launch
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
+
+        enemiesRealName = new string[enemyHitLimit];
+        enemiesCaught = new GameObject[enemyHitLimit];
+
+        heroSkillTrigger = transform.parent.GetComponent<HeroSkillTrigger>();
         countEnemiesHit = 0;
         markedTargetName = "ReflectiveArrowVictim";
     }
@@ -37,7 +48,7 @@ public class ReflectiveArrow : MonoBehaviour {
         }
 
         //move projectile towards target
-        if (readyLaunch)
+        if (isFindingTarget)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
         }
@@ -51,11 +62,18 @@ public class ReflectiveArrow : MonoBehaviour {
             if (Vector2.Distance(transform.position, hitObject.transform.position) <= radius)
             {
                 TargetAnEnemy(hitObject.collider);
-                readyLaunch = true;
+                isFindingTarget = true;
+
+                //To re enable the sprite renderer when the projectile launched
+                spriteRenderer.enabled = true;
+
+                //To continue the attacking animation
+                heroSkillTrigger.ResumeHeroAnimation();
             }
         }
         else
         {
+            //To hide the skills button after clicking
             heroSkillTrigger.HideSkillsHolder();
             Destroy(gameObject);
         }
@@ -66,9 +84,19 @@ public class ReflectiveArrow : MonoBehaviour {
         if (other.tag == "Enemy" && other.name == markedTargetName)
         {
             //after marked target hit, ASAP find the next target
-            FindTargetOnRadius();
+            //but remember if it is still look for next enemy
+            if(isFindingTarget)
+                FindTargetOnRadius();
 
             other.gameObject.GetComponent<Enemy>().Attacked();
+
+            //Stop the projecetile to look for next enemy when hit the last enemy
+            if (countEnemiesHit == enemyHitLimit)
+            {
+                isFindingTarget = false;
+                RefundEnemiesName();
+                Destroy(this.gameObject);
+            }
         }
     }
 
@@ -127,5 +155,14 @@ public class ReflectiveArrow : MonoBehaviour {
             }
         }
         TargetAnEnemy(tempNearestTarget.GetComponent<Collider2D>());
+    }
+
+    void RefundEnemiesName()
+    {
+        //return the name
+        for (int i = 0; i < enemiesCaught.Length; i++)
+        {
+            enemiesCaught[i].name = enemiesRealName[i];
+        }
     }
 }

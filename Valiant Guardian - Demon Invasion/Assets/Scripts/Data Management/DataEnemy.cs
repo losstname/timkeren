@@ -9,11 +9,22 @@ public class DataEnemy
     private static DataEnemy instance;
     private MasterEnemy meleeImp;
     private MasterEnemy rangedImp;
+    private MasterEnemy bigMeleeImp;
+    private MasterEnemy overLord;
+    private MasterEnemy impBomber;
+    private MasterEnemy impOjek;
+
     private DataEnemy()
     {
         //set status enemy here
-        meleeImp = new MasterEnemy(150, 0, 70, 70, 200);
-        rangedImp = new MasterEnemy(80, 40, 50, 30, 150);
+        meleeImp = new MasterEnemy(1, 200, 10, 60, 50,1,true);
+        rangedImp = new MasterEnemy(45,160,10,50,50,1,true);
+
+        bigMeleeImp = new MasterEnemy(1, 500, 5, 135, 75, 1, true);
+        overLord = new MasterEnemy(1, 160, 10, 50, 50, 1, true);
+
+        impBomber = new MasterEnemy(1, 200, 10, 60, 50, 1, true);
+        impOjek = new MasterEnemy(1, 160, 10, 50, 50, 1, true);
     }
     public static DataEnemy getInstance()
     {

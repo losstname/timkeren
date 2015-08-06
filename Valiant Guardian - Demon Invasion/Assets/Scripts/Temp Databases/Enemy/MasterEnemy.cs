@@ -6,27 +6,38 @@ namespace Assets.Scripts.Temp_Databases.Enemy
     public class MasterEnemy
     {
 
-        private int attackSpeed;
+        private int moveSpeed;
         private int range;
         private int attackDamage;
         private int defense;
         private int hitPoints;
-        //skill & buff?
+        private int idleTime;
+        private bool miniBossAvail;
 
-        public MasterEnemy(int attackSpeed, int range, int attackDamage, int defense, int hitPoints)
+        public MasterEnemy( int range,int hitPoints, int moveSpeed,
+            int attackDamage, int defense,int idleTime
+            ,bool miniBossAvail)
         {
-            this.attackSpeed = attackSpeed;
+            this.moveSpeed = moveSpeed;
             this.range = range;
             this.attackDamage = attackDamage;
             this.defense = defense;
             this.hitPoints = hitPoints;
+            this.idleTime = idleTime;
+            this.miniBossAvail = miniBossAvail;
+        }
+
+        public int IdleTime
+        {
+            get { return idleTime; }
+            set { idleTime = value; }
         }
 
 
-        public int AttackSpeed
+        public int MoveSpeed
         {
-            get { return attackSpeed; }
-            private set { attackSpeed = value; }
+            get { return moveSpeed; }
+            private set { moveSpeed = value; }
         }
         public int Range
         {

@@ -15,7 +15,7 @@ namespace Assets.Scripts.Temp_Databases.Heroes
 
         private void preparingData()
         {
-            mainAttack = new AttackModel(30, new int[] { 1, 1 }, 60);
+            mainAttack = new AttackModel(2, new int[] { 15, 5 }, 40);
             skillAttack = new AttackModel(30, new int[] { 1, 1 }, 60);
             ultSkillAttack = new AttackModel(30, new int[] { 1, 1 }, 60);
             attackSpeed = 60;

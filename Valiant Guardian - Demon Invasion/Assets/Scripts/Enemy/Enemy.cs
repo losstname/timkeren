@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
@@ -21,8 +21,6 @@ public class Enemy : MonoBehaviour {
     private SpriteRenderer enemySpriteRenderer;
     public float fadeSpeed = 1f;
     public float fadeDelay = 2f;
-	public int ImpAttack = 70;
-	public int ImpDefense = 70;
 
 	public int HPDecrease;
 	private int attackX;
@@ -113,7 +111,8 @@ public class Enemy : MonoBehaviour {
     public void BaseAttacked()
     {
 		attackX = Random.Range(1,30);
-		int baseHpDecrease = ImpAttack - ((ImpAttack * attackX) / 100);
+        int impAttack = DataEnemy.getInstance().MeleeImp.AttackDamage;
+        int baseHpDecrease = impAttack - ((impAttack * attackX) / 100);
 		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble())
 				ScriptableObject.FindObjectOfType<Door>().AttackBase(baseHpDecrease);
 
@@ -122,7 +121,8 @@ public class Enemy : MonoBehaviour {
 	public void Attacked(){
 		attackX = Random.Range(1,20);
 		defenseY = Random.Range(31, 80);
-		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((ImpDefense *defenseY) / 100);
+        int impDefense = DataEnemy.getInstance().MeleeImp.Defense;
+        HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
 		hitPoints -= HPDecrease;
         //Spawn damage floater
         SpawnDamageFloater(HPDecrease);

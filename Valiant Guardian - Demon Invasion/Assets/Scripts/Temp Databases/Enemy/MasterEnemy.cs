@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 namespace Assets.Scripts.Temp_Databases.Enemy
@@ -11,11 +11,11 @@ namespace Assets.Scripts.Temp_Databases.Enemy
         private int attackDamage;
         private int defense;
         private int hitPoints;
-        private int idleTime;
+        private double idleTime;
         private bool miniBossAvail;
 
         public MasterEnemy( int range,int hitPoints, int moveSpeed,
-            int attackDamage, int defense,int idleTime
+            int attackDamage, int defense, double idleTime
             ,bool miniBossAvail)
         {
             this.moveSpeed = moveSpeed;
@@ -27,7 +27,7 @@ namespace Assets.Scripts.Temp_Databases.Enemy
             this.miniBossAvail = miniBossAvail;
         }
 
-        public int IdleTime
+        public double IdleTime
         {
             get { return idleTime; }
             set { idleTime = value; }

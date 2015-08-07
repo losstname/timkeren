@@ -111,6 +111,7 @@ public class Enemy : MonoBehaviour {
     public void BaseAttacked()
     {
 		attackX = Random.Range(1,30);
+        //Example , get meleeImp attack from database
         int impAttack = DataEnemy.getInstance().MeleeImp.AttackDamage;
         int baseHpDecrease = impAttack - ((impAttack * attackX) / 100);
 		if(ScriptableObject.FindObjectOfType<Door>().isAttackAble())
@@ -121,6 +122,7 @@ public class Enemy : MonoBehaviour {
 	public void Attacked(){
 		attackX = Random.Range(1,20);
 		defenseY = Random.Range(31, 80);
+        //Example , get meleeImp defense from database
         int impDefense = DataEnemy.getInstance().MeleeImp.Defense;
         HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
 		hitPoints -= HPDecrease;

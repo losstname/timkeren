@@ -10,12 +10,12 @@
 using System;
 namespace AssemblyCSharp
 {
-	interface ISave
-	{
-		void doSave(object data,string savedName);
-		object doLoad(string savedName);
-		//for check file only, if there is no data in path return false
-		bool isHaveData(string savedName);
-	}
+    interface ISave
+    {
+        void doSave(object data, string savedName);
+        object doLoad(string savedName);
+        //for check file only, if there is no data in path return false
+        bool isHaveData(string savedName);
+    }
 }
 

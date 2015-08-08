@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class DestroyByTime : MonoBehaviour {
+public class DestroyByTime : MonoBehaviour
+{
 
     public float lifeTime = 1;
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
         lifeTime -= Time.deltaTime;
-        if (lifeTime <= 0.0f) {
+        if (lifeTime <= 0.0f)
+        {
             Destroy(gameObject);
         }
-	}
+    }
 }

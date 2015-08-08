@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 //Put on the hero
 public class HeroAttack : MonoBehaviour
@@ -11,7 +11,8 @@ public class HeroAttack : MonoBehaviour
     private Hero hero;
 
     private bool ableAttack = true;
-    void Awake() {
+    void Awake()
+    {
         hero = GetComponent<Hero>();
     }
 

@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System;
 
 //attach to CharacterSelectionCanvas
 //do not rename the panel inside this canvas
-public class CharacterSelection : MonoBehaviour {
+public class CharacterSelection : MonoBehaviour
+{
 
     private CharacterList characterList;
     private float distanceBetweenCharThumbList;
@@ -61,7 +62,7 @@ public class CharacterSelection : MonoBehaviour {
         useFourHeroesPromptGO.SetActive(false);
 
         //initialize selected hero
-        listSelectedHero = new int[4] { 0,0,0,0 };
+        listSelectedHero = new int[4] { 0, 0, 0, 0 };
         //Todo -->  load last selected hero
         //set active hero automatically based on this selected hero
 
@@ -92,9 +93,10 @@ public class CharacterSelection : MonoBehaviour {
     }
 
     //this function called when the assign button is clicked
-    public void setHeroPosition() {
+    public void setHeroPosition()
+    {
         //to validate whether the hero can be use or not
-        if (!lockedStat[selectedHero] && filledHeroesPosition!=HeroesPlacementHolder.transform.childCount-1)
+        if (!lockedStat[selectedHero] && filledHeroesPosition != HeroesPlacementHolder.transform.childCount - 1)
         {
             HeroesPlacementHolder.transform.GetChild(++filledHeroesPosition).GetComponent<Image>().sprite = characterList.HeroesSprite[selectedHero];
             HeroesPlacementHolder.transform.GetChild(filledHeroesPosition).GetComponent<Image>().enabled = true;
@@ -194,7 +196,7 @@ public class CharacterSelection : MonoBehaviour {
             float step = distCovered / distance;
             selectedHeroFrameTr.anchoredPosition = Vector3.Lerp(StartPosition, TargetPosition, step);
             yield return new WaitForEndOfFrame();
-            if (selectedHeroFrameTr.anchoredPosition==TargetPosition)
+            if (selectedHeroFrameTr.anchoredPosition == TargetPosition)
                 break;
         }
         frameCanMove = true;
@@ -231,22 +233,26 @@ public class CharacterSelection : MonoBehaviour {
     public void fourHeroUsedValidate()
     {
         //if four heroes is selected then go to survival
-        if (filledHeroesPosition == HeroesPlacementHolder.transform.childCount - 1) {
+        if (filledHeroesPosition == HeroesPlacementHolder.transform.childCount - 1)
+        {
             ScriptableObject.FindObjectOfType<Navigation>().GoToSurvival();
             //save current selected hero to database
             DataPlayer.getInstance().LastHeroUsed = listSelectedHero;
         }
         //if heroes selected less then 4, cannot continue
-        else {
+        else
+        {
             showUseFourHeroesPrompt();
         }
     }
 
-    public void showUseFourHeroesPrompt(){
+    public void showUseFourHeroesPrompt()
+    {
         useFourHeroesPromptGO.SetActive(true);
     }
 
-    public void hideUseFourHeroesPrompt(){
+    public void hideUseFourHeroesPrompt()
+    {
         useFourHeroesPromptGO.SetActive(false);
     }
 }

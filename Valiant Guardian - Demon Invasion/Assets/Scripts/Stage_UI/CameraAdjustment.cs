@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class CameraAdjustment : MonoBehaviour {
+public class CameraAdjustment : MonoBehaviour
+{
 
     void Awake()
     {

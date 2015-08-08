@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class ProjectileAttack : MonoBehaviour {
+public class ProjectileAttack : MonoBehaviour
+{
 
     void OnTriggerEnter2D(Collider2D other)
     {

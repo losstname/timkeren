@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 //Put on the ultimate skill button imitation sprite
-public class UltimateSkillTrigger : MonoBehaviour {
+public class UltimateSkillTrigger : MonoBehaviour
+{
 
     private HeroSkill heroSkill;
 

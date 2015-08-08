@@ -17,8 +17,8 @@ public class DataEnemy
     private DataEnemy()
     {
         //set status enemy here
-        meleeImp = new MasterEnemy(1, 200, 10, 60, 50,1,true);
-        rangedImp = new MasterEnemy(45,160,10,50,50,1,true);
+        meleeImp = new MasterEnemy(1, 200, 10, 60, 50, 1, true);
+        rangedImp = new MasterEnemy(45, 160, 10, 50, 50, 1, true);
 
         bigMeleeImp = new MasterEnemy(1, 500, 5, 135, 75, 1.8, true);
         overLord = new MasterEnemy(1, 160, 10, 50, 50, 1, true);

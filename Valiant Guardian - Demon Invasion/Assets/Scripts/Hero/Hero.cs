@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 //Put on the hero
 public class Hero : MonoBehaviour
@@ -41,10 +41,12 @@ public class Hero : MonoBehaviour
 
     void Update()
     {
-        if (Enemies == null) {
+        if (Enemies == null)
+        {
             autoChangeEnemy();
         }
-        else if(Enemies != null) {
+        else if (Enemies != null)
+        {
             DistanceFromHero = Vector3.Distance(GameObject.FindGameObjectWithTag("Enemy").transform.position, transform.position);
         }
     }

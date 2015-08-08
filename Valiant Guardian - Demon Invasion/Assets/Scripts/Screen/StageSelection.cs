@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
 //attach to CharacterSelectionCanvas
 //do not rename the panel inside this canvas
-public class StageSelection : MonoBehaviour {
+public class StageSelection : MonoBehaviour
+{
 
     private CharacterList characterList;
 
@@ -47,7 +48,7 @@ public class StageSelection : MonoBehaviour {
     void setLastUsedHeroPanel()
     {
         int[] lastHeroes = DataPlayer.getInstance().LastHeroUsed;
-        for (int i=0; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             LastUsedHeroPanel.transform.GetChild(i).GetComponent<Image>().sprite = characterList.HeroesSprite[lastHeroes[i]];
         }

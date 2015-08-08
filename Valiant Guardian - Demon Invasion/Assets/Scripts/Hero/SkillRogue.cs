@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class SkillRogue : MonoBehaviour {
+public class SkillRogue : MonoBehaviour
+{
 
     public GameObject normProjectiles;
     public GameObject ultiProjectiles;

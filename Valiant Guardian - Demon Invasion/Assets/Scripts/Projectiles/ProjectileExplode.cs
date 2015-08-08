@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class ProjectileExplode : MonoBehaviour {
+public class ProjectileExplode : MonoBehaviour
+{
 
     public GameObject explosion;
 

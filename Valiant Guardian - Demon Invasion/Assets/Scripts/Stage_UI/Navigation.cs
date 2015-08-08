@@ -1,30 +1,37 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class Navigation : MonoBehaviour {
+public class Navigation : MonoBehaviour
+{
 
-    public void GoToMenuScreen(){
+    public void GoToMenuScreen()
+    {
         Application.LoadLevel("MenuScreen");
     }
 
-    public void GoToSurvival() {
+    public void GoToSurvival()
+    {
         Application.LoadLevel("Survival");
     }
 
-    public void GoToStageSelection() {
+    public void GoToStageSelection()
+    {
         Application.LoadLevel("StageSelection");
     }
 
-    public void GoToCharacterSelection() {
+    public void GoToCharacterSelection()
+    {
         Application.LoadLevel("CharacterSelection");
     }
 
-    public void ExitApplication() {
+    public void ExitApplication()
+    {
         Application.Quit();
     }
 
-	public void RestartApplication(){
-		Time.timeScale = 1;
-		Application.LoadLevel(Application.loadedLevel);
-	}
+    public void RestartApplication()
+    {
+        Time.timeScale = 1;
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }

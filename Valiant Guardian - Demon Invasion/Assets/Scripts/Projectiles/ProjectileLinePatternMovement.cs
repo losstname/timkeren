@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class ProjectileLinePatternMovement : MonoBehaviour {
+public class ProjectileLinePatternMovement : MonoBehaviour
+{
 
     public float speed = 10f;
 
-	void Update () {
+    void Update()
+    {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
-	}
+    }
 }

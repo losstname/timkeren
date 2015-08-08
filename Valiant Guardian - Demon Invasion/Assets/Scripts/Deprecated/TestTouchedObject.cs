@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class TestTouchedObject : MonoBehaviour {
+public class TestTouchedObject : MonoBehaviour
+{
 
     public string message;
 

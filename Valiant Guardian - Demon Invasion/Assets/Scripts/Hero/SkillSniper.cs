@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class SkillSniper : MonoBehaviour {
+public class SkillSniper : MonoBehaviour
+{
 
     public GameObject normProjectiles;
     public GameObject ultiProjectiles;

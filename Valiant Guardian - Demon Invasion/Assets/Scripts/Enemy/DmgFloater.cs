@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class DmgFloater : MonoBehaviour {
+public class DmgFloater : MonoBehaviour
+{
 
     public float time = 0.5f;
     public float speed = 1f;

@@ -1,15 +1,17 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class FpsCounter : MonoBehaviour {
+public class FpsCounter : MonoBehaviour
+{
 
     float deltaTime = 0.0f;
     float resetTime = 0.05f;
     float reseting = 0.0f;
     Text fpsText;
 
-    void Awake(){
+    void Awake()
+    {
         fpsText = GetComponent<Text>();
     }
 

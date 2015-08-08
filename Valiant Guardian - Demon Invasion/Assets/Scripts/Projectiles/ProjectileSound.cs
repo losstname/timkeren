@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class ProjectileSound : MonoBehaviour {
+public class ProjectileSound : MonoBehaviour
+{
 
     private AudioSource audioSfx;
     public AudioClip initSound;

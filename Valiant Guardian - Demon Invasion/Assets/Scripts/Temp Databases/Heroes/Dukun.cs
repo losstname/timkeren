@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace Assets.Scripts.Temp_Databases.Heroes
         public Dukun(Int32 experience, bool locked)
             : base(experience, locked, 2)//dukun ID =2
         {
-            preparingData();   
+            preparingData();
         }
 
         private void preparingData()

@@ -14,9 +14,9 @@ namespace Assets.Scripts.Temp_Databases.Enemy
         private double idleTime;
         private bool miniBossAvail;
 
-        public MasterEnemy( int range,int hitPoints, int moveSpeed,
+        public MasterEnemy(int range, int hitPoints, int moveSpeed,
             int attackDamage, int defense, double idleTime
-            ,bool miniBossAvail)
+            , bool miniBossAvail)
         {
             this.moveSpeed = moveSpeed;
             this.range = range;

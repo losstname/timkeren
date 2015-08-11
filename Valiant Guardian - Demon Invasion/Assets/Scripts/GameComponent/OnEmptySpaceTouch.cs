@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class OnEmptySpaceTouch : MonoBehaviour {
+public class OnEmptySpaceTouch : MonoBehaviour
+{
 
     HeroSkillTrigger[] heroesSkillTrigger;
 

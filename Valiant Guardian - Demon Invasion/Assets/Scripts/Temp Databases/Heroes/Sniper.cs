@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ namespace Assets.Scripts.Temp_Databases.Heroes
 
         private void preparingData()
         {
-            mainAttack = new AttackModel(30, new int[] { 1, 1 }, 60);
+            mainAttack = new AttackModel(3, new int[] { 22, 1 }, 200);
             skillAttack = new AttackModel(30, new int[] { 1, 1 }, 60);
             ultSkillAttack = new AttackModel(30, new int[] { 1, 1 }, 60);
             attackSpeed = 60;

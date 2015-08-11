@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,8 @@ namespace Assets.Scripts.Temp_Databases.Heroes
         private int[] radius;
         private int damage;
 
-        public AttackModel(int cooldown, int[] radius, int damage) {
+        public AttackModel(int cooldown, int[] radius, int damage)
+        {
             this.cooldown = cooldown;
             this.radius = radius;
             this.damage = damage;

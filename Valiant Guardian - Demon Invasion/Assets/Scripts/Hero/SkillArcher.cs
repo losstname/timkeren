@@ -1,14 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class SkillArcher : MonoBehaviour {
+public class SkillArcher : MonoBehaviour
+{
 
     public GameObject normProjectiles;
     public GameObject ultiProjectiles;
 
     private Hero hero;
 
-    void Awake() {
+    void Awake()
+    {
         hero = GetComponent<Hero>();
     }
 
@@ -19,7 +21,8 @@ public class SkillArcher : MonoBehaviour {
         spawnNormProjectile();
     }
 
-    public void ultimateSkill() {
+    public void ultimateSkill()
+    {
         //make sure the projectile aiming at enemy
         hero.aimAtEnemy();
         spawnUltiProjectile();

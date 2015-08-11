@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class CharacterList : MonoBehaviour {
+public class CharacterList : MonoBehaviour
+{
 
     public GameObject[] HeroesPrefab;   //game object for instatiating
     public GameObject[] EnemiesPrefab;

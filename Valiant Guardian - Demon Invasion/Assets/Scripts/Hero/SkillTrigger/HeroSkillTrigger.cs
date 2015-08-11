@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 //Put on the hero with skillsholder set
-public class HeroSkillTrigger : MonoBehaviour {
+public class HeroSkillTrigger : MonoBehaviour
+{
 
     Hero hero;
 

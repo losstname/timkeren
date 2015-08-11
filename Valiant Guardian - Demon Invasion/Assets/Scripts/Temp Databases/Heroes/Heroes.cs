@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,11 +33,13 @@ namespace Assets.Scripts.Temp_Databases.Heroes
         public int Price { get; private set; }
         public Int32 Experience { get; set; }
 
-        public void increaseExperience(int addition) {
+        public void increaseExperience(int addition)
+        {
             experience += addition;
         }
 
-        public void unlockHeroes(ref int coin) {
+        public void unlockHeroes(ref int coin)
+        {
             if (coin > price)
             {
                 locked = false;

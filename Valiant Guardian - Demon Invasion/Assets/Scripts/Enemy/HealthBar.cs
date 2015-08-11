@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class HealthBar : MonoBehaviour {
+public class HealthBar : MonoBehaviour
+{
 
     public float maxHitPoints;
     public float fadeSpeed = 1f;
@@ -39,7 +40,7 @@ public class HealthBar : MonoBehaviour {
         float scaling = dmg / maxHitPoints;
         Vector3 newScale = new Vector3(scaling, 0f, 0f);
         //To make sure nothing has negative values
-        if(hitPoints.localScale.x > newScale.x)
+        if (hitPoints.localScale.x > newScale.x)
         {
             hitPoints.localScale -= newScale;
         }

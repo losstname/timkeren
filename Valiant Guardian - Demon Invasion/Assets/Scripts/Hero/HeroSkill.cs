@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 //Put on the hero
-public class HeroSkill : MonoBehaviour {
+public class HeroSkill : MonoBehaviour
+{
 
     private Hero hero;
     private HeroSkillTrigger heroSkillTrigger;

@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class ReflectiveArrow : MonoBehaviour {
+public class ReflectiveArrow : MonoBehaviour
+{
 
     SpriteRenderer spriteRenderer;
 
@@ -90,7 +91,7 @@ public class ReflectiveArrow : MonoBehaviour {
         {
             //after marked target hit, ASAP find the next target
             //but remember if it is still look for next enemy
-            if(isFindingTarget)
+            if (isFindingTarget)
                 FindTargetOnRadius();
 
             other.gameObject.GetComponent<Enemy>().Attacked();
@@ -137,7 +138,7 @@ public class ReflectiveArrow : MonoBehaviour {
         {
             if (enemiesFound[i].name != markedTargetName)
             {
-                if(Vector2.Distance(transform.position, enemiesFound[i].transform.position) <= radius)
+                if (Vector2.Distance(transform.position, enemiesFound[i].transform.position) <= radius)
                     enemiesOnRadius[enemiesOnRadiusCount++] = enemiesFound[i].gameObject;
             }
         }

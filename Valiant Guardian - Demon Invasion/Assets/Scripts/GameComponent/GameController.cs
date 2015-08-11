@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class GameController : MonoBehaviour {
+public class GameController : MonoBehaviour
+{
 
     CharacterList characterList;
 
@@ -49,7 +50,8 @@ public class GameController : MonoBehaviour {
         preparationPanel.SetActive(false);
     }
 
-	void Start () {
+    void Start()
+    {
         //set wave board number from set of sprite numbers
         wave = 1;
         waveTextUnit[0] = GameObject.Find("WaveBoard").transform.FindChild("Unit").GetComponent<Image>();
@@ -66,9 +68,10 @@ public class GameController : MonoBehaviour {
 
         //To Start Enemy Spawning waves using IEnumeratir function
         StartCoroutine(EnemySpawning());
-	}
+    }
 
-    void Update() {
+    void Update()
+    {
         //time is decreasing when there is time left
         //prevent minus time when enemy not spawning
         if (timeLeft > 0)
@@ -76,15 +79,17 @@ public class GameController : MonoBehaviour {
             timeLeft -= Time.deltaTime;
             timeLeftText.text = ((int)timeLeft).ToString();
         }
-		else{
+        else
+        {
             //No player win in survival mode
-			//ScriptableObject.FindObjectOfType<PlayerBase>().PlayerWin();
-            if(GameObject.FindGameObjectWithTag("Enemy")==null && isPreparationTime==false)
+            //ScriptableObject.FindObjectOfType<PlayerBase>().PlayerWin();
+            if (GameObject.FindGameObjectWithTag("Enemy") == null && isPreparationTime == false)
                 StartCoroutine(PreparationTime());
-		}
+        }
     }
 
-    private void SpawnHeroes(){
+    private void SpawnHeroes()
+    {
         GameObject heroesHolder = GameObject.Find("Hero");
         int[] heroesOrder = DataPlayer.getInstance().LastHeroUsed;
         for (int i = 0; i < heroesHolder.transform.childCount; i++)

@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class SkillDukun : MonoBehaviour {
+public class SkillDukun : MonoBehaviour
+{
 
     public GameObject normProjectiles;
     public GameObject ultiProjectiles;

@@ -89,4 +89,9 @@ public class HeroSkillTrigger : MonoBehaviour {
     {
         hero.anim.enabled = true;
     }
+
+    public void RestartHeroAnimation()
+    {
+        hero.anim.Play(hero.idleStateHash, -1, float.NegativeInfinity);
+    }
 }

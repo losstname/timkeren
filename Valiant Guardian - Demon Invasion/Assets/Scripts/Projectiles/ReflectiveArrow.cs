@@ -20,6 +20,9 @@ public class ReflectiveArrow : MonoBehaviour {
     private bool isFindingTarget = false;
     private bool projectileVisible = false;
 
+    public GameObject soundHitGO;
+    public AudioClip soundHit;
+
     public GameObject[] enemiesOnRadius;
     void Start()
     {
@@ -48,7 +51,7 @@ public class ReflectiveArrow : MonoBehaviour {
         }
 
         //move projectile towards target
-        if (isFindingTarget)
+        if (isFindingTarget && target != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
         }
@@ -57,24 +60,26 @@ public class ReflectiveArrow : MonoBehaviour {
     void setFirstEnemyOnTap()
     {
         RaycastHit2D hitObject = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        if (hitObject.transform.tag == "Enemy")
+        if (hitObject.transform.tag == "Enemy" && Vector2.Distance(transform.position, hitObject.transform.position) <= radius)
         {
-            if (Vector2.Distance(transform.position, hitObject.transform.position) <= radius)
-            {
-                TargetAnEnemy(hitObject.collider);
-                isFindingTarget = true;
+            TargetAnEnemy(hitObject.collider);
+            isFindingTarget = true;
 
-                //To re enable the sprite renderer when the projectile launched
-                spriteRenderer.enabled = true;
+            //To re enable the sprite renderer when the projectile launched
+            spriteRenderer.enabled = true;
 
-                //To continue the attacking animation
-                heroSkillTrigger.ResumeHeroAnimation();
-            }
+            //To continue the attacking animation
+            heroSkillTrigger.ResumeHeroAnimation();
+
+            //To play the sfx
+            GetComponent<AudioSource>().Play();
         }
         else
         {
             //To hide the skills button after clicking
-            heroSkillTrigger.HideSkillsHolder();
+            //heroSkillTrigger.HideSkillsHolder();
+            heroSkillTrigger.ResumeHeroAnimation();
+            heroSkillTrigger.RestartHeroAnimation();
             Destroy(gameObject);
         }
     }
@@ -90,11 +95,17 @@ public class ReflectiveArrow : MonoBehaviour {
 
             other.gameObject.GetComponent<Enemy>().Attacked();
 
+            //Instantiate the object holding the audio source
+            GameObject tmpSound = Instantiate(soundHitGO, this.transform.position, Quaternion.identity) as GameObject;
+            tmpSound.GetComponent<AudioSource>().clip = soundHit;
+            tmpSound.GetComponent<AudioSource>().Play();
+
             //Stop the projecetile to look for next enemy when hit the last enemy
             if (countEnemiesHit == enemyHitLimit)
             {
                 isFindingTarget = false;
                 RefundEnemiesName();
+
                 Destroy(this.gameObject);
             }
         }

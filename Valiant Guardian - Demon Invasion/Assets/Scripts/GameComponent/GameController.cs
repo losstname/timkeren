@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour {
         else cameraZPos = 1;
 
         //To test the camera position, delete this line if finished
-        Debug.Log(Camera.main.transform.position.z);
+        //Debug.Log(Camera.main.transform.position.z);
 
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
 
@@ -96,10 +96,12 @@ public class GameController : MonoBehaviour {
 
     IEnumerator EnemySpawning(){
 		while(timeLeft > 0){
+            //Set initial yPos
             float yPos = Random.Range(y1Pos, y2Pos);
 
             //Determine offset from y1Pos to yPos
             float newZOffsetRange = Mathf.Abs(yPos - y1Pos);
+
             float zPos = (newZOffsetRange + zOffset * cameraZPos);
             Vector3 InstantiatePos = new Vector3(xPos, yPos, zPos); //Set spawning position
             int EnemyToSpawnIndex = Random.Range(0, Enemies.Length);

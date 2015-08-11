@@ -149,7 +149,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   radius: 15
-  speed: 10
+  speed: 30
   soundHitGO: {fileID: 140864, guid: 32d52fe79a45d344088b3e17425c6c8f, type: 2}
   soundHit: {fileID: 8300000, guid: 020ae0d6f2edc6141a6bad8147052351, type: 3}
   enemiesOnRadius: []
@@ -192,7 +192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_PlayOnAwake

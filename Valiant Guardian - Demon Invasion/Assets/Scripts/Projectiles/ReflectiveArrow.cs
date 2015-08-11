@@ -10,10 +10,11 @@ public class ReflectiveArrow : MonoBehaviour
     HeroSkillTrigger heroSkillTrigger;
 
     public int enemyHitLimit = 4;
-    private int countEnemiesHit;
+    private int countEnemiesTargeted;
     private string[] enemiesRealName;
     public GameObject[] enemiesCaught;
     private string markedTargetName;    //All targeted enemies marked by this name
+    private int countEnemiesHit;
 
     public float radius;
     public float speed;
@@ -35,6 +36,7 @@ public class ReflectiveArrow : MonoBehaviour
         enemiesCaught = new GameObject[enemyHitLimit];
 
         heroSkillTrigger = transform.parent.GetComponent<HeroSkillTrigger>();
+        countEnemiesTargeted = 0;
         countEnemiesHit = 0;
         markedTargetName = "ReflectiveArrowVictim";
     }
@@ -115,15 +117,22 @@ public class ReflectiveArrow : MonoBehaviour
     void TargetAnEnemy(Collider2D targetCollider)
     {
         //save the reference of the enemies in order
-        enemiesCaught[countEnemiesHit] = targetCollider.gameObject;
+        enemiesCaught[countEnemiesTargeted] = targetCollider.gameObject;
 
         //save the name to be refund when the skills finished
-        enemiesRealName[countEnemiesHit] = targetCollider.gameObject.name;
+        enemiesRealName[countEnemiesTargeted] = targetCollider.gameObject.name;
         targetCollider.gameObject.name = markedTargetName;
 
         //set the reference to current targeted enemy
-        this.target = enemiesCaught[countEnemiesHit];
+        this.target = enemiesCaught[countEnemiesTargeted];
 
+        countEnemiesTargeted++;
+        countEnemiesHit++;
+    }
+
+    void TargetPreviousEnemy()
+    {
+        int tmpRandomTarget = Random.Range(0, countEnemiesTargeted);
         countEnemiesHit++;
     }
 
@@ -142,7 +151,14 @@ public class ReflectiveArrow : MonoBehaviour
                     enemiesOnRadius[enemiesOnRadiusCount++] = enemiesFound[i].gameObject;
             }
         }
-        FindNearestTarget();
+        if (enemiesOnRadiusCount == 0)
+        {
+            TargetPreviousEnemy();
+        }
+        else
+        {
+            FindNearestTarget();
+        }
     }
 
     //find the nearest target after clasified by FindTargetOnRadius() method

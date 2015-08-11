@@ -74,7 +74,10 @@ public class Hero : MonoBehaviour
         //Projectile object is a child of hero object
         if (Enemies != null)
         {
-            Quaternion direction = Quaternion.LookRotation(Enemies.transform.position - ProjectilePosTr.position, ProjectilePosTr.TransformDirection(Vector3.up));
+            //newEnemyPosition is to prevent interfence with the z position of enemies
+            Vector3 newEnemyPosition = new Vector3(Enemies.transform.position.x, Enemies.transform.position.y, 0f);
+
+            Quaternion direction = Quaternion.LookRotation(newEnemyPosition - ProjectilePosTr.position, ProjectilePosTr.TransformDirection(Vector3.up));
             ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
         }
     }

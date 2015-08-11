@@ -149,7 +149,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   radius: 15
-  speed: 30
+  speed: 15
   soundHitGO: {fileID: 140864, guid: 32d52fe79a45d344088b3e17425c6c8f, type: 2}
   soundHit: {fileID: 8300000, guid: 020ae0d6f2edc6141a6bad8147052351, type: 3}
   enemiesOnRadius: []
@@ -187,12 +187,16 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: enemiesCaught.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: radius
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_PlayOnAwake
@@ -214,6 +218,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d033171a465e79d4b91e33f1496ec814, type: 3}
+    - target: {fileID: 0}
+      propertyPath: enemyHitLimit
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 111118}

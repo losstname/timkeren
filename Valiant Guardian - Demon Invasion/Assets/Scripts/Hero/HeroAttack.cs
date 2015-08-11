@@ -3,7 +3,6 @@ using System.Collections;
 //Put on the hero
 public class HeroAttack : MonoBehaviour
 {
-
     public GameObject Projectiles;
 
     public static int archerAtk = 100;
@@ -49,6 +48,7 @@ public class HeroAttack : MonoBehaviour
     {
         //make sure the projectile aiming at enemy
         hero.aimAtEnemy();
+
         //spawning projectile
         //called from animation
         Instantiate(Projectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);

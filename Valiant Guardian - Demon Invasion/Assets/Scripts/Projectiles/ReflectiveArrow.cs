@@ -160,10 +160,13 @@ public class ReflectiveArrow : MonoBehaviour
                 continue;
             else
             {
-                float newDistance = Vector2.Distance(tempNearestTarget.transform.position, enemiesOnRadius[i].transform.position);
+                float newDistance = Vector2.Distance(transform.position, enemiesOnRadius[i].transform.position);
                 //if the distance to the enemy closer than the previous distance then save it
                 if (newDistance < tempDistance)
+                {
                     tempNearestTarget = enemiesOnRadius[i].gameObject;
+                    tempDistance = newDistance;
+                }
             }
         }
         TargetAnEnemy(tempNearestTarget.GetComponent<Collider2D>());
@@ -174,7 +177,10 @@ public class ReflectiveArrow : MonoBehaviour
         //return the name
         for (int i = 0; i < enemiesCaught.Length; i++)
         {
-            enemiesCaught[i].name = enemiesRealName[i];
+            if (enemiesCaught[i] == null)
+                continue;
+            else
+                enemiesCaught[i].name = enemiesRealName[i];
         }
     }
 }

@@ -10,8 +10,7 @@ public class GameController : MonoBehaviour
     public float y1Pos;
     public float y2Pos;
     public float xPos;
-    private float zOffset = 1f;
-    private int cameraZPos;
+    private float zOffset = -1f;
 
     public float wavesWait;
     public GameObject[] Enemies;
@@ -32,15 +31,6 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        //To determine the z Index for instantiated enemy/other game object
-        //Need more testing with overlapping sprite
-        if (Camera.main.transform.position.z < 0)
-            cameraZPos = -1;
-        else cameraZPos = 1;
-
-        //To test the camera position, delete this line if finished
-        //Debug.Log(Camera.main.transform.position.z);
-
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
 
         //Panel used to prepare anything between waves
@@ -104,10 +94,7 @@ public class GameController : MonoBehaviour
             //Set initial yPos
             float yPos = Random.Range(y1Pos, y2Pos);
 
-            //Determine offset from y1Pos to yPos
-            float newZOffsetRange = Mathf.Abs(yPos - y1Pos);
-
-            float zPos = (newZOffsetRange + zOffset * cameraZPos);
+            float zPos = yPos + zOffset - y1Pos;
             Vector3 InstantiatePos = new Vector3(xPos, yPos, zPos); //Set spawning position
             int EnemyToSpawnIndex = Random.Range(0, Enemies.Length);
             Instantiate(Enemies[EnemyToSpawnIndex], InstantiatePos, Quaternion.identity);

@@ -43,7 +43,7 @@ public class ReflectiveArrow : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !isFindingTarget)
             setFirstEnemyOnTap();
 
         //Set the object rotation

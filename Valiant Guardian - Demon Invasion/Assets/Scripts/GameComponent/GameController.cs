@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
 
     private void SpawnHeroes()
     {
-        GameObject heroesHolder = GameObject.Find("Hero");
+        GameObject heroesHolder = GameObject.Find("HeroPos");
         int[] heroesOrder = DataPlayer.getInstance().LastHeroUsed;
         for (int i = 0; i < heroesHolder.transform.childCount; i++)
         {

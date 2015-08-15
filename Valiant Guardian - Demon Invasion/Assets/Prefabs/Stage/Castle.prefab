@@ -250,12 +250,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.143734843, y: .197950944}
-      - {x: -.216471955, y: -.0781860575}
-      - {x: -.445615321, y: -.496970296}
-      - {x: -2.11253929, y: -.48949188}
+    - - {x: -.387579501, y: .0842740312}
+      - {x: -.39258185, y: -.0707723498}
+      - {x: -1.16360235, y: -.440131873}
+      - {x: -1.76031995, y: -.415354759}
       - {x: -.888650596, y: -.0372865498}
-      - {x: -.948793948, y: .196263835}
+      - {x: -.894606113, y: .0801157281}
 --- !u!212 &21200514
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -383,7 +383,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 4179505bc012cbb4e9d69fbdd871995b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21267500
@@ -409,7 +409,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
-  m_SortingOrder: 7
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: d4e0cf7fd6a914140aa21a468da760b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

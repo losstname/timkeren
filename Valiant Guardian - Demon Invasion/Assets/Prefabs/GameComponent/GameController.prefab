@@ -43,6 +43,11 @@ MonoBehaviour:
   hitPoints: 5000
   attackable: 1
   destroyable: 1
+  hitGateTransition:
+  - {fileID: 21300000, guid: a9e250b8aac0c974ba6eb1d584a76859, type: 3}
+  - {fileID: 21300000, guid: 94bde09ee8b6e2241aa570d6c833ab74, type: 3}
+  - {fileID: 21300000, guid: 84bbe5c028ec5e74ba8a6eba1f9a3609, type: 3}
+  hitPointsStop: 000000003200000064000000
 --- !u!114 &11439172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a0aec54151e654ab9833f615e96833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  y1Pos: .699999988
+  y1Pos: -1.39999998
   y2Pos: -3
   xPos: 7
   wavesWait: 2

@@ -11,12 +11,25 @@ public class Door : MonoBehaviour
     public bool attackable = true;
     public bool destroyable = true;
 
+    //To store customizable image of door conditions
+    public Sprite[] hitGateTransition;
+
+    //To set the point to transition between two door condition
+    private int[] hitPointsStop = new int[3];
+
     void Awake()
     {
         //gateHp = GameObject.Find("BaseHPText").GetComponent<Text>();
         gateHpSlider = GameObject.Find("GateHP").GetComponent<Slider>();
         //gateHp.text = "Gate HP: " + hitPoints;
         doorObject = GameObject.FindGameObjectWithTag("Base");
+    }
+
+    void Start()
+    {
+        hitPointsStop[0] = 0;
+        hitPointsStop[1] = hitPoints / 2;
+        hitPointsStop[2] = hitPoints;
     }
 
     public void AttackBase(int hpDecrease)
@@ -30,6 +43,10 @@ public class Door : MonoBehaviour
             {
                 //gateHp.text = "Gate HP:  " + hitPoints;
                 gateHpSlider.value = hitPoints;
+                if (hitPoints < hitPointsStop[1])
+                {
+                    doorObject.GetComponent<SpriteRenderer>().sprite = hitGateTransition[1];
+                }
             }
             else
             {
@@ -39,7 +56,7 @@ public class Door : MonoBehaviour
                     attackable = false;
                     GameController gameCtrl = GameObject.FindObjectOfType<GameController>();
                     gameCtrl.StopAllCoroutines();
-                    doorObject.SetActive(false);
+                    doorObject.GetComponent<SpriteRenderer>().sprite = hitGateTransition[0];
                 }
             }
         }

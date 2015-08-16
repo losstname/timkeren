@@ -149,6 +149,26 @@ public class Enemy : MonoBehaviour
             disableBeingTargeted();
         }
     }
+	public void AttackedV2()
+	{
+		attackX = Random.Range(1, 20);
+		defenseY = Random.Range(31, 80);
+		//Example , get meleeImp defense from database
+		int impDefense = DataEnemy.getInstance().MeleeImp.Defense;
+		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
+		HPDecrease = HPDecrease * 2;
+		hitPoints -= HPDecrease;
+		//Spawn damage floater
+		SpawnDamageFloater(HPDecrease);
+		//set health bar
+		healthBar.OnAttacked(HPDecrease);
+		if (hitPoints <= 0)
+		{
+			Death();
+			disableBeingTargeted();
+		}
+	}
+
 
     void SpawnDamageFloater(float dmg)
     {
@@ -172,6 +192,21 @@ public class Enemy : MonoBehaviour
         StartCoroutine(FadeOut());
         Destroy(gameObject, 3f);
     }
+
+	public void Stun(float stunDelay,int damage)
+	{
+		ableMove = false;
+		Invoke ("WaitForStunToEnd", stunDelay);
+
+		//StartCoroutine (WaitForStunToEnd());
+	}
+	
+	void/*IEnumerator*/ WaitForStunToEnd()
+	{
+		//yield return new WaitForSeconds (2f);
+		ableMove = true;
+	}
+
 
     IEnumerator FadeOut()
     {

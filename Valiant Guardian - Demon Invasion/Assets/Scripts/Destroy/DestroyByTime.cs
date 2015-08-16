@@ -4,7 +4,7 @@ using System.Collections;
 public class DestroyByTime : MonoBehaviour
 {
 
-    public float lifeTime = 1;
+    public float lifeTime = 5;
     // Update is called once per frame
     void Update()
     {

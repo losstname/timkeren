@@ -3,7 +3,6 @@ using System.Collections;
 //Put on the hero with skillsholder set
 public class HeroSkillTrigger : MonoBehaviour
 {
-
     Hero hero;
 
     private GameObject SkillsHolder;

@@ -36,7 +36,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         baseDoor = GameObject.FindGameObjectWithTag("Base").transform;
-        baseDoorPositionOffset = new Vector3(0.0f, 0.6f, 0.0f);
         playerBase = GameObject.Find("PlayerBase").transform;
         anim = GetComponent<Animator>();
         sightStart = this.transform;
@@ -58,7 +57,7 @@ public class Enemy : MonoBehaviour
             //Debug.DrawLine (sightStart.position, sightEnd.position, Color.green);
             if (moveToDoor && !foundDoor)
             {
-                transform.position = Vector3.MoveTowards(transform.position, baseDoor.position - baseDoorPositionOffset, step);
+                transform.position = Vector3.MoveTowards(transform.position, baseDoor.FindChild("AttackPoint").position, step);
             }
             else if (foundDoor)
             {

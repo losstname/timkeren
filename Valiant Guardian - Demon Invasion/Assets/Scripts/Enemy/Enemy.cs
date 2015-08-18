@@ -155,6 +155,7 @@ public class Enemy : MonoBehaviour
 		//Example , get meleeImp defense from database
 		int impDefense = DataEnemy.getInstance().MeleeImp.Defense;
 		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
+		//damage * 2
 		HPDecrease = HPDecrease * 2;
 		hitPoints -= HPDecrease;
 		//Spawn damage floater
@@ -194,15 +195,15 @@ public class Enemy : MonoBehaviour
 
 	public void Stun(float stunDelay,int damage)
 	{
+		//make the enemy stop moving
 		ableMove = false;
 		Invoke ("WaitForStunToEnd", stunDelay);
 
-		//StartCoroutine (WaitForStunToEnd());
 	}
 	
-	void/*IEnumerator*/ WaitForStunToEnd()
+	void WaitForStunToEnd()
 	{
-		//yield return new WaitForSeconds (2f);
+		//enemy move again after the stun end
 		ableMove = true;
 	}
 

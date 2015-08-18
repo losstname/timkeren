@@ -9,7 +9,6 @@ public class GrenadeAreaDamage : MonoBehaviour
 		if (other.tag == "Enemy")
 		{
 			other.GetComponent<Enemy>().AttackedV2();
-			//    Destroy(other.gameObject);
 		}
 	}
 }

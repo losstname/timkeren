@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normProjectiles: {fileID: 111118, guid: 40278714941c7294993943614d08e9f4, type: 2}
-  ultiProjectiles: {fileID: 180930, guid: 7dd20129556ba38429bf6fa82f6c6241, type: 2}
+  ultiProjectiles: {fileID: 193416, guid: d56034de6e9447e448557ff2983ba9d0, type: 2}
 --- !u!212 &21213210
 SpriteRenderer:
   m_ObjectHideFlags: 1

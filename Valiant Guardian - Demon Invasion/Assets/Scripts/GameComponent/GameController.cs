@@ -26,8 +26,7 @@ public class GameController : MonoBehaviour
 
     //wave board info management using these three variables
     private int wave;
-    public Sprite[] waveTextList;
-    private Image[] waveTextUnit = new Image[2];
+    private Text waveText;
 
     void Awake()
     {
@@ -44,8 +43,7 @@ public class GameController : MonoBehaviour
     {
         //set wave board number from set of sprite numbers
         wave = 1;
-        waveTextUnit[0] = GameObject.Find("WaveBoard").transform.FindChild("Unit").GetComponent<Image>();
-        waveTextUnit[1] = GameObject.Find("WaveBoard").transform.FindChild("Dozens").GetComponent<Image>();
+        waveText = GameObject.Find("WaveBoard").transform.FindChild("WaveCount").GetComponent<Text>();
         setWaveBoardNumber(wave);
 
         //spawn heroes which have been selected in character selection screen
@@ -158,9 +156,6 @@ public class GameController : MonoBehaviour
 
     void setWaveBoardNumber(int wave)
     {
-        int a = wave % 10;
-        waveTextUnit[0].sprite = waveTextList[a];
-        int b = wave / 10;
-        waveTextUnit[1].sprite = waveTextList[b];
+        waveText.text = wave.ToString();
     }
 }

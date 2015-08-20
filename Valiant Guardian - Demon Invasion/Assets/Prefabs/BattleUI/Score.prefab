@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22404586}
   - 222: {fileID: 22208184}
   - 114: {fileID: 11490410}
+  - 114: {fileID: 11471940}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -42,6 +43,7 @@ GameObject:
   - 224: {fileID: 22474296}
   - 222: {fileID: 22239060}
   - 114: {fileID: 11452996}
+  - 114: {fileID: 11457372}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -64,7 +66,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: e6bb0aff6a66a0948809ac9714a11c2a, type: 3}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -74,7 +76,35 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: xxxxxx
+  m_Text: 999999
+--- !u!114 &11457372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
+--- !u!114 &11471940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!114 &11490410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +120,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: e6bb0aff6a66a0948809ac9714a11c2a, type: 3}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -127,8 +157,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 66, y: 0}
-  m_SizeDelta: {x: 110, y: 40}
+  m_AnchoredPosition: {x: 70, y: 0}
+  m_SizeDelta: {x: 139, y: 49}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22426502
 RectTransform:
@@ -163,7 +193,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 65.3000031, y: 0}
+  m_AnchoredPosition: {x: 65.3000031, y: -5}
   m_SizeDelta: {x: 191, y: 39}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000

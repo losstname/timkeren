@@ -10,13 +10,13 @@ public class PlayerBase : MonoBehaviour
     void Awake()
     {
         enemyLimitText = GameObject.Find("EnemyLimitText").GetComponent<Text>();
-        enemyLimitText.text = "Enemy Limit : " + enemyLimit;
+        enemyLimitText.text = enemyLimit.ToString();
     }
 
     public void AttackBase()
     {
         enemyLimit--;
-        enemyLimitText.text = "Enemy Limit : " + enemyLimit;
+        enemyLimitText.text = enemyLimit.ToString();
         if (enemyLimit <= 0)
         {
             enemyLimitText.text = "You Loseee";

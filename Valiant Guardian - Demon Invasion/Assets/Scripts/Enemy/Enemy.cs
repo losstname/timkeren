@@ -197,6 +197,7 @@ public class Enemy : MonoBehaviour
 	{
 		//make the enemy stop moving
 		ableMove = false;
+		this.GetComponent<Animator> ().SetBool ("isStun", true);
 		Invoke ("WaitForStunToEnd", stunDelay);
 
 	}
@@ -205,6 +206,7 @@ public class Enemy : MonoBehaviour
 	{
 		//enemy move again after the stun end
 		ableMove = true;
+		this.GetComponent<Animator> ().SetBool ("isStun", false);
 	}
 
 

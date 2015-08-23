@@ -12,8 +12,7 @@ public class ProjectileExplode : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy")
-        {
-            
+        {          
 			Invoke("spawnExplossionEffect",stunDelay);
 			//set explosion position
 			temp2 = other.gameObject.GetComponent<Transform>().position;

@@ -39,6 +39,8 @@ public class SkillArcher : MonoBehaviour
     {
         //spawning projectile for ultimate skill
         //called from animation
-        Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		GameObject projectile = Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation) as GameObject;
+		projectile.transform.parent = this.transform;
+        //Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
     }
 }

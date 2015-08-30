@@ -206,6 +206,7 @@ public class Enemy : MonoBehaviour
 	{
 		//enemy move again after the stun end
 		ableMove = true;
+		//stun animation
 		this.GetComponent<Animator> ().SetBool ("isStun", false);
 	}
 

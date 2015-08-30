@@ -99,7 +99,8 @@ public class GrenadeArrow : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Enemy" && other.name == markedTargetName)
-		{          
+		{
+			//call explosion effect function
 			Invoke("spawnExplossionEffect",stunDelay);
 			//set explosion position
 			temp2 = other.gameObject.GetComponent<Transform>().position;
@@ -110,6 +111,7 @@ public class GrenadeArrow : MonoBehaviour
 			//GetComponent<ProjectileSound>().hitTargetSound();
 			GetComponent<AudioSource>().clip = soundHit;
 			GetComponent<AudioSource>().Play();
+			//trigger the stun
 			other.gameObject.GetComponent<Enemy>().Stun(stunDelay,damage);
 			//float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
 			//Destroy(gameObject, waitToDestroy);

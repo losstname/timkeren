@@ -19,10 +19,9 @@ public class GameController : MonoBehaviour
     private float timeLeft;
     private Text timeLeftText;
 
-    public float preparationTime = 60.0f;
-    private float preparationTimeLeft;
-    private bool isPreparationTime = false;
-    private GameObject preparationPanel;
+    //preparation panel script
+    PreparationTime preparationTime;
+    public bool isPreparationTime = false;
 
     //wave board info management using these three variables
     private int wave;
@@ -31,12 +30,7 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
-
-        //Panel used to prepare anything between waves
-        preparationPanel = GameObject.Find("PreparationPanel");
-
-        //Set inactive for the initial gameplay
-        preparationPanel.SetActive(false);
+        preparationTime = GetComponent<PreparationTime>();
     }
 
     void Start()
@@ -72,7 +66,9 @@ public class GameController : MonoBehaviour
             //No player win in survival mode
             //ScriptableObject.FindObjectOfType<PlayerBase>().PlayerWin();
             if (GameObject.FindGameObjectWithTag("Enemy") == null && isPreparationTime == false)
-                StartCoroutine(PreparationTime());
+            {
+                BeginPreparationTime();
+            }
         }
     }
 
@@ -100,32 +96,22 @@ public class GameController : MonoBehaviour
         }
     }
 
-    IEnumerator PreparationTime()
+    private void BeginPreparationTime()
     {
-        Text preparationTimeLeftText = preparationPanel.transform.FindChild("Time").GetChild(0).GetComponent<Text>();
-        TooglePrepPanel();
         isPreparationTime = true;
+
+        //Tell preparation time class to start the countdown
+        preparationTime.StartPreparationTime();
+
         setHeroesAttackCapability(false);
-        preparationTimeLeft = preparationTime;
-        while (preparationTimeLeft >= 0.0f)
-        {
-            preparationTimeLeftText.text = preparationTimeLeft.ToString();
-            yield return new WaitForSeconds(1.0f);
-            preparationTimeLeft--;
-        }
-        if (preparationTimeLeft < 0.0f && isPreparationTime)
-        {
-            EndPreparationTime();
-        }
     }
 
     //make this public function so the ready button can trigger it
     public void EndPreparationTime()
     {
-        //to make sure the panel don't show up when the ready button used
-        preparationTimeLeft = -1.0f;
+        //tell the preparation time class to stop the countdown
+        preparationTime.FinishPreparationTime();
 
-        TooglePrepPanel();
         isPreparationTime = false;
         timeLeft = timeLimit;
 
@@ -135,14 +121,6 @@ public class GameController : MonoBehaviour
 
         //update the Wave information
         setWaveBoardNumber(++wave);
-    }
-
-    void TooglePrepPanel()
-    {
-        if (preparationPanel.active == false)
-            preparationPanel.SetActive(true);
-        else
-            preparationPanel.SetActive(false);
     }
 
     void setHeroesAttackCapability(bool capability)

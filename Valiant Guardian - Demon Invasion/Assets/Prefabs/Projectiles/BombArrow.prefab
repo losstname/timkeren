@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180930}
   m_LocalRotation: {x: 0, y: 0, z: .193977565, w: .981005967}
-  m_LocalPosition: {x: -2.06999993, y: -2.63000011, z: 0}
+  m_LocalPosition: {x: 5.27434492, y: -1.94056094, z: 0}
   m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,7 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f7554110914c54db75f742c1a573cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 150820, guid: 76f7d0cb322232944a97f8b4d57b4307, type: 2}
+  explosion: {fileID: 176626, guid: a858f259917c7d742939f0b31b2c07db, type: 2}
+  stunDelay: 0
+  damage: 0
+  radius: 0
 --- !u!212 &21284556
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -206,6 +209,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 176626, guid: a858f259917c7d742939f0b31b2c07db, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180930}

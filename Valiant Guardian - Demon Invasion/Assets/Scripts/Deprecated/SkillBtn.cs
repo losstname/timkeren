@@ -63,7 +63,7 @@ public class SkillBtn : MonoBehaviour
 
     public void toogleHeroSkillsHolder()
     {
-        if (skillsHolder.active == true)
+        if (skillsHolder.activeInHierarchy == true)
         {
             skillsHolder.SetActive(false);
         }

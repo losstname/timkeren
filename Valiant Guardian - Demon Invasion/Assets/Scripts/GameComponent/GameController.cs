@@ -27,6 +27,8 @@ public class GameController : MonoBehaviour
     private int wave;
     private Text waveText;
 
+    private bool isPaused = false;
+
     void Awake()
     {
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
@@ -135,5 +137,17 @@ public class GameController : MonoBehaviour
     void setWaveBoardNumber(int wave)
     {
         waveText.text = wave.ToString();
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void UnPauseGame()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 }

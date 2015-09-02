@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 06167bb386bfa1247adcd0622f3802ca
-timeCreated: 1441158860
+guid: 44440be05d8e7ef4a93929c45a20db0d
+timeCreated: 1438086307
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -85,320 +85,320 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 80
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_2
       rect:
         serializedVersion: 2
-        x: 150
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 160
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_3
       rect:
         serializedVersion: 2
-        x: 225
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 240
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_4
       rect:
         serializedVersion: 2
-        x: 300
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 320
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_5
       rect:
         serializedVersion: 2
-        x: 375
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 400
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_6
       rect:
         serializedVersion: 2
-        x: 450
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 480
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_7
       rect:
         serializedVersion: 2
-        x: 525
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 560
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_8
       rect:
         serializedVersion: 2
-        x: 600
-        y: 306
-        width: 75
-        height: 95
-      alignment: 1
+        x: 640
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 720
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_10
       rect:
         serializedVersion: 2
-        x: 75
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 800
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_11
       rect:
         serializedVersion: 2
-        x: 150
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 880
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_12
       rect:
         serializedVersion: 2
-        x: 225
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 960
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 1040
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_14
       rect:
         serializedVersion: 2
-        x: 375
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 1120
+        y: 209
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_15
       rect:
         serializedVersion: 2
-        x: 450
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 0
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_16
       rect:
         serializedVersion: 2
-        x: 525
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 80
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_17
       rect:
         serializedVersion: 2
-        x: 600
-        y: 211
-        width: 75
-        height: 95
-      alignment: 1
+        x: 160
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 240
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_19
       rect:
         serializedVersion: 2
-        x: 75
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 320
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_20
       rect:
         serializedVersion: 2
-        x: 150
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 400
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_21
       rect:
         serializedVersion: 2
-        x: 225
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 480
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_22
       rect:
         serializedVersion: 2
-        x: 300
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 560
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_23
       rect:
         serializedVersion: 2
-        x: 375
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 640
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_24
       rect:
         serializedVersion: 2
-        x: 450
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 720
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_25
       rect:
         serializedVersion: 2
-        x: 525
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 800
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_26
       rect:
         serializedVersion: 2
-        x: 600
-        y: 116
-        width: 75
-        height: 95
-      alignment: 1
+        x: 880
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 21
-        width: 75
-        height: 95
-      alignment: 1
+        x: 960
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_28
       rect:
         serializedVersion: 2
-        x: 75
-        y: 21
-        width: 75
-        height: 95
-      alignment: 1
+        x: 1040
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_29
       rect:
         serializedVersion: 2
-        x: 150
-        y: 21
-        width: 75
-        height: 95
-      alignment: 1
+        x: 1120
+        y: 108
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_30
       rect:
         serializedVersion: 2
-        x: 225
-        y: 21
-        width: 75
-        height: 95
-      alignment: 1
+        x: 0
+        y: 7
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_31
       rect:
         serializedVersion: 2
-        x: 300
-        y: 21
-        width: 75
-        height: 95
-      alignment: 1
+        x: 80
+        y: 7
+        width: 80
+        height: 101
+      alignment: 4
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

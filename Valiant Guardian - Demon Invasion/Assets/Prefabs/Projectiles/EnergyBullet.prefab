@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93df5b2e1ff91dc44be082e255837175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initSound: {fileID: 8300000, guid: d033171a465e79d4b91e33f1496ec814, type: 3}
+  initSound: {fileID: 8300000, guid: 6f8f8b3f3c9b1994199aa2362fa28525, type: 3}
   hitSound: {fileID: 8300000, guid: 020ae0d6f2edc6141a6bad8147052351, type: 3}
 --- !u!114 &11445420
 MonoBehaviour:
@@ -205,6 +205,14 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: initSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f8f8b3f3c9b1994199aa2362fa28525, type: 3}
+    - target: {fileID: 0}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 020ae0d6f2edc6141a6bad8147052351, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 108734}

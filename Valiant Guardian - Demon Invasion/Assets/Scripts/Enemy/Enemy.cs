@@ -33,6 +33,9 @@ public class Enemy : MonoBehaviour
 
     private HealthBar healthBar;
 
+    public GameObject soundDeadGO;  //Game Object to be instatiated when dead
+    public AudioClip soundDead;     //The dead sound fx
+
     void Start()
     {
         baseDoor = GameObject.FindGameObjectWithTag("Base").transform;
@@ -105,7 +108,7 @@ public class Enemy : MonoBehaviour
         if (other.tag == "PlayerBase" && gameObject.tag != "DeadEnemy")
         {
             other.GetComponent<PlayerBase>().AttackBase();
-            Death();
+            Destroy(this.gameObject);
         }
     }
 
@@ -182,14 +185,22 @@ public class Enemy : MonoBehaviour
         ableMove = false;
         //let the projectile get through
         GetComponent<BoxCollider2D>().enabled = false;
-        //untagged this enemy
+        //untagged this enemy from being targeted by heroes
         gameObject.tag = "DeadEnemy";
+
         //add coin
         Coin coin = GameObject.FindObjectOfType<Coin>();
         coin.addCoin();
+
         anim.SetTrigger(isDeadHash);
-        //Destory dead enemy after 2s
         StartCoroutine(FadeOut());
+
+        //Instantiate the object holding the audio source when dead
+        GameObject tmpSound = Instantiate(soundDeadGO, this.transform.position, Quaternion.identity) as GameObject;
+        tmpSound.GetComponent<AudioSource>().clip = soundDead;
+        tmpSound.GetComponent<AudioSource>().Play();
+
+        //Destory dead enemy after 3 secs
         Destroy(gameObject, 3f);
     }
 
@@ -201,7 +212,7 @@ public class Enemy : MonoBehaviour
 		Invoke ("WaitForStunToEnd", stunDelay);
 
 	}
-	
+
 	void WaitForStunToEnd()
 	{
 		//enemy move again after the stun end

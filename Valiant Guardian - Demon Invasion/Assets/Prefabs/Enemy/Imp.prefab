@@ -247,11 +247,11 @@ MonoBehaviour:
   CoolDown: 2
   fadeSpeed: 1
   fadeDelay: 2
-  ImpAttack: 70
-  ImpDefense: 70
   HPDecrease: 0
   hitPoints: 200
   dmgFloaterGO: {fileID: 159370, guid: 8513563fa0a8be1449979e551e8ee3e9, type: 2}
+  soundDeadGO: {fileID: 140864, guid: 32d52fe79a45d344088b3e17425c6c8f, type: 2}
+  soundDead: {fileID: 8300000, guid: dfb37ed9d10ef3244894e16e353551b0, type: 3}
 --- !u!114 &11488076
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,6 +16,12 @@ public class HeroSkillTrigger : MonoBehaviour
     private Collider2D normalSkillCollider;
     private Collider2D ultimateSkillCollider;
 
+    public GameObject readySkillNotifPrefab;
+    public GameObject readySkillNotif;
+
+
+    private bool normalSkillReady;
+    private bool ultimateSkillReady;
     void Awake()
     {
         hero = GetComponent<Hero>();
@@ -30,14 +36,29 @@ public class HeroSkillTrigger : MonoBehaviour
     {
         normalSkillCoolDownLeft -= Time.deltaTime;
         ultimateSkillCoolDownLeft -= Time.deltaTime;
-        if (normalSkillCoolDownLeft <= 0.0f)
+        if (normalSkillCoolDownLeft <= 0.0f && !normalSkillReady)
         {
             normalSkillCollider.enabled = true;
+            normalSkillReady = true;
+            if (readySkillNotif == null) { InstantiateReadySkillNotif(); }
         }
-        if (ultimateSkillCoolDownLeft <= 0.0f)
+        if (ultimateSkillCoolDownLeft <= 0.0f && !ultimateSkillReady)
         {
             ultimateSkillCollider.enabled = true;
+            ultimateSkillReady = true;
+            if (readySkillNotif == null) { InstantiateReadySkillNotif(); }
         }
+    }
+
+    private void InstantiateReadySkillNotif()
+    {
+        readySkillNotif = Instantiate(readySkillNotifPrefab, this.transform.FindChild("NotifPos").position, Quaternion.identity) as GameObject;
+        readySkillNotif.transform.parent = this.transform.FindChild("NotifPos").transform;
+    }
+
+    public void DestroyReadySkillNotif()
+    {
+        Destroy(readySkillNotif.gameObject);
     }
 
     public void setNormalSkillCoolDown(float coolDown)

@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &115700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 411462}
+  m_Layer: 0
+  m_Name: NotifPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &140640
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,13 +111,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.99646163, y: -2.52135777, z: 0}
+  m_LocalPosition: {x: 3.20858598, y: -2.21775937, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 496252}
+  - {fileID: 411462}
   - {fileID: 417868}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &411462
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0309999995, y: .662999988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 410682}
+  m_RootOrder: 1
 --- !u!4 &413168
 Transform:
   m_ObjectHideFlags: 1
@@ -140,7 +168,7 @@ Transform:
   - {fileID: 414622}
   - {fileID: 413168}
   m_Father: {fileID: 410682}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &496252
 Transform:
   m_ObjectHideFlags: 1
@@ -291,6 +319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c440b325421ec49a5fe86486792858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readySkillNotifPrefab: {fileID: 105784, guid: 1f7b1b1f3d676f14ea2f7c09e5f9a4d1,
+    type: 2}
+  readySkillNotif: {fileID: 0}
 --- !u!114 &11487806
 MonoBehaviour:
   m_ObjectHideFlags: 1

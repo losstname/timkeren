@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7c5a4450a01d5854d976cabb047542e7
-timeCreated: 1441158683
+timeCreated: 1441529346
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,7 +62,7 @@ TextureImporter:
         y: 16
         width: 110
         height: 96
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_prep_east_1
@@ -72,7 +72,7 @@ TextureImporter:
         y: 16
         width: 110
         height: 96
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_prep_east_2
@@ -82,7 +82,7 @@ TextureImporter:
         y: 16
         width: 110
         height: 96
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_prep_east_3
@@ -92,7 +92,7 @@ TextureImporter:
         y: 16
         width: 110
         height: 96
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_prep_east_4
@@ -102,7 +102,7 @@ TextureImporter:
         y: 16
         width: 110
         height: 96
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_prep_east_5
@@ -112,7 +112,7 @@ TextureImporter:
         y: 16
         width: 110
         height: 96
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

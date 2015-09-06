@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 06167bb386bfa1247adcd0622f3802ca
-timeCreated: 1441158860
+timeCreated: 1441529439
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -88,7 +88,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_1
@@ -98,7 +98,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_2
@@ -108,7 +108,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_3
@@ -118,7 +118,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_4
@@ -128,7 +128,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_5
@@ -138,7 +138,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_6
@@ -148,7 +148,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_7
@@ -158,7 +158,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_8
@@ -168,7 +168,7 @@ TextureImporter:
         y: 306
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_9
@@ -178,7 +178,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_10
@@ -188,7 +188,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_11
@@ -198,7 +198,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_12
@@ -208,7 +208,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_13
@@ -218,7 +218,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_14
@@ -228,7 +228,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_15
@@ -238,7 +238,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_16
@@ -248,7 +248,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_17
@@ -258,7 +258,7 @@ TextureImporter:
         y: 211
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_18
@@ -268,7 +268,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_19
@@ -278,7 +278,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_20
@@ -288,7 +288,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_21
@@ -298,7 +298,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_22
@@ -308,7 +308,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_23
@@ -318,7 +318,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_24
@@ -328,7 +328,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_25
@@ -338,7 +338,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_26
@@ -348,7 +348,7 @@ TextureImporter:
         y: 116
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_27
@@ -358,7 +358,7 @@ TextureImporter:
         y: 21
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_28
@@ -368,7 +368,7 @@ TextureImporter:
         y: 21
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_29
@@ -378,7 +378,7 @@ TextureImporter:
         y: 21
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_30
@@ -388,7 +388,7 @@ TextureImporter:
         y: 21
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_idle_31
@@ -398,7 +398,7 @@ TextureImporter:
         y: 21
         width: 75
         height: 95
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

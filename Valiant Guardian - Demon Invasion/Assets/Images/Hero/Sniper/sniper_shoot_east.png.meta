@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8847e0ddb024a7144a70575fea25777f
-timeCreated: 1441158746
+timeCreated: 1441529383
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -68,7 +68,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_1
@@ -78,7 +78,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_2
@@ -88,7 +88,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_3
@@ -98,7 +98,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_4
@@ -108,7 +108,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_5
@@ -118,7 +118,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_6
@@ -128,7 +128,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_7
@@ -138,7 +138,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_8
@@ -148,7 +148,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_9
@@ -158,7 +158,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_10
@@ -168,7 +168,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sniper_shoot_east_11
@@ -178,7 +178,7 @@ TextureImporter:
         y: 9
         width: 102
         height: 87
-      alignment: 1
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

@@ -33,6 +33,9 @@ public class Enemy : MonoBehaviour
 
     private HealthBar healthBar;
 
+    //Indicator if enemy tapped and targeted
+    public GameObject targetIndicator;
+
     public GameObject soundDeadGO;  //Game Object to be instatiated when dead
     public AudioClip soundDead;     //The dead sound fx
 
@@ -241,6 +244,12 @@ public class Enemy : MonoBehaviour
         for (int i = 0; i < heroes.Length; i++)
         {
             heroes[i].GetComponent<Hero>().changeEnemy(this.gameObject);
+
+            //Instantiate target indicator
+            GameObject tmpIndicator = Instantiate(targetIndicator, this.transform.FindChild("IndicatorPos").position, Quaternion.identity) as GameObject;
+
+            //Set the target indicator as child so it moves along with the enemy GO
+            tmpIndicator.transform.parent = this.transform.FindChild("IndicatorPos").transform;
         }
     }
 }

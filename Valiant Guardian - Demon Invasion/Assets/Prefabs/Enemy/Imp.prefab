@@ -62,6 +62,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &145284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480904}
+  m_Layer: 0
+  m_Name: IndicatorPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &151198
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +164,7 @@ Transform:
   - {fileID: 452288}
   - {fileID: 437114}
   m_Father: {fileID: 453302}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &437114
 Transform:
   m_ObjectHideFlags: 1
@@ -194,14 +209,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .910000026, y: -3, z: 0}
+  m_LocalPosition: {x: -5.26000023, y: -.349999994, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 408322}
   - {fileID: 438072}
+  - {fileID: 480904}
   - {fileID: 433708}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &480904
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0430000015, y: .437000006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 453302}
+  m_RootOrder: 2
 --- !u!61 &6162054
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -250,6 +278,7 @@ MonoBehaviour:
   HPDecrease: 0
   hitPoints: 200
   dmgFloaterGO: {fileID: 159370, guid: 8513563fa0a8be1449979e551e8ee3e9, type: 2}
+  targetIndicator: {fileID: 154302, guid: ea70e60fe7f4c5744aac159f81e224cd, type: 2}
   soundDeadGO: {fileID: 140864, guid: 32d52fe79a45d344088b3e17425c6c8f, type: 2}
   soundDead: {fileID: 8300000, guid: dfb37ed9d10ef3244894e16e353551b0, type: 3}
 --- !u!114 &11488076

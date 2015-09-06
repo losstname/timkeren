@@ -46,6 +46,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &127458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 476458}
+  m_Layer: 0
+  m_Name: IndicatorPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &140790
 GameObject:
   m_ObjectHideFlags: 1
@@ -131,11 +146,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.32999992, y: -2.73124027, z: 0}
+  m_LocalPosition: {x: -4.41792488, y: .352444351, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407244}
   - {fileID: 484166}
+  - {fileID: 476458}
   - {fileID: 428002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -152,7 +168,7 @@ Transform:
   - {fileID: 442490}
   - {fileID: 444876}
   m_Father: {fileID: 427396}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &431232
 Transform:
   m_ObjectHideFlags: 1
@@ -190,6 +206,18 @@ Transform:
   - {fileID: 431232}
   m_Father: {fileID: 428002}
   m_RootOrder: 1
+--- !u!4 &476458
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0289999992, y: .818000019, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 427396}
+  m_RootOrder: 2
 --- !u!4 &484166
 Transform:
   m_ObjectHideFlags: 1
@@ -263,6 +291,7 @@ MonoBehaviour:
   HPDecrease: 0
   hitPoints: 200
   dmgFloaterGO: {fileID: 159370, guid: 8513563fa0a8be1449979e551e8ee3e9, type: 2}
+  targetIndicator: {fileID: 154302, guid: ea70e60fe7f4c5744aac159f81e224cd, type: 2}
   soundDeadGO: {fileID: 140864, guid: 32d52fe79a45d344088b3e17425c6c8f, type: 2}
   soundDead: {fileID: 8300000, guid: db53474a5cdf48e4895140b93d036f07, type: 3}
 --- !u!212 &21281382

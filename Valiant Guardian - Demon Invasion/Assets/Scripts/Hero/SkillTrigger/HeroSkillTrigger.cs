@@ -18,10 +18,7 @@ public class HeroSkillTrigger : MonoBehaviour
 
     public GameObject readySkillNotifPrefab;
     public GameObject readySkillNotif;
-
-
-    private bool normalSkillReady;
-    private bool ultimateSkillReady;
+    private bool isReadySkillNotifActive;
     void Awake()
     {
         hero = GetComponent<Hero>();
@@ -36,17 +33,21 @@ public class HeroSkillTrigger : MonoBehaviour
     {
         normalSkillCoolDownLeft -= Time.deltaTime;
         ultimateSkillCoolDownLeft -= Time.deltaTime;
-        if (normalSkillCoolDownLeft <= 0.0f && !normalSkillReady)
+        if (normalSkillCoolDownLeft <= 0.0f)
         {
             normalSkillCollider.enabled = true;
-            normalSkillReady = true;
-            if (readySkillNotif == null) { InstantiateReadySkillNotif(); }
+            if (isReadySkillNotifActive == false) {
+                InstantiateReadySkillNotif();
+                isReadySkillNotifActive = true;
+            }
         }
-        if (ultimateSkillCoolDownLeft <= 0.0f && !ultimateSkillReady)
+        if (ultimateSkillCoolDownLeft <= 0.0f)
         {
             ultimateSkillCollider.enabled = true;
-            ultimateSkillReady = true;
-            if (readySkillNotif == null) { InstantiateReadySkillNotif(); }
+            if (isReadySkillNotifActive == false) {
+                InstantiateReadySkillNotif();
+                isReadySkillNotifActive = true;
+            }
         }
     }
 
@@ -59,6 +60,7 @@ public class HeroSkillTrigger : MonoBehaviour
     public void DestroyReadySkillNotif()
     {
         Destroy(readySkillNotif.gameObject);
+        readySkillNotif = null;
     }
 
     public void setNormalSkillCoolDown(float coolDown)
@@ -75,12 +77,14 @@ public class HeroSkillTrigger : MonoBehaviour
     {
         normalSkillCoolDownLeft = normalSkillCoolDown;
         normalSkillCollider.enabled = false;
+        isReadySkillNotifActive = false;
     }
 
     public void resetUltimateSkillCoolDownLeft()
     {
         ultimateSkillCoolDownLeft = ultimateSkillCoolDown;
         ultimateSkillCollider.enabled = false;
+        isReadySkillNotifActive = false;
     }
 
     void OnMouseDown()

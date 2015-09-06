@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c440b325421ec49a5fe86486792858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readySkillNotifPrefab: {fileID: 105784, guid: 1f7b1b1f3d676f14ea2f7c09e5f9a4d1,
+  readySkillNotifPrefab: {fileID: 195522, guid: 03b75d99d3e2ef347899a0df9487be85,
     type: 2}
   readySkillNotif: {fileID: 0}
 --- !u!114 &11487806

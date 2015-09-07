@@ -68,10 +68,14 @@ public class PreparationTime : MonoBehaviour {
     IEnumerator PreparationTimeCountDown()
     {
         Text preparationTimeLeftText = preparationPanel.transform.FindChild("Time").GetChild(0).GetComponent<Text>();
+        Text trapShopTimeLeftText = trapShop.transform.FindChild("Time").GetChild(0).GetComponent<Text>();
+        Text mercenaryShopTimeLeftText = mercenaryShop.transform.FindChild("Time").GetChild(0).GetComponent<Text>();
         preparationTimeLeft = preparationTime;
         while (preparationTimeLeft >= 0.0f)
         {
             preparationTimeLeftText.text = preparationTimeLeft.ToString();
+            trapShopTimeLeftText.text = preparationTimeLeft.ToString();
+            mercenaryShopTimeLeftText.text = preparationTimeLeft.ToString();
             yield return new WaitForSeconds(1.0f);
             preparationTimeLeft--;
         }

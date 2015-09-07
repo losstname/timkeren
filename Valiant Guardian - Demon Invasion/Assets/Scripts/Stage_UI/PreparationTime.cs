@@ -16,6 +16,8 @@ public class PreparationTime : MonoBehaviour {
     private GameObject hireMercenaryTab;
     private GameObject fireMercenaryTab;
 
+    private GameObject countDownDialog;
+
     void Awake()
     {
         gameController = GetComponent<GameController>();
@@ -36,6 +38,9 @@ public class PreparationTime : MonoBehaviour {
         hireMercenaryTab = mercenaryShop.transform.FindChild("HireTab").gameObject;
         fireMercenaryTab = mercenaryShop.transform.FindChild("FireTab").gameObject;
 
+        //3 seconds countdown dialog to show before each wave start
+        countDownDialog = GameObject.Find("CountdownDialog").gameObject;
+
         ResetAllPanel();
         preparationPanelCanvas.SetActive(false);
     }
@@ -51,7 +56,13 @@ public class PreparationTime : MonoBehaviour {
         //to make sure the panel don't show up when the ready button used
         preparationTimeLeft = -1.0f;
 
-        CloseCanvas();
+        ResetAllPanel();
+
+        //Prevent panel active when countdown dialog show up
+        preparationPanel.SetActive(false);
+
+        //Start 3 seconds countdown before next wave
+        StartCoroutine(CountDownDialog());
     }
 
     IEnumerator PreparationTimeCountDown()
@@ -66,9 +77,24 @@ public class PreparationTime : MonoBehaviour {
         }
         if (preparationTimeLeft < 0.0f && gameController.isPreparationTime)
         {
-            //Tell the gamecontroller when the preparation times up
-            gameController.EndPreparationTime();
+            FinishPreparationTime();
         }
+    }
+
+    IEnumerator CountDownDialog()
+    {
+        countDownDialog.SetActive(true);
+        Text text = countDownDialog.transform.FindChild("Text").GetComponent<Text>();
+        int count = 3;
+        for (int i = count; i > 0; i--)
+        {
+            text.text = i.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+        CloseCanvas();
+
+        //Tell the gamecontroller when the preparation times up
+        gameController.EndPreparationTime();
     }
 
     /*------------------------------- Preparation Panel Visibility --------------------------*/
@@ -85,6 +111,9 @@ public class PreparationTime : MonoBehaviour {
         preparationPanel.SetActive(true);
         trapShop.SetActive(false);
         mercenaryShop.SetActive(false);
+
+        //Exception for countdown dialog assumed as panel here
+        countDownDialog.SetActive(false);
     }
 
     /*------------------------------- Preparation Panel Navigation ---------------------------*/

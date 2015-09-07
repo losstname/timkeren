@@ -111,9 +111,6 @@ public class GameController : MonoBehaviour
     //make this public function so the ready button can trigger it
     public void EndPreparationTime()
     {
-        //tell the preparation time class to stop the countdown
-        preparationTime.FinishPreparationTime();
-
         isPreparationTime = false;
         timeLeft = timeLimit;
 

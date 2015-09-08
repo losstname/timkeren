@@ -178,8 +178,8 @@ public class Enemy : MonoBehaviour
 
     void SpawnDamageFloater(float dmg)
     {
-        dmgFloaterGO.GetComponent<TextMesh>().text = dmg.ToString();
-        Instantiate(dmgFloaterGO, dmgFloaterSpawnPoint.position, dmgFloaterSpawnPoint.rotation);
+        GameObject tmpDmgFloater = Instantiate(dmgFloaterGO, dmgFloaterSpawnPoint.position, dmgFloaterSpawnPoint.rotation) as GameObject;
+        tmpDmgFloater.GetComponent<TextMesh>().text = dmg.ToString();
     }
 
     void Death()

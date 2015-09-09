@@ -4,9 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/*
+Enemy ID list :
+0. meleeImp
+1. rangedImp
+2. bigMeleeImp
+3. overLord
+4. impBomber
+5. impOjek
+ *
+ * This ID used to identify enemy stat called
+ * from Enemy.cs when enemy is attacked
+ * see GetEnemyDefenseStat function in Enemy.cs
+*/
+
 public class DataEnemy
 {
     private static DataEnemy instance;
+
+    //Dont change these enemy order
+    //Ask Dre for more information
     private MasterEnemy meleeImp;
     private MasterEnemy rangedImp;
     private MasterEnemy bigMeleeImp;

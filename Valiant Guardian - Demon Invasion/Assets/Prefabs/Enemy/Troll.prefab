@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267fa7193f0480e408e6c121da7d10af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyID: 2
   speed: .5
   CoolDown: 2
   fadeSpeed: 1
@@ -382,6 +383,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: fadeSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemyID
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

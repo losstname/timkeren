@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
+    //ID to identify type of enemy
+    //See DataEnemy.cs to see Enemy ID list
+    public int enemyID;
+
     public float speed = 1f;
     private bool ableMove = true;
     private Transform baseDoor;
@@ -141,7 +145,7 @@ public class Enemy : MonoBehaviour
         attackX = Random.Range(1, 20);
         defenseY = Random.Range(31, 80);
         //Example , get meleeImp defense from database
-        int impDefense = DataEnemy.getInstance().MeleeImp.Defense;
+        int impDefense = GetEnemyDefenseStat();
         HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
         hitPoints -= HPDecrease;
         //Spawn damage floater
@@ -154,13 +158,14 @@ public class Enemy : MonoBehaviour
             disableBeingTargeted();
         }
     }
+
 	public void AttackedV2()
 	{
 		attackX = Random.Range(1, 20);
 		defenseY = Random.Range(31, 80);
 		//Example , get meleeImp defense from database
-		int impDefense = DataEnemy.getInstance().MeleeImp.Defense;
-		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
+        int enemyDefense = GetEnemyDefenseStat();
+		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((enemyDefense * defenseY) / 100);
 		//damage * 2
 		HPDecrease = HPDecrease * 2;
 		hitPoints -= HPDecrease;
@@ -175,6 +180,21 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+    private int GetEnemyDefenseStat()
+    {
+        //Don't forget to change the enemy ID using public int enemyID variable in this class
+        if (enemyID==0) { return DataEnemy.getInstance().MeleeImp.Defense; }
+        else if (enemyID == 1) { return DataEnemy.getInstance().RangedImp.Defense; }
+
+        else if (enemyID == 2) { return DataEnemy.getInstance().BigMeleeImp.Defense; }
+        else if (enemyID == 3) { return DataEnemy.getInstance().OverLord.Defense; }
+
+        else if (enemyID == 4) { return DataEnemy.getInstance().ImpBomber.Defense; }
+        else if (enemyID == 5) { return DataEnemy.getInstance().ImpOjek.Defense; }
+
+        Debug.Log("enemy id in Enemy.cs not detected, using default ID = 0");
+        return DataEnemy.getInstance().MeleeImp.Defense;
+    }
 
     void SpawnDamageFloater(float dmg)
     {
@@ -213,7 +233,6 @@ public class Enemy : MonoBehaviour
 		ableMove = false;
 		this.GetComponent<Animator> ().SetBool ("isStun", true);
 		Invoke ("WaitForStunToEnd", stunDelay);
-
 	}
 
 	void WaitForStunToEnd()
@@ -223,7 +242,6 @@ public class Enemy : MonoBehaviour
 		//stun animation
 		this.GetComponent<Animator> ().SetBool ("isStun", false);
 	}
-
 
     IEnumerator FadeOut()
     {

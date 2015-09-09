@@ -79,7 +79,10 @@ public class PreparationTime : MonoBehaviour {
             yield return new WaitForSeconds(1.0f);
             preparationTimeLeft--;
         }
-        if (preparationTimeLeft < 0.0f && gameController.isPreparationTime)
+
+        //Greater than zero is used to prevent executing FinishPreparationTime method twice
+        //when the ready button used
+        if (preparationTimeLeft < 0.0f && preparationTimeLeft>-1.0f && gameController.isPreparationTime)
         {
             FinishPreparationTime();
         }

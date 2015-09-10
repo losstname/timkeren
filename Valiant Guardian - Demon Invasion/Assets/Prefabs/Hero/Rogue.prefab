@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a1a5f5edef4984e9fbef471ac1ddf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normProjectiles: {fileID: 165164, guid: 358277bd7dddb0542840e1bf0194ae10, type: 2}
+  normProjectiles: {fileID: 119830, guid: c02328ebf67138b4e9c02519ce44dcfa, type: 2}
   ultiProjectiles: {fileID: 180930, guid: 7dd20129556ba38429bf6fa82f6c6241, type: 2}
 --- !u!114 &11464514
 MonoBehaviour:

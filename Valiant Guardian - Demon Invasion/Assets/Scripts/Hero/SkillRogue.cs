@@ -16,12 +16,14 @@ public class SkillRogue : MonoBehaviour
 
     public void normalSkill()
     {
-        StartCoroutine(bulletBurst());
+        //StartCoroutine(bulletBurst());
+		//hero.aimAtEnemy ();
+		spawnNormProjectile ();
     }
 
     IEnumerator bulletBurst()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             //make sure the projectile aiming at enemy
             hero.aimAtEnemy();
@@ -41,13 +43,14 @@ public class SkillRogue : MonoBehaviour
     {
         //spawning projectile for ultimate skill
         //called from animation
-        Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		 Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
     }
 
     public void spawnNormProjectile()
     {
         //spawning projectile
         //called from animation
-        Instantiate(normProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		GameObject projectile = (GameObject)Instantiate(normProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		projectile.transform.parent = this.transform;
     }
 }

@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GrenadeArrow : MonoBehaviour
-{
+public class GassyFlashBang : MonoBehaviour {
 	
 	SpriteRenderer spriteRenderer;
 	
 	public GameObject target;
+	public GameObject gassProjectile;
 	HeroSkillTrigger heroSkillTrigger;
 	
 	public int enemyHitLimit = 4;
@@ -16,6 +16,13 @@ public class GrenadeArrow : MonoBehaviour
 	private string markedTargetName;    //All targeted enemies marked by this name
 	private int countEnemiesHit;
 	
+	public Vector3 ground;
+	bool groundClicked;
+	bool reachGround;
+	bool flag;
+	public int spawnNum;
+	public float explosionRadius;
+
 	public float radius;
 	public float speed;
 	
@@ -26,24 +33,23 @@ public class GrenadeArrow : MonoBehaviour
 	public AudioClip soundHit;
 	
 	public GameObject[] enemiesOnRadius;
-
-	public GameObject explosion;
-	public float stunDelay;
-	public int damage;
-	public int explosionRadius;
+	
+	
+	
+	
+	public float slowandpoisonDelay;
+	public int poison;
 	Vector3 temp2;
-	
-	
 	
 	void Start()
 	{
 		//To mark the arrow not visible before launch
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteRenderer.enabled = false;
-		
+		groundClicked = false;
+		reachGround = false;
 		enemiesRealName = new string[enemyHitLimit];
-		enemiesCaught = new GameObject[enemyHitLimit];
-		
+		enemiesCaught = new GameObject[enemyHitLimit];	
 		heroSkillTrigger = transform.parent.GetComponent<HeroSkillTrigger>();
 		countEnemiesTargeted = 0;
 		countEnemiesHit = 0;
@@ -56,21 +62,60 @@ public class GrenadeArrow : MonoBehaviour
 			setFirstEnemyOnTap();
 		
 		//Set the object rotation
-		if (target != null)
+		if (groundClicked)
 		{
-			Quaternion direction = Quaternion.LookRotation(target.transform.position - this.transform.position, this.transform.TransformDirection(Vector3.up));
+			Quaternion direction = Quaternion.LookRotation(ground - this.transform.position, this.transform.TransformDirection(Vector3.up));
 			this.transform.rotation = new Quaternion(0, 0, direction.z, direction.w);
 		}
 		
 		//move projectile towards target
-		if (isFindingTarget && target != null)
+		if (isFindingTarget && groundClicked && !reachGround)
 		{
-			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
+			transform.position = Vector2.MoveTowards(transform.position, ground, Time.deltaTime * speed);
+			if(Vector2.MoveTowards(transform.position, ground, Time.deltaTime * speed)==new Vector2(transform.position.x,transform.position.y))
+			{
+				
+				reachGround = true;
+			}
+			
+		}
+
+		// hit the ground
+		if (transform.position.x == ground.x && transform.position.y == ground.y) {
+			reachGround = true;
+		}
+
+		// hit the ground and found enemy
+		if(isFindingTarget && reachGround)
+		{
+			if(!flag)
+			{
+				disableProjectileVisulization();
+				flag=true;
+				spawnExplossionEffect();
+				
+			}
 		}
 	}
 	
 	void setFirstEnemyOnTap()
 	{
+		ground = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		groundClicked = true;
+		//TargetAnEnemy(hitObject.collider);
+		isFindingTarget = true;		
+		//To re enable the sprite renderer when the projectile launched
+		spriteRenderer.enabled = true;		
+		//To continue the attacking animation
+		heroSkillTrigger.ResumeHeroAnimation();
+		//To play the sfx
+		//GetComponent<AudioSource>().Play();
+		
+
+		//GameObject temp = Instantiate(gassProjectile,new Vector3(center.x,center.y,0), Quaternion.identity) as GameObject;
+	
+		
+		/*
 		RaycastHit2D hitObject = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 		if (hitObject.transform.tag == "Enemy" && Vector2.Distance(transform.position, hitObject.transform.position) <= radius)
 		{
@@ -94,42 +139,57 @@ public class GrenadeArrow : MonoBehaviour
 			heroSkillTrigger.RestartHeroAnimation();
 			Destroy(gameObject);
 		}
+		*/
 	}
+	
+	
 	
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Enemy" && other.name == markedTargetName)
-		{
-			//call explosion effect function
-			Invoke("spawnExplossionEffect",stunDelay);
+		if (other.gameObject.tag == "Enemy")
+		{          
+			//Invoke("spawnExplossionEffect",slowandpoisonDelay);
 			//set explosion position
-			temp2 = other.gameObject.GetComponent<Transform>().position;
+			//temp2 = other.gameObject.GetComponent<Transform>().position;
 			//instantiate the explosion
 			//Instantiate(explosion, transform.position, transform.rotation);
 			//Projectile hit enemy
+			//other.gameObject.GetComponent<Enemy>().AttackedV3();
 			disableProjectileVisulization();
 			//GetComponent<ProjectileSound>().hitTargetSound();
 			GetComponent<AudioSource>().clip = soundHit;
 			GetComponent<AudioSource>().Play();
-			//trigger the stun
-			other.gameObject.GetComponent<Enemy>().Stun(stunDelay,damage);
+			//other.gameObject.GetComponent<Enemy>().SlowAndPoison(slowandpoisonDelay,poison);
 			//float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
 			//Destroy(gameObject, waitToDestroy);
 		}
 	}
 	
-
+	
+	
 	void spawnExplossionEffect()
 	{
-		//instantiate explosion
-		GameObject temp = (GameObject) Instantiate(explosion, temp2, transform.rotation);
-		//set radius explosion
-		temp.GetComponent<Transform> ().localScale = new Vector3 (radius, radius, 1);
-		//start explosion animation
-		temp.GetComponent<Animator>	 ().Play ("FadeIn");
-		Destroy(gameObject);
-	}
+		// looping gass projectile
+		for (int i = 0; i<spawnNum; i++)
+		{
+			// random in tap area
+			Vector3 center = ground;
+			center.x = center.x + Random.Range(-radius, radius);
+			center.y = center.y + Random.Range(-radius, radius);
+			GameObject temp =Instantiate(gassProjectile,new Vector3(center.x,center.y,0) , Quaternion.identity) as GameObject;
+			//temp.GetComponent<Transform> ().localScale = new Vector3 (explosionRadius, explosionRadius, 1);
+			// play the animation
+			temp.GetComponent<Animator> ().Play ("Gass");
+		}
 
+		Destroy(gameObject);
+		//set radius explosion
+		//temp.GetComponent<Transform> ().localScale = new Vector3 (radius, radius, 1);
+		//start explosion animation
+		//temp.GetComponent<Animator> ().Play ("FadeIn");
+		
+	}
+	
 	private void disableProjectileVisulization()
 	{
 		//disabling projectile existence to maintain hit sound
@@ -224,4 +284,6 @@ public class GrenadeArrow : MonoBehaviour
 				enemiesCaught[i].name = enemiesRealName[i];
 		}
 	}
+	
+	
 }

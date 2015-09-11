@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public GameObject[] Enemies;
 
     public float timeLimit = 180.0f;
+    public float timeAdd = 20.0f;
     private float timeLeft;
     private Text timeLeftText;
 
@@ -123,8 +124,8 @@ public class GameController : MonoBehaviour
     public void EndPreparationTime()
     {
         isPreparationTime = false;
+        timeLimit += timeAdd;
         timeLeft = timeLimit;
-
         //When preparation time ends start spawning enemies again
         StartCoroutine(EnemySpawning());
         setHeroesAttackCapability(true);

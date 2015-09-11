@@ -6,12 +6,15 @@ public class StageUI : MonoBehaviour {
     private GameController gameController;
 
     private GameObject gameMenu;
+    private GameObject startupDialog;
 
     void Awake()
     {
         gameController = GetComponent<GameController>();
         gameMenu = GameObject.Find("GameMenu");
+        startupDialog = GameObject.Find("StartupDialog");
         gameMenu.SetActive(false);
+        //startupDialog.SetActive(true);
     }
 
     public void ToogleGameMenu()
@@ -28,5 +31,11 @@ public class StageUI : MonoBehaviour {
             gameMenu.SetActive(false);
             gameController.UnPauseGame();
         }
+    }
+
+    public void StartWave()
+    {
+        startupDialog.SetActive(false);
+        gameController.StartWave();
     }
 }

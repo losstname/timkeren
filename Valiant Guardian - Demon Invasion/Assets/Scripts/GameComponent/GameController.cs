@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     private Text waveText;
 
     private bool isPaused = false;
+    private bool isStarted = false;
 
     void Awake()
     {
@@ -51,17 +52,21 @@ public class GameController : MonoBehaviour
         timeLeftText.text = timeLeft.ToString();
 
         //To Start Enemy Spawning waves using IEnumeratir function
-        StartCoroutine(EnemySpawning());
+        //StartCoroutine(EnemySpawning());
     }
 
     void Update()
     {
         //time is decreasing when there is time left
         //prevent minus time when enemy not spawning
+        //only count when the game is started
         if (timeLeft > 0)
         {
-            timeLeft -= Time.deltaTime;
-            timeLeftText.text = ((int)timeLeft).ToString();
+            if(isStarted)
+            {
+                timeLeft -= Time.deltaTime;
+                timeLeftText.text = ((int)timeLeft).ToString();
+            }
         }
         else
         {
@@ -83,6 +88,12 @@ public class GameController : MonoBehaviour
             GameObject tempHero = Instantiate(characterList.HeroesPrefab[heroesOrder[i]], heroesHolder.transform.GetChild(i).position, Quaternion.identity) as GameObject;
             tempHero.transform.parent = heroesHolder.transform.GetChild(i).transform;
         }
+    }
+
+    public void StartWave()
+    {
+        isStarted = true;
+        StartCoroutine(EnemySpawning());
     }
 
     IEnumerator EnemySpawning(){

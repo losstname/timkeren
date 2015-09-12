@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     private bool foundDoor = false;
 
     public float CoolDown = 2f;
+	bool isSlowed;
+	public bool isPoisoned;
+
 
     private Animator anim;
     private int isDeadHash = Animator.StringToHash("isDead");
@@ -180,6 +183,37 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	public void AttackedV3()
+	{
+		// if already poisoned, then return. don't stacked the poisoned
+		if (isPoisoned) {
+			return;
+		}
+		attackX = Random.Range(1, 20);
+		defenseY = Random.Range(31, 80);
+		//Example , get meleeImp defense from database
+		int impDefense = DataEnemy.getInstance().MeleeImp.Defense;
+		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
+		//damage * 0.4
+		HPDecrease = (HPDecrease * 4) / 10;
+		hitPoints -= HPDecrease;
+		//Spawn damage floater
+		SpawnDamageFloater(HPDecrease);
+		//set health bar
+		healthBar.OnAttacked(HPDecrease);
+		if (hitPoints <= 0)
+		{
+			Death();
+			disableBeingTargeted();
+		}
+		Invoke ("StopPoison",0.5f);
+	}
+	
+	void StopPoison()
+	{
+		isPoisoned = false;
+	}
+
     private int GetEnemyDefenseStat()
     {
         //Don't forget to change the enemy ID using public int enemyID variable in this class
@@ -242,6 +276,42 @@ public class Enemy : MonoBehaviour
 		//stun animation
 		this.GetComponent<Animator> ().SetBool ("isStun", false);
 	}
+
+	
+	// still slowed and poisoned after the gass area
+	/*	public void SlowAndPoison(float slowandpoisonDelay, int poison)
+	{
+
+		speed = speed * 0.5f;
+		Invoke ("WaitForSlowAndPoisonToEnd", slowandpoisonDelay);
+		int temp;
+	
+		for(int i=1; i<=slowandpoisonDelay; i++)
+		{
+			Invoke ("AttackedV3", i);
+		}
+
+*/
+	
+	public void Slow(float slowandpoisonDelay)
+	{
+		// if already slowed, then return. don't stacked the slowed
+		if (isSlowed) {
+			return;
+		}
+		// speed half
+		speed = speed * 0.5f;
+		Invoke ("WaitForSlowToEnd", slowandpoisonDelay);
+		isSlowed = true;
+	}
+	
+	void WaitForSlowToEnd()
+	{
+		// speed back to normal
+		speed = speed * 2f;
+		isSlowed = false;
+	}
+
 
     IEnumerator FadeOut()
     {

@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
     public int HPDecrease;
     private int attackX;
     private int defenseY;
-    public int hitPoints = 200;
+    public float hitPoints = 200;
 
     private Transform dmgFloaterSpawnPoint;
     public GameObject dmgFloaterGO;
@@ -56,6 +56,10 @@ public class Enemy : MonoBehaviour
         enemySpriteRenderer = GetComponent<SpriteRenderer>();
         dmgFloaterSpawnPoint = transform.FindChild("DmgFloaterSpawnPoint");
         healthBar = transform.FindChild("HealthBar").GetComponent<HealthBar>();
+
+        // Enemy Hitpoints Principle
+        int heroes = GameObject.FindGameObjectsWithTag("Hero").Length;;
+        hitPoints = hitPoints * (1 + (Mathf.Pow(GameController.Instance.GetWave(),2) / 10)) * Mathf.CeilToInt(heroes / 2.0f);
     }
 
     void Update()

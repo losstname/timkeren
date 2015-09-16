@@ -5,6 +5,20 @@ using System.Collections;
 public class GameController : MonoBehaviour
 {
 
+    private static GameController instance;
+
+    public static GameController Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new GameObject("GameController").AddComponent<GameController>();
+            }
+            return instance;
+        }
+    }
+
     CharacterList characterList;
 
     public float y1Pos;
@@ -33,6 +47,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         characterList = GameObject.Find("GameManager").GetComponent<CharacterList>();
         preparationTime = GetComponent<PreparationTime>();
     }
@@ -158,5 +173,10 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    public int GetWave()
+    {
+        return wave;
     }
 }

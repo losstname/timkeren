@@ -71,7 +71,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1
+  - time: .899999976
     functionName: PauseHeroAnimation
     data: 
     objectReferenceParameter: {fileID: 0}

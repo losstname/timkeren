@@ -19,16 +19,18 @@ public class Enemy : MonoBehaviour
     public float CoolDown = 2f;
 	bool isSlowed;
 	public bool isPoisoned;
-
-
+	
     private Animator anim;
     private int isDeadHash = Animator.StringToHash("isDead");
     private int isAttackingHash = Animator.StringToHash("isAttacking");
-    private int isStayingHash = Animator.StringToHash("isStaying");
+   	private int isStayingHash = Animator.StringToHash("isStaying");
 
     private SpriteRenderer enemySpriteRenderer;
     public float fadeSpeed = 1f;
     public float fadeDelay = 2f;
+
+	public bool isChicken;
+	public Vector3 chickenPosition;
 
     public int HPDecrease;
     private int attackX;
@@ -48,6 +50,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+		isChicken = false;
         baseDoor = GameObject.FindGameObjectWithTag("Base").transform;
         playerBase = GameObject.Find("PlayerBase").transform;
         anim = GetComponent<Animator>();
@@ -62,6 +65,12 @@ public class Enemy : MonoBehaviour
         hitPoints = hitPoints * (1 + (Mathf.Pow(GameController.Instance.GetWave(),2) / 10)) * Mathf.CeilToInt(heroes / 2.0f);
     }
 
+	public void stopAttacking()
+	{
+		//stop attacking the base
+		foundDoor = false;
+		anim.SetBool(isStayingHash, false);
+	}
     void Update()
     {
         if (ableMove)
@@ -69,10 +78,21 @@ public class Enemy : MonoBehaviour
             float step = Time.deltaTime * speed;
             //use LineCast to see if enemy get contact to invisWall
             //if got contact to invisWall LayerMask then enemy will move to door instead move toward left
+
             moveToDoor = Physics2D.Linecast(sightStart.position, sightEnd.position, 1 << LayerMask.NameToLayer("InvisWall"));
-            //un-Comment debug below to see LineCast on Enemy
+
+				//un-Comment debug below to see LineCast on Enemy
             //Debug.DrawLine (sightStart.position, sightEnd.position, Color.green);
-            if (moveToDoor && !foundDoor)
+            if(isChicken)
+			{
+				//flip the sprite from left to right
+				if(transform.position.x < chickenPosition.x)
+				{
+					transform.localScale= new Vector3((Mathf.Abs(transform.localScale.x)*-1),transform.localScale.y,0);
+				}
+				transform.position = Vector3.MoveTowards(transform.position, chickenPosition, step);
+			}
+			else if (moveToDoor && !foundDoor)
             {
                 transform.position = Vector3.MoveTowards(transform.position, baseDoor.FindChild("AttackPoint").position, step);
             }
@@ -130,6 +150,12 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
+			//if chicken terror is activated
+			if(isChicken)
+			{
+				stopAttacking();
+				break;
+			}
             //set animation to attacking base
             anim.SetTrigger(isAttackingHash);
             yield return new WaitForSeconds(CoolDown);

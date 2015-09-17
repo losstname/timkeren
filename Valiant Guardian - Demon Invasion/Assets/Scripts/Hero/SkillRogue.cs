@@ -43,7 +43,9 @@ public class SkillRogue : MonoBehaviour
     {
         //spawning projectile for ultimate skill
         //called from animation
-		 Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		//Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		GameObject projectile = (GameObject) Instantiate(ultiProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		projectile.transform.parent = this.transform;
     }
 
     public void spawnNormProjectile()

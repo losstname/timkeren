@@ -100,7 +100,13 @@ public class GassyFlashBang : MonoBehaviour {
 	
 	void setFirstEnemyOnTap()
 	{
+		//validate the place of the chicken 
+		//so that it can't be too high and too close to the door
 		ground = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		if (ground.x < -2.8f || ground.y >-0.9f) {
+			return;
+		}
+
 		groundClicked = true;
 		//TargetAnEnemy(hitObject.collider);
 		isFindingTarget = true;		

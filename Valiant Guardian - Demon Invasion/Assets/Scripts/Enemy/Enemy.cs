@@ -141,7 +141,8 @@ public class Enemy : MonoBehaviour
         attackX = Random.Range(1, 30);
         //Example , get meleeImp attack from database
         int impAttack = DataEnemy.getInstance().MeleeImp.AttackDamage;
-        int baseHpDecrease = impAttack - ((impAttack * attackX) / 100);
+        int baseHpDecrease = impAttack - (Mathf.RoundToInt(impAttack * (attackX / 100.0f)));
+        //Debug.Log(baseHpDecrease);
         if (ScriptableObject.FindObjectOfType<Door>().isAttackAble())
             ScriptableObject.FindObjectOfType<Door>().AttackBase(baseHpDecrease);
 

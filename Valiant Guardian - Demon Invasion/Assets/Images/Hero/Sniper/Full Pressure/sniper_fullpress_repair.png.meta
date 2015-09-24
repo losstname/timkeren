@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: 45cf0e2ecc108af4f92d9b1d6ec87529
+timeCreated: 1443022852
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniper_fullpress_repair_0
+    21300002: sniper_fullpress_repair_1
+    21300004: sniper_fullpress_repair_2
+    21300006: sniper_fullpress_repair_3
+    21300008: sniper_fullpress_repair_4
+    21300010: sniper_fullpress_repair_5
+    21300012: sniper_fullpress_repair_6
+    21300014: sniper_fullpress_repair_7
+    21300016: sniper_fullpress_repair_8
+    21300018: sniper_fullpress_repair_9
+    21300020: sniper_fullpress_repair_10
+    21300022: sniper_fullpress_repair_11
+    21300024: sniper_fullpress_repair_12
+    21300026: sniper_fullpress_repair_13
+    21300028: sniper_fullpress_repair_14
+    21300030: sniper_fullpress_repair_15
+    21300032: sniper_fullpress_repair_16
+    21300034: sniper_fullpress_repair_17
+    21300036: sniper_fullpress_repair_18
+    21300038: sniper_fullpress_repair_19
+    21300040: sniper_fullpress_repair_20
+    21300042: sniper_fullpress_repair_21
+    21300044: sniper_fullpress_repair_22
+    21300046: sniper_fullpress_repair_23
+    21300048: sniper_fullpress_repair_24
+    21300050: sniper_fullpress_repair_25
+    21300052: sniper_fullpress_repair_26
+    21300054: sniper_fullpress_repair_27
+    21300056: sniper_fullpress_repair_28
+    21300058: sniper_fullpress_repair_29
+    21300060: sniper_fullpress_repair_30
+    21300062: sniper_fullpress_repair_31
+    21300064: sniper_fullpress_repair_32
+    21300066: sniper_fullpress_repair_33
+    21300068: sniper_fullpress_repair_34
+    21300070: sniper_fullpress_repair_35
+    21300072: sniper_fullpress_repair_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniper_fullpress_repair_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 14
+        width: 57
+        height: 102
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_3
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 14
+        width: 77
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_4
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 13
+        width: 76
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_5
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 11
+        width: 76
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 11
+        width: 78
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_7
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 14
+        width: 75
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_8
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 14
+        width: 75
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_9
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 14
+        width: 75
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_10
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 12
+        width: 76
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_11
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 14
+        width: 76
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_12
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 13
+        width: 75
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_13
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 13
+        width: 75
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_14
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 13
+        width: 75
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_15
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 14
+        width: 77
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_16
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 13
+        width: 76
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_17
+      rect:
+        serializedVersion: 2
+        x: 2677
+        y: 12
+        width: 75
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_18
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 12
+        width: 75
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_19
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 14
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_fullpress_repair_20
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 14
+        width: 70
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

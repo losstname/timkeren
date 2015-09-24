@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .600000024, y: 0, z: 0}
+  m_LocalPosition: {x: .899999976, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 464768}
@@ -153,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.600000024, y: 0, z: 0}
+  m_LocalPosition: {x: -.899999976, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 464768}
@@ -221,7 +221,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .319999993, y: .319999993}
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6194382
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -234,7 +234,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .319999993, y: .319999993}
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6198146
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -281,6 +281,7 @@ MonoBehaviour:
   normSkillCoolDown: 5
   ultiSkillCooldown: 20
   Enemies: {fileID: 0}
+  additAnim: {fileID: 191432, guid: 1d02c8760864d774b843fab163f4a7d3, type: 2}
   ProjectilePosTr: {fileID: 453394}
   anim: {fileID: 0}
   idleTime: 1
@@ -347,8 +348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e33b34d4a07dca47b47279b858e8096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normProjectiles: {fileID: 108734, guid: 8a1bb3b983cb1b04bb2c0e306b2304f1, type: 2}
-  ultiProjectiles: {fileID: 180930, guid: 7dd20129556ba38429bf6fa82f6c6241, type: 2}
+  normProjectiles: {fileID: 101714, guid: 62a9295ce87d8b94eb646e2f847e0ff9, type: 2}
+  ultiProjectiles: {fileID: 135066, guid: 52d755aa3ebd4084eb96ee6c52497187, type: 2}
 --- !u!114 &11484324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,7 +388,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: e0bff87400ad779409e765c5fa8cc208, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f98352dbd2f44b44cac235c577d74b13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21216190
 SpriteRenderer:
@@ -413,7 +414,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 6b00d405cf4e43348becc368168a40cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90eca92672f382f4d95c6b84307483a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21236718
 SpriteRenderer:
@@ -455,7 +456,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: normProjectiles
       value: 
-      objectReference: {fileID: 108734, guid: 8a1bb3b983cb1b04bb2c0e306b2304f1, type: 2}
+      objectReference: {fileID: 101714, guid: 62a9295ce87d8b94eb646e2f847e0ff9, type: 2}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: .800000012
@@ -464,6 +465,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .800000012
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ultiProjectiles
+      value: 
+      objectReference: {fileID: 135066, guid: 52d755aa3ebd4084eb96ee6c52497187, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101914}

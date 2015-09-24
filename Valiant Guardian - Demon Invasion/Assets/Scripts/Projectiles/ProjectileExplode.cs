@@ -34,7 +34,7 @@ public class ProjectileExplode : MonoBehaviour
 		//set radius explosion
 		temp.GetComponent<Transform> ().localScale = new Vector3 (radius, radius, 1);
 		//start explosion animation
-		temp.GetComponent<Animator> ().Play ("FadeIn");
+		temp.GetComponent<Animator> ().Play ("Bullseye");
 		Destroy(gameObject);
 	}
 

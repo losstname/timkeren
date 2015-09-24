@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: ebc159301628839468681de2f7306979
+timeCreated: 1443086505
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniper_bullseye_southeast_0
+    21300002: sniper_bullseye_southeast_1
+    21300004: sniper_bullseye_southeast_2
+    21300006: sniper_bullseye_southeast_3
+    21300008: sniper_bullseye_southeast_4
+    21300010: sniper_bullseye_southeast_5
+    21300012: sniper_bullseye_southeast_6
+    21300014: sniper_bullseye_southeast_7
+    21300016: sniper_bullseye_southeast_8
+    21300018: sniper_bullseye_southeast_9
+    21300020: sniper_bullseye_southeast_10
+    21300022: sniper_bullseye_southeast_11
+    21300024: sniper_bullseye_southeast_12
+    21300026: sniper_bullseye_southeast_13
+    21300028: sniper_bullseye_southeast_14
+    21300030: sniper_bullseye_southeast_15
+    21300032: sniper_bullseye_southeast_16
+    21300034: sniper_bullseye_southeast_17
+    21300036: sniper_bullseye_southeast_18
+    21300038: sniper_bullseye_southeast_19
+    21300040: sniper_bullseye_southeast_20
+    21300042: sniper_bullseye_southeast_21
+    21300044: sniper_bullseye_southeast_22
+    21300046: sniper_bullseye_southeast_23
+    21300048: sniper_bullseye_southeast_24
+    21300050: sniper_bullseye_southeast_25
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniper_bullseye_southeast_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 21
+        width: 75
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 21
+        width: 75
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_2
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 21
+        width: 75
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 21
+        width: 75
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_4
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 21
+        width: 74
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_5
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 21
+        width: 75
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_6
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 21
+        width: 101
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_7
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 21
+        width: 103
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_8
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_9
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_10
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_11
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_12
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_13
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_14
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_15
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_16
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 19
+        width: 85
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_17
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 19
+        width: 86
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_18
+      rect:
+        serializedVersion: 2
+        x: 2839
+        y: 21
+        width: 91
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_19
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 21
+        width: 92
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_20
+      rect:
+        serializedVersion: 2
+        x: 3166
+        y: 21
+        width: 95
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_21
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 21
+        width: 95
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_22
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 21
+        width: 94
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_23
+      rect:
+        serializedVersion: 2
+        x: 3633
+        y: 21
+        width: 95
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_24
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_bullseye_southeast_25
+      rect:
+        serializedVersion: 2
+        x: 3942
+        y: 19
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

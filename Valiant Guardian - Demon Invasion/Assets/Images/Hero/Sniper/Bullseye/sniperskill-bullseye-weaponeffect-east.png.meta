@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: 0b3b8e22dd4850a47a9824bcee6a4491
+timeCreated: 1443020388
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniperskill-bullseye-weaponeffect-east_0
+    21300002: sniperskill-bullseye-weaponeffect-east_1
+    21300004: sniperskill-bullseye-weaponeffect-east_2
+    21300006: sniperskill-bullseye-weaponeffect-east_3
+    21300008: sniperskill-bullseye-weaponeffect-east_4
+    21300010: sniperskill-bullseye-weaponeffect-east_5
+    21300012: sniperskill-bullseye-weaponeffect-east_6
+    21300014: sniperskill-bullseye-weaponeffect-east_7
+    21300016: sniperskill-bullseye-weaponeffect-east_8
+    21300018: sniperskill-bullseye-weaponeffect-east_9
+    21300020: sniperskill-bullseye-weaponeffect-east_10
+    21300022: sniperskill-bullseye-weaponeffect-east_11
+    21300024: sniperskill-bullseye-weaponeffect-east_12
+    21300026: sniperskill-bullseye-weaponeffect-east_13
+    21300028: sniperskill-bullseye-weaponeffect-east_14
+    21300030: sniperskill-bullseye-weaponeffect-east_15
+    21300032: sniperskill-bullseye-weaponeffect-east_16
+    21300034: sniperskill-bullseye-weaponeffect-east_17
+    21300036: sniperskill-bullseye-weaponeffect-east_18
+    21300038: sniperskill-bullseye-weaponeffect-east_19
+    21300040: sniperskill-bullseye-weaponeffect-east_20
+    21300042: sniperskill-bullseye-weaponeffect-east_21
+    21300044: sniperskill-bullseye-weaponeffect-east_22
+    21300046: sniperskill-bullseye-weaponeffect-east_23
+    21300048: sniperskill-bullseye-weaponeffect-east_24
+    21300050: sniperskill-bullseye-weaponeffect-east_25
+    21300052: sniperskill-bullseye-weaponeffect-east_26
+    21300054: sniperskill-bullseye-weaponeffect-east_27
+    21300056: sniperskill-bullseye-weaponeffect-east_28
+    21300058: sniperskill-bullseye-weaponeffect-east_29
+    21300060: sniperskill-bullseye-weaponeffect-east_30
+    21300062: sniperskill-bullseye-weaponeffect-east_31
+    21300064: sniperskill-bullseye-weaponeffect-east_32
+    21300066: sniperskill-bullseye-weaponeffect-east_33
+    21300068: sniperskill-bullseye-weaponeffect-east_34
+    21300070: sniperskill-bullseye-weaponeffect-east_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniperskill-bullseye-weaponeffect-east_7
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 23
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_8
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 10
+        width: 97
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_19
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 34
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 12
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 18
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 21
+        width: 43
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_3
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 14
+        width: 109
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_4
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 12
+        width: 119
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-weaponeffect-east_5
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 14
+        width: 110
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

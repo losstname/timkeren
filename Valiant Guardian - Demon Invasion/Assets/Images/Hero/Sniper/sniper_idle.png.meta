@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 06167bb386bfa1247adcd0622f3802ca
-timeCreated: 1441529439
+guid: 51ce26a177cc304439987291b83c78d3
+timeCreated: 1442928220
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -39,7 +39,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -84,9 +84,9 @@ TextureImporter:
     - name: sniper_idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 306
-        width: 75
+        x: 36
+        y: 807
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -94,9 +94,9 @@ TextureImporter:
     - name: sniper_idle_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 306
-        width: 75
+        x: 192
+        y: 807
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -104,9 +104,9 @@ TextureImporter:
     - name: sniper_idle_2
       rect:
         serializedVersion: 2
-        x: 150
-        y: 306
-        width: 75
+        x: 348
+        y: 807
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -114,9 +114,9 @@ TextureImporter:
     - name: sniper_idle_3
       rect:
         serializedVersion: 2
-        x: 225
-        y: 306
-        width: 75
+        x: 504
+        y: 807
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,9 +124,9 @@ TextureImporter:
     - name: sniper_idle_4
       rect:
         serializedVersion: 2
-        x: 300
-        y: 306
-        width: 75
+        x: 660
+        y: 807
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,9 +134,9 @@ TextureImporter:
     - name: sniper_idle_5
       rect:
         serializedVersion: 2
-        x: 375
-        y: 306
-        width: 75
+        x: 816
+        y: 807
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -144,9 +144,9 @@ TextureImporter:
     - name: sniper_idle_6
       rect:
         serializedVersion: 2
-        x: 450
-        y: 306
-        width: 75
+        x: 36
+        y: 650
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,9 +154,9 @@ TextureImporter:
     - name: sniper_idle_7
       rect:
         serializedVersion: 2
-        x: 525
-        y: 306
-        width: 75
+        x: 192
+        y: 650
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -164,9 +164,9 @@ TextureImporter:
     - name: sniper_idle_8
       rect:
         serializedVersion: 2
-        x: 600
-        y: 306
-        width: 75
+        x: 348
+        y: 650
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,9 +174,9 @@ TextureImporter:
     - name: sniper_idle_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 211
-        width: 75
+        x: 504
+        y: 650
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,9 +184,9 @@ TextureImporter:
     - name: sniper_idle_10
       rect:
         serializedVersion: 2
-        x: 75
-        y: 211
-        width: 75
+        x: 660
+        y: 650
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,9 +194,9 @@ TextureImporter:
     - name: sniper_idle_11
       rect:
         serializedVersion: 2
-        x: 150
-        y: 211
-        width: 75
+        x: 816
+        y: 650
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -204,9 +204,9 @@ TextureImporter:
     - name: sniper_idle_12
       rect:
         serializedVersion: 2
-        x: 225
-        y: 211
-        width: 75
+        x: 36
+        y: 493
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -214,9 +214,9 @@ TextureImporter:
     - name: sniper_idle_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 211
-        width: 75
+        x: 192
+        y: 493
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -224,9 +224,9 @@ TextureImporter:
     - name: sniper_idle_14
       rect:
         serializedVersion: 2
-        x: 375
-        y: 211
-        width: 75
+        x: 348
+        y: 493
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -234,9 +234,9 @@ TextureImporter:
     - name: sniper_idle_15
       rect:
         serializedVersion: 2
-        x: 450
-        y: 211
-        width: 75
+        x: 504
+        y: 493
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -244,9 +244,9 @@ TextureImporter:
     - name: sniper_idle_16
       rect:
         serializedVersion: 2
-        x: 525
-        y: 211
-        width: 75
+        x: 660
+        y: 493
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -254,9 +254,9 @@ TextureImporter:
     - name: sniper_idle_17
       rect:
         serializedVersion: 2
-        x: 600
-        y: 211
-        width: 75
+        x: 816
+        y: 493
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -264,9 +264,9 @@ TextureImporter:
     - name: sniper_idle_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 116
-        width: 75
+        x: 36
+        y: 336
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -274,9 +274,9 @@ TextureImporter:
     - name: sniper_idle_19
       rect:
         serializedVersion: 2
-        x: 75
-        y: 116
-        width: 75
+        x: 192
+        y: 336
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -284,9 +284,9 @@ TextureImporter:
     - name: sniper_idle_20
       rect:
         serializedVersion: 2
-        x: 150
-        y: 116
-        width: 75
+        x: 348
+        y: 336
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -294,9 +294,9 @@ TextureImporter:
     - name: sniper_idle_21
       rect:
         serializedVersion: 2
-        x: 225
-        y: 116
-        width: 75
+        x: 504
+        y: 336
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -304,9 +304,9 @@ TextureImporter:
     - name: sniper_idle_22
       rect:
         serializedVersion: 2
-        x: 300
-        y: 116
-        width: 75
+        x: 660
+        y: 336
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -314,9 +314,9 @@ TextureImporter:
     - name: sniper_idle_23
       rect:
         serializedVersion: 2
-        x: 375
-        y: 116
-        width: 75
+        x: 816
+        y: 336
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -324,9 +324,9 @@ TextureImporter:
     - name: sniper_idle_24
       rect:
         serializedVersion: 2
-        x: 450
-        y: 116
-        width: 75
+        x: 36
+        y: 179
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -334,9 +334,9 @@ TextureImporter:
     - name: sniper_idle_25
       rect:
         serializedVersion: 2
-        x: 525
-        y: 116
-        width: 75
+        x: 192
+        y: 179
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -344,9 +344,9 @@ TextureImporter:
     - name: sniper_idle_26
       rect:
         serializedVersion: 2
-        x: 600
-        y: 116
-        width: 75
+        x: 348
+        y: 179
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -354,9 +354,9 @@ TextureImporter:
     - name: sniper_idle_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 21
-        width: 75
+        x: 504
+        y: 179
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -364,9 +364,9 @@ TextureImporter:
     - name: sniper_idle_28
       rect:
         serializedVersion: 2
-        x: 75
-        y: 21
-        width: 75
+        x: 660
+        y: 179
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -374,9 +374,9 @@ TextureImporter:
     - name: sniper_idle_29
       rect:
         serializedVersion: 2
-        x: 150
-        y: 21
-        width: 75
+        x: 816
+        y: 179
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -384,9 +384,9 @@ TextureImporter:
     - name: sniper_idle_30
       rect:
         serializedVersion: 2
-        x: 225
-        y: 21
-        width: 75
+        x: 36
+        y: 22
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -394,9 +394,9 @@ TextureImporter:
     - name: sniper_idle_31
       rect:
         serializedVersion: 2
-        x: 300
-        y: 21
-        width: 75
+        x: 192
+        y: 22
+        width: 73
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}

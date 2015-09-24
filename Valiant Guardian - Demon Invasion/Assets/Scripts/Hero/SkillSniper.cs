@@ -50,4 +50,6 @@ public class SkillSniper : MonoBehaviour
         //called from animation
         Instantiate(normProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
     }
+
+
 }

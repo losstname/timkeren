@@ -12,6 +12,7 @@ public class Hero : MonoBehaviour
     public float ultiSkillCooldown = 20f;
 
     public GameObject Enemies;
+	public GameObject additAnim;
 
     public Transform ProjectilePosTr;
     public Animator anim;
@@ -30,8 +31,14 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
+
         ProjectilePosTr = transform.GetChild(0);
         anim = GetComponent<Animator>();
+		if(name=="Sniper")
+		{
+			//set the degree of the hero
+			anim.SetInteger("degreeToTarget",331);
+		}
         //set skill cool down to skill trigger
         GetComponent<HeroSkillTrigger>().setNormalSkillCoolDown(normSkillCoolDown);
         GetComponent<HeroSkillTrigger>().setUltimateSkillCoolDown(ultiSkillCooldown);
@@ -69,7 +76,7 @@ public class Hero : MonoBehaviour
     }
 
     public void aimAtEnemy()
-    {
+	{
         //Set projectile object to look at enemy
         //Projectile object is a child of hero object
         if (Enemies != null)
@@ -79,6 +86,14 @@ public class Hero : MonoBehaviour
 
             Quaternion direction = Quaternion.LookRotation(newEnemyPosition - ProjectilePosTr.position, ProjectilePosTr.TransformDirection(Vector3.up));
             ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
+			anim.SetInteger("degreeToTarget",(int)ProjectilePosTr.rotation.eulerAngles.z);
+
         }
     }
+
+	public void additionalAnimation()
+	{
+		//spawn additional animation for skill
+		Instantiate(additAnim, this.ProjectilePosTr.position, this.ProjectilePosTr.rotation);
+	}
 }

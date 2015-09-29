@@ -216,14 +216,21 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: .6875
-    functionName: additionalAnimation
+    functionName: normalSkill
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: .75
-    functionName: normalSkill
+    functionName: PauseHeroAnimation
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: .8125
+    functionName: additionalAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

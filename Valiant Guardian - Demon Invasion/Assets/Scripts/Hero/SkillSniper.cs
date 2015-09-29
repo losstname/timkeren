@@ -16,7 +16,8 @@ public class SkillSniper : MonoBehaviour
 
     public void normalSkill()
     {
-        StartCoroutine(bulletBurst());
+        //StartCoroutine(bulletBurst());
+		spawnNormProjectile();
     }
 
     IEnumerator bulletBurst()
@@ -48,7 +49,8 @@ public class SkillSniper : MonoBehaviour
     {
         //spawning projectile
         //called from animation
-        Instantiate(normProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+		GameObject projectile = Instantiate(normProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation) as GameObject;
+		projectile.transform.parent = this.transform;
     }
 
 

@@ -14,7 +14,7 @@ GameObject:
   - 82: {fileID: 8255184}
   - 114: {fileID: 11415646}
   - 114: {fileID: 11407732}
-  - 114: {fileID: 11418988}
+  - 114: {fileID: 11451012}
   m_Layer: 0
   m_Name: Bullseye
   m_TagString: Projectile
@@ -72,7 +72,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6f8f8b3f3c9b1994199aa2362fa28525, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93df5b2e1ff91dc44be082e255837175, type: 3}
   m_Name: 
@@ -151,13 +151,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2b94e95703179c44998e42827875068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
---- !u!114 &11418988
+--- !u!114 &11451012
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -165,13 +165,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 101714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f7554110914c54db75f742c1a573cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 98f106cc96d00bb48afc9dcf203f1448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  enemyHitLimit: 4
+  enemiesCaught: []
+  radius: 10
+  speed: 15
+  soundHitGO: {fileID: 140864, guid: 32d52fe79a45d344088b3e17425c6c8f, type: 2}
+  soundHit: {fileID: 8300000, guid: 020ae0d6f2edc6141a6bad8147052351, type: 3}
+  enemiesOnRadius: []
   explosion: {fileID: 175574, guid: 9328ec700c7f25c4cb5401c8888076bc, type: 2}
   stunDelay: .100000001
   damage: 0
-  radius: 3
+  explosionRadius: 0
 --- !u!212 &21271620
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -211,11 +219,11 @@ Prefab:
       objectReference: {fileID: 175574, guid: 9328ec700c7f25c4cb5401c8888076bc, type: 2}
     - target: {fileID: 0}
       propertyPath: radius
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
@@ -228,6 +236,30 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: stunDelay
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: soundHitGO
+      value: 
+      objectReference: {fileID: 140864, guid: 32d52fe79a45d344088b3e17425c6c8f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: soundHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 020ae0d6f2edc6141a6bad8147052351, type: 3}
+    - target: {fileID: 0}
+      propertyPath: explosionRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f8f8b3f3c9b1994199aa2362fa28525, type: 3}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

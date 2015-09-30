@@ -13,4 +13,5 @@ public class GrenadeAreaDamage : MonoBehaviour
 			other.GetComponent<Enemy>().AttackedV2();
 		}
 	}
+
 }

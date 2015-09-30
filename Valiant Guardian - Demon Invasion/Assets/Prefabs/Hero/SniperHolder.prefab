@@ -349,7 +349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normProjectiles: {fileID: 101714, guid: 62a9295ce87d8b94eb646e2f847e0ff9, type: 2}
-  ultiProjectiles: {fileID: 135066, guid: 52d755aa3ebd4084eb96ee6c52497187, type: 2}
+  ultiProjectiles: {fileID: 197410, guid: 3a63e80247229d94dba22094e12d8e84, type: 2}
+  ultiProjectilesV2: {fileID: 0}
 --- !u!114 &11484324
 MonoBehaviour:
   m_ObjectHideFlags: 1

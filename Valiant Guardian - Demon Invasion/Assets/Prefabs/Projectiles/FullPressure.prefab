@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f391af05bd57e84587f69c0f0ee3173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOnFirstEnemy: 0
 --- !u!114 &11453026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711b06abdc19bb04e95395a8b49a0e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 2
+  lifeTime: 1
 --- !u!212 &21291748
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -142,7 +141,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: lifeTime
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsKinematic
@@ -159,6 +158,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: laserProjectile
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: destroyOnFirstEnemy
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

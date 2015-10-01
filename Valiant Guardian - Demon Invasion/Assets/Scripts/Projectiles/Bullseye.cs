@@ -131,7 +131,7 @@ public class Bullseye : MonoBehaviour
 		//set radius explosion
 		//temp.GetComponent<Transform> ().localScale = new Vector3 (radius, radius, 1);
 		//start explosion animation
-		temp.GetComponent<GrenadeAreaDamage> ().enemyName = markedTargetName;
+		temp.GetComponent<BullseyeLaserDamage> ().enemyName = markedTargetName;
 		temp.GetComponent<Animator>	 ().Play ("Bullseye");
 		Destroy(gameObject);
 	}

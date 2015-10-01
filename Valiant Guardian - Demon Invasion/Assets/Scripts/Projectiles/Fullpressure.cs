@@ -119,7 +119,7 @@ public class Fullpressure : MonoBehaviour {
 		//validate the place of the chicken 
 		//so that it can't be too high and too close to the door
 		ground = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		if (ground.x < -1.5f || ground.y >-0.9f) {
+		if (ground.x < -3.5f || ground.x > -1.5f || ground.y >-0.9f) {
 			return;
 		}
 		

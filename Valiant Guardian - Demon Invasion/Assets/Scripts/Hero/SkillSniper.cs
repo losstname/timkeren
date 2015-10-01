@@ -8,7 +8,6 @@ public class SkillSniper : MonoBehaviour
     public GameObject ultiProjectiles;
 	public GameObject ultiProjectilesV2;
 	public Vector3 arah2;
-
     private Hero hero;
 
     void Awake()

@@ -32,7 +32,7 @@ public class Bullseye : MonoBehaviour
 	public int damage;
 	public float explosionRadius;
 	Vector3 temp2;
-	
+
 	
 	
 	void Start()
@@ -47,7 +47,7 @@ public class Bullseye : MonoBehaviour
 		heroSkillTrigger = transform.parent.GetComponent<HeroSkillTrigger>();
 		countEnemiesTargeted = 0;
 		countEnemiesHit = 0;
-		markedTargetName = "BullseyeVictim";
+		markedTargetName = "";
 	}
 	
 	void Update()
@@ -82,7 +82,8 @@ public class Bullseye : MonoBehaviour
 			
 			//To continue the attacking animation
 			heroSkillTrigger.ResumeHeroAnimation();
-			
+			markedTargetName = hitObject.transform.name;
+			hitObject.transform.name = "markedBullseye";
 			//To play the sfx
 			GetComponent<AudioSource>().Play();
 		}
@@ -102,7 +103,7 @@ public class Bullseye : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Enemy" && other.name == markedTargetName) {
+		if (other.gameObject.tag == "Enemy" && other.name == "markedBullseye") {
 			//call explosion effect function
 			Invoke ("spawnExplossionEffect", stunDelay);
 			//set explosion position
@@ -115,8 +116,8 @@ public class Bullseye : MonoBehaviour
 			GetComponent<AudioSource> ().clip = soundHit;
 			GetComponent<AudioSource> ().Play ();
 			//trigger the stun
-			other.gameObject.GetComponent<Enemy> ().Stun (stunDelay, damage);
-			other.gameObject.GetComponent<Enemy> ().AttackedV2 ();
+			//other.gameObject.GetComponent<Enemy> ().Stun (stunDelay, damage);
+			//other.gameObject.GetComponent<Enemy> ().AttackedV2 ();
 			//float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
 			//Destroy(gameObject, waitToDestroy);
 		} 
@@ -130,6 +131,7 @@ public class Bullseye : MonoBehaviour
 		//set radius explosion
 		//temp.GetComponent<Transform> ().localScale = new Vector3 (radius, radius, 1);
 		//start explosion animation
+		temp.GetComponent<GrenadeAreaDamage> ().enemyName = markedTargetName;
 		temp.GetComponent<Animator>	 ().Play ("Bullseye");
 		Destroy(gameObject);
 	}

@@ -204,9 +204,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: .00329816341, y: -.0115427971}
   serializedVersion: 2
-  m_Size: {x: .319999993, y: .319999993}
+  m_Size: {x: .92023772, y: .910343647}
 --- !u!61 &6196564
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -217,9 +217,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: .00329816341, y: -.0115427971}
   serializedVersion: 2
-  m_Size: {x: .319999993, y: .319999993}
+  m_Size: {x: .92023772, y: .910343647}
 --- !u!95 &9523526
 Animator:
   serializedVersion: 3
@@ -264,6 +264,7 @@ MonoBehaviour:
   normSkillCoolDown: 5
   ultiSkillCooldown: 20
   Enemies: {fileID: 0}
+  additAnim: {fileID: 0}
   ProjectilePosTr: {fileID: 403492}
   anim: {fileID: 0}
   idleTime: 1
@@ -359,7 +360,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 21feb20adb491944586c7768bdb1bc14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3039aa87dbce9cc4ea2e093b14551b02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21234210
 SpriteRenderer:
@@ -411,7 +412,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1771190353
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: b754bd2e3834691469a4280fc0796154, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a31e6f9acb9e9cc40be4b34f1f7cae64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

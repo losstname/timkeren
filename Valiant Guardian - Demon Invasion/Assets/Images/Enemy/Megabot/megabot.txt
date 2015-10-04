@@ -1,0 +1,22 @@
+megabot_atk1_chomp & fin & prep : 537x356
+megabot_atk2_burst : 103x121
+megabot_atk2_fin & prep & shoot : 494x397
+megabot_break : 614x392
+megabot_dead : 395x371
+megabot_idle : 450x355
+megabot_walk : 515x373
+
+megabot2_atk2 : 494x397
+megabot2_atk3_prep : 613x402
+megabot2_atk3_fin : 615x400
+megabot2_break : 614x392
+megabot2_idle : 392x355
+megabot2_walk : 515x373
+megabot2_warning : 387x432
+
+megabot3_atk2 : 494x397
+megabot3_atk3_fin : 615x400
+megabot3_atk3_prep : 609x402
+megabot3_idle : 392x355
+megabot3_walk : 515x373
+megabot3_warning : 387x432

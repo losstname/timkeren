@@ -53,7 +53,7 @@ public class GassyFlashBang : MonoBehaviour {
 		heroSkillTrigger = transform.parent.GetComponent<HeroSkillTrigger>();
 		countEnemiesTargeted = 0;
 		countEnemiesHit = 0;
-		markedTargetName = "GrenadeArrowVictim";
+		markedTargetName = "GassyFlashBangVictim";
 	}
 	
 	void Update()
@@ -100,7 +100,7 @@ public class GassyFlashBang : MonoBehaviour {
 	
 	void setFirstEnemyOnTap()
 	{
-		//validate the place of the chicken 
+		//validate the place of the bomb 
 		//so that it can't be too high and too close to the door
 		ground = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		if (ground.x < -2.8f || ground.y >-0.9f) {
@@ -163,6 +163,7 @@ public class GassyFlashBang : MonoBehaviour {
 			//other.gameObject.GetComponent<Enemy>().AttackedV3();
 			disableProjectileVisulization();
 			//GetComponent<ProjectileSound>().hitTargetSound();
+			//play the sfx
 			GetComponent<AudioSource>().clip = soundHit;
 			GetComponent<AudioSource>().Play();
 			//other.gameObject.GetComponent<Enemy>().SlowAndPoison(slowandpoisonDelay,poison);
@@ -172,7 +173,9 @@ public class GassyFlashBang : MonoBehaviour {
 	}
 	
 	
-	
+	/// <summary>
+	/// Spawns the explossion effect.
+	/// </summary>
 	void spawnExplossionEffect()
 	{
 		// looping gass projectile

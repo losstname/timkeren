@@ -104,11 +104,10 @@ public class GrenadeArrow : MonoBehaviour
 			Invoke("spawnExplossionEffect",stunDelay);
 			//set explosion position
 			temp2 = other.gameObject.GetComponent<Transform>().position;
-			//instantiate the explosion
-			//Instantiate(explosion, transform.position, transform.rotation);
 			//Projectile hit enemy
 			disableProjectileVisulization();
 			//GetComponent<ProjectileSound>().hitTargetSound();
+			//play the sfx
 			GetComponent<AudioSource>().clip = soundHit;
 			GetComponent<AudioSource>().Play();
 			//trigger the stun
@@ -118,7 +117,9 @@ public class GrenadeArrow : MonoBehaviour
 		}
 	}
 	
-
+	/// <summary>
+	/// Spawns the explossion effect.
+	/// </summary>
 	void spawnExplossionEffect()
 	{
 		//instantiate explosion

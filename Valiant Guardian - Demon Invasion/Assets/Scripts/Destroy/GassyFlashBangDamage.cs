@@ -16,20 +16,26 @@ public class GassyFlashBangDamage : MonoBehaviour
 	{
 		if (other.tag == "Enemy")
 		{
+			//the enemy will slow for 3 seconds
 			other.GetComponent<Enemy>().Slow(3);
 		}
 	}
 
+	/// <summary>
+	/// do the poison attack
+	/// </summary>
 	void poisonAttacked()
 	{
 		// check enemy in circle area
 		Collider2D[] col = Physics2D.OverlapCircleAll (transform.position, GetComponent<CircleCollider2D> ().radius);
 		for(int i =0 ;i<col.Length;i++)
 		{
+			//no enemy? return
 			if(!col[i].GetComponent<Enemy>())
 			{
 				return;
 			}
+			//damage * 0.4
 			col[i].GetComponent<Enemy>().AttackedV3();
 			col[i].GetComponent<Enemy>().isPoisoned=true;
 		}

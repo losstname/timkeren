@@ -53,7 +53,7 @@ public class ChickenTerror : MonoBehaviour {
 		heroSkillTrigger = transform.parent.GetComponent<HeroSkillTrigger>();
 		countEnemiesTargeted = 0;
 		countEnemiesHit = 0;
-		markedTargetName = "GrenadeArrowVictim";
+		markedTargetName = "ChickenTerrorVictim";
 	}
 	
 	void Update()
@@ -173,11 +173,12 @@ public class ChickenTerror : MonoBehaviour {
 			temp2 = other.gameObject.GetComponent<Transform>().position;
 			//instantiate the explosion
 			//Instantiate(explosion, transform.position, transform.rotation);
-			//Projectile hit enemy
+			//wait for 3 seconds, and then call the explosion effect
 			Invoke("spawnExplossionEffect",3);
 			//other.gameObject.GetComponent<Enemy>().AttackedV2();
 			//disableProjectileVisulization();
 			//GetComponent<ProjectileSound>().hitTargetSound();
+			//play the sfx
 			GetComponent<AudioSource>().clip = soundHit;
 			GetComponent<AudioSource>().Play();
 			//other.gameObject.GetComponent<Enemy>().SlowAndPoison(slowandpoisonDelay,poison);
@@ -187,23 +188,14 @@ public class ChickenTerror : MonoBehaviour {
 	}
 	
 	
-	
+	/// <summary>
+	/// Spawns the explossion effect.
+	/// </summary>
 	void spawnExplossionEffect()
 	{
-		/*// looping gass projectile
-		for (int i = 0; i<spawnNum; i++)
-		{
-			// random in tap area
-			Vector3 center = ground;
-			center.x = center.x + Random.Range(-radius, radius);
-			center.y = center.y + Random.Range(-radius, radius);
-			GameObject temp =Instantiate(chickenProjectile,new Vector3(center.x,center.y,0) , Quaternion.identity) as GameObject;
-			//temp.GetComponent<Transform> ().localScale = new Vector3 (explosionRadius, explosionRadius, 1);
-			// play the animation
-			temp.GetComponent<Animator> ().Play ("Gass");
-		}*/
-		
+		//instantiate the explosion
 		GameObject temp = (GameObject) Instantiate (chickenProjectile, temp2, transform.rotation);
+		//do the animation
 		temp.GetComponent<Animator>().Play("FadeIn");
 
 		//return the flip from right to left

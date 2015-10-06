@@ -53,21 +53,12 @@ public class Fullpressure : MonoBehaviour {
 		heroSkillTrigger = transform.parent.GetComponent<HeroSkillTrigger>();
 		countEnemiesTargeted = 0;
 		countEnemiesHit = 0;
-		markedTargetName = "GrenadeArrowVictim";
+		markedTargetName = "FullpressureVictim";
 		this.transform.rotation =  Quaternion.identity;// new Quaternion (0, 0, 0,0);
 	}
 	
 	void Update()
 	{
-		
-		/*
-		enemyInstance = (Enemy)(((GameObject)GameObject.FindGameObjectsWithTag ("Enemy")).GetComponent<Enemy> ());
-		for (int idx= 0; idx <enemyInstance.Length; idx++) 
-		{
-			enemyInstance[idx].isChicken = true;
-			enemyInstance[idx].chickenPosition = transform.position;
-		}
-		*/
 
 		if (Input.GetButtonDown("Fire1") && !isFindingTarget)
 			setFirstEnemyOnTap();
@@ -116,8 +107,8 @@ public class Fullpressure : MonoBehaviour {
 	
 	void setFirstEnemyOnTap()
 	{
-		//validate the place of the chicken 
-		//so that it can't be too high and too close to the door
+		//validate the place of the laser 
+		//so that it can only been tap when it's close to the door
 		ground = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		if (ground.x < -3.5f || ground.x > -1.5f || ground.y >-0.9f) {
 			return;
@@ -125,7 +116,7 @@ public class Fullpressure : MonoBehaviour {
 		
 		groundClicked = true;
 		Quaternion direction = Quaternion.LookRotation(ground - this.transform.position, this.transform.TransformDirection(Vector3.up));
-		transform.parent.GetComponent<SkillSniper> ().arah2 = ground; //= new Quaternion(0, 0, direction.z, direction.w);
+		transform.parent.GetComponent<SkillSniper> ().dir = ground; //= new Quaternion(0, 0, direction.z, direction.w);
 		//TargetAnEnemy(hitObject.collider);
 		isFindingTarget = true;		
 		//To re enable the sprite renderer when the projectile launched
@@ -184,8 +175,10 @@ public class Fullpressure : MonoBehaviour {
 			//other.gameObject.GetComponent<Enemy>().AttackedV2();
 			//disableProjectileVisulization();
 			//GetComponent<ProjectileSound>().hitTargetSound();
+			//play the sfx
 			GetComponent<AudioSource>().clip = soundHit;
 			GetComponent<AudioSource>().Play();
+			//damage * 2
 			other.gameObject.GetComponent<Enemy>().AttackedV2();
 			//float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
 			//Destroy(gameObject, waitToDestroy);
@@ -193,11 +186,14 @@ public class Fullpressure : MonoBehaviour {
 	}
 	
 	
-	
+	/// <summary>
+	/// Spawns the explossion effect.
+	/// </summary>
 	public void spawnExplossionEffect()
 	{
 		//spawn laser projectile
 		GameObject temp = (GameObject) Instantiate (laserProjectile, temp2, transform.rotation);
+		//play the animation
 		temp.GetComponent<Animator>().Play("FullPressure");
 
 		Destroy(gameObject);

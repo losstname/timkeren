@@ -11,6 +11,7 @@ public class GrenadeAreaDamage : MonoBehaviour
 	{
 		if (other.tag == "Enemy")
 		{
+			//damage * 2
 			other.GetComponent<Enemy>().AttackedV2();
 		}
 	}

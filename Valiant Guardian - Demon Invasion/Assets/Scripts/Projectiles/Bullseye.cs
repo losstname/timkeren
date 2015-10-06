@@ -87,6 +87,8 @@ public class Bullseye : MonoBehaviour
 			//To play the sfx
 			GetComponent<AudioSource>().Play();
 		}
+		//the skill must target the enemy!
+		//not the enemy? then return!
 		else if(hitObject.transform.tag != "Enemy")
 		{
 			return;
@@ -110,28 +112,26 @@ public class Bullseye : MonoBehaviour
 			//temp2 = other.gameObject.GetComponent<Transform> ().position;
 			//instantiate the explosion
 			//Instantiate(explosion, transform.position, transform.rotation);
-			//Projectile hit enemy
+			//projectile hit enemy
 			disableProjectileVisulization ();
-			//GetComponent<ProjectileSound>().hitTargetSound();
+			//play the sfx
 			GetComponent<AudioSource> ().clip = soundHit;
 			GetComponent<AudioSource> ().Play ();
-			//trigger the stun
-			//other.gameObject.GetComponent<Enemy> ().Stun (stunDelay, damage);
-			//other.gameObject.GetComponent<Enemy> ().AttackedV2 ();
-			//float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
-			//Destroy(gameObject, waitToDestroy);
 		} 
 	}
 	
-	
+	/// <summary>
+	/// Spawns the explossion effect.
+	/// </summary>
 	void spawnExplossionEffect()
 	{
 		//instantiate explosion
 		GameObject temp = (GameObject) Instantiate(explosion, transform.position, transform.rotation);
 		//set radius explosion
 		//temp.GetComponent<Transform> ().localScale = new Vector3 (radius, radius, 1);
-		//start explosion animation
+		//mark the enemy 
 		temp.GetComponent<BullseyeLaserDamage> ().enemyName = markedTargetName;
+		//play the animation
 		temp.GetComponent<Animator>	 ().Play ("Bullseye");
 		Destroy(gameObject);
 	}

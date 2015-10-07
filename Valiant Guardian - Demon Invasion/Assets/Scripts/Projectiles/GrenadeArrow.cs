@@ -86,6 +86,12 @@ public class GrenadeArrow : MonoBehaviour
 			//To play the sfx
 			GetComponent<AudioSource>().Play();
 		}
+		//the skill must target the enemy!
+		//not the enemy? then return!
+		else if(hitObject.transform.tag != "Enemy")
+		{
+			return;
+		}
 		else
 		{
 			//To hide the skills button after clicking

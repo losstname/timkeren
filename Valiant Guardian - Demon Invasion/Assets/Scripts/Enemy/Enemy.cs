@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     public float CoolDown = 2f;
 	bool isSlowed;
 	public bool isPoisoned;
-	
+
     private Animator anim;
     private int isDeadHash = Animator.StringToHash("isDead");
     private int isAttackingHash = Animator.StringToHash("isAttacking");
@@ -171,16 +171,17 @@ public class Enemy : MonoBehaviour
         //Debug.Log(baseHpDecrease);
         if (ScriptableObject.FindObjectOfType<Door>().isAttackAble())
             ScriptableObject.FindObjectOfType<Door>().AttackBase(baseHpDecrease);
-
     }
 
     public void Attacked()
     {
         attackX = Random.Range(1, 20);
         defenseY = Random.Range(31, 80);
-        //Example , get meleeImp defense from database
-        int impDefense = GetEnemyDefenseStat();
-        HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((impDefense * defenseY) / 100);
+
+        int enemyDefense = GetEnemyDefenseStat();
+        //implement enemy defense formula without character level
+        enemyDefense = (int)(Mathf.Ceil(enemyDefense * 1.15f));
+        HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((enemyDefense * defenseY) / 100);
         hitPoints -= HPDecrease;
         //Spawn damage floater
         SpawnDamageFloater(HPDecrease);
@@ -197,9 +198,11 @@ public class Enemy : MonoBehaviour
 	{
 		attackX = Random.Range(1, 20);
 		defenseY = Random.Range(31, 80);
-		//Example , get meleeImp defense from database
+
         int enemyDefense = GetEnemyDefenseStat();
-		HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((enemyDefense * defenseY) / 100);
+        //implement enemy defense formula without character level
+        enemyDefense = (int)(Mathf.Ceil(enemyDefense * 1.15f));
+        HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((enemyDefense * defenseY) / 100);
 		//damage * 2
 		HPDecrease = HPDecrease * 2;
 		hitPoints -= HPDecrease;
@@ -239,7 +242,7 @@ public class Enemy : MonoBehaviour
 		}
 		Invoke ("StopPoison",0.5f);
 	}
-	
+
 	void StopPoison()
 	{
 		isPoisoned = false;
@@ -247,6 +250,7 @@ public class Enemy : MonoBehaviour
 
     private int GetEnemyDefenseStat()
     {
+        //Get defense status from database
         //Don't forget to change the enemy ID using public int enemyID variable in this class
         if (enemyID==0) { return DataEnemy.getInstance().MeleeImp.Defense; }
         else if (enemyID == 1) { return DataEnemy.getInstance().RangedImp.Defense; }
@@ -308,7 +312,7 @@ public class Enemy : MonoBehaviour
 		this.GetComponent<Animator> ().SetBool ("isStun", false);
 	}
 
-	
+
 	// still slowed and poisoned after the gass area
 	/*	public void SlowAndPoison(float slowandpoisonDelay, int poison)
 	{
@@ -316,14 +320,14 @@ public class Enemy : MonoBehaviour
 		speed = speed * 0.5f;
 		Invoke ("WaitForSlowAndPoisonToEnd", slowandpoisonDelay);
 		int temp;
-	
+
 		for(int i=1; i<=slowandpoisonDelay; i++)
 		{
 			Invoke ("AttackedV3", i);
 		}
 
 */
-	
+
 	public void Slow(float slowandpoisonDelay)
 	{
 		// if already slowed, then return. don't stacked the slowed
@@ -335,7 +339,7 @@ public class Enemy : MonoBehaviour
 		Invoke ("WaitForSlowToEnd", slowandpoisonDelay);
 		isSlowed = true;
 	}
-	
+
 	void WaitForSlowToEnd()
 	{
 		// speed back to normal

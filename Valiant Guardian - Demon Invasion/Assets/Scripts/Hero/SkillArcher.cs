@@ -33,6 +33,9 @@ public class SkillArcher : MonoBehaviour
         //spawning projectile
         GameObject projectile = Instantiate(normProjectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation) as GameObject;
         projectile.transform.parent = this.transform;
+
+        //Passing the attack status from hero to projectile
+        projectile.GetComponent<ReflectiveArrow>().GetDmgFromHero(hero.GetHeroAttackStat());
     }
 
     public void spawnUltiProjectile()

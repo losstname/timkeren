@@ -51,7 +51,11 @@ public class HeroAttack : MonoBehaviour
 
         //spawning projectile
         //called from animation
-        Instantiate(Projectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation);
+        GameObject currentProjectile;
+        currentProjectile = Instantiate(Projectiles, hero.ProjectilePosTr.position, hero.ProjectilePosTr.rotation) as GameObject;
+
+        //Passing attack value from hero to projectile
+        currentProjectile.GetComponent<ProjectileAttack>().GetDmgFromHero(hero.GetHeroAttackStat());
     }
 
     public void setHeroAttackCapability(bool capability)

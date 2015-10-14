@@ -1,11 +1,18 @@
 using UnityEngine;
 using System.Collections;
 //Put on the hero
+//Hero ID list
+//1. Archer
+//2. Sniper
+//3. Dukun
+//4. Rogue
 public class Hero : MonoBehaviour
 {
     public int heroID;
 
+    //this variable holds the distance value between enemy and hero
     public float DistanceFromHero;
+
     public float protectionRadius = 10f;
     //public float nearRadius = 3f;
 
@@ -18,6 +25,7 @@ public class Hero : MonoBehaviour
     public Transform ProjectilePosTr;
     public Animator anim;
 
+    //idle time to determine idle animation length
     public float idleTime = 1f;
     public float coolDown;
 
@@ -32,7 +40,6 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
-
         ProjectilePosTr = transform.GetChild(0);
         anim = GetComponent<Animator>();
 		if(name=="Sniper")
@@ -98,7 +105,7 @@ public class Hero : MonoBehaviour
 		Instantiate(additAnim, this.ProjectilePosTr.position, this.ProjectilePosTr.rotation);
 	}
 
-    private int GetHeroAttackStat()
+    public int GetHeroAttackStat()
     {
         //Get defense status from database
         //Don't forget to change the enemy ID using public int enemyID variable in this class

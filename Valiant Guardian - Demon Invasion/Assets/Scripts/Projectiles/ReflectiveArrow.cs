@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ReflectiveArrow : MonoBehaviour
 {
+    private float dmgFromHero;
 
     SpriteRenderer spriteRenderer;
 
@@ -102,7 +103,7 @@ public class ReflectiveArrow : MonoBehaviour
             if (isFindingTarget)
                 FindTargetOnRadius();
 
-            other.gameObject.GetComponent<Enemy>().AttackedV2();
+            other.gameObject.GetComponent<Enemy>().Attacked(dmgFromHero);
 
             //Instantiate the object holding the audio source
             GameObject tmpSound = Instantiate(soundHitGO, this.transform.position, Quaternion.identity) as GameObject;
@@ -204,5 +205,10 @@ public class ReflectiveArrow : MonoBehaviour
             else
                 enemiesCaught[i].name = enemiesRealName[i];
         }
+    }
+
+    public void GetDmgFromHero(float dmg)
+    {
+        dmgFromHero = dmg;
     }
 }

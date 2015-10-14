@@ -27,6 +27,8 @@ public class ProjectileAttack : MonoBehaviour
         Destroy(GetComponent<SpriteRenderer>());
     }
 
+    //this method to set dmg value carried by this projectile
+    //called from the hero
     public void GetDmgFromHero(float dmg)
     {
         dmgFromHero = dmg;

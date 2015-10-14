@@ -173,7 +173,7 @@ public class Enemy : MonoBehaviour
             ScriptableObject.FindObjectOfType<Door>().AttackBase(baseHpDecrease);
     }
 
-    public void Attacked(float dmgFromProjectile)
+    public void Attacked(float projectileDmg)
     {
         attackX = Random.Range(1, 20);
         defenseY = Random.Range(31, 80);
@@ -182,7 +182,7 @@ public class Enemy : MonoBehaviour
         //implement enemy defense formula without character level
         enemyDefense = (int)(Mathf.Ceil(enemyDefense * 1.15f));
 		//Exponential Formula for Hero Attack. 4 row below
-		HPDecrease = Mathf.CeilToInt (HeroAttack.archerAtk * (1 + Mathf.Pow(1/*<-- level*/, 2)/10) * (1+(1/*<-- level*//100)) + (1/*<-- level*/*HeroAttack.archerAtk/4));
+		HPDecrease = Mathf.CeilToInt (projectileDmg * (1 + Mathf.Pow(1/*<-- level*/, 2)/10) * (1+(1/*<-- level*//100)) + (1/*<-- level*/* projectileDmg / 4));
 		HPDecrease = Mathf.RoundToInt(HPDecrease - (HPDecrease * (attackX / 100f)) - (HPDecrease * (defenseY / 100f)));
         hitPoints -= HPDecrease;
         //Spawn damage floater

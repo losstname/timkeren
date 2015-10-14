@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3032ccefadaa06e4d8ef1e0b714d9d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heroID: 3
   DistanceFromHero: 0
   protectionRadius: 7
   normSkillCoolDown: 5
@@ -424,6 +425,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: protectionRadius
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroID
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

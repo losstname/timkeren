@@ -181,7 +181,9 @@ public class Enemy : MonoBehaviour
         int enemyDefense = GetEnemyDefenseStat();
         //implement enemy defense formula without character level
         enemyDefense = (int)(Mathf.Ceil(enemyDefense * 1.15f));
-        HPDecrease = HeroAttack.archerAtk - ((HeroAttack.archerAtk * attackX) / 100) - ((enemyDefense * defenseY) / 100);
+		//Exponential Formula for Hero Attack. 4 row below
+		HPDecrease = Mathf.CeilToInt (HeroAttack.archerAtk * (1 + Mathf.Pow(1/*<-- level*/, 2)/10) * (1+(1/*<-- level*//100)) + (1/*<-- level*/*HeroAttack.archerAtk/4));
+		HPDecrease = Mathf.RoundToInt(HPDecrease - (HPDecrease * (attackX / 100f)) - (HPDecrease * (defenseY / 100f)));
         hitPoints -= HPDecrease;
         //Spawn damage floater
         SpawnDamageFloater(HPDecrease);

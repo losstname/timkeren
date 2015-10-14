@@ -102,7 +102,7 @@ public class ReflectiveArrow : MonoBehaviour
             if (isFindingTarget)
                 FindTargetOnRadius();
 
-            other.gameObject.GetComponent<Enemy>().Attacked();
+            other.gameObject.GetComponent<Enemy>().AttackedV2();
 
             //Instantiate the object holding the audio source
             GameObject tmpSound = Instantiate(soundHitGO, this.transform.position, Quaternion.identity) as GameObject;

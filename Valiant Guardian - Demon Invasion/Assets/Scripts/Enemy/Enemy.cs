@@ -173,7 +173,7 @@ public class Enemy : MonoBehaviour
             ScriptableObject.FindObjectOfType<Door>().AttackBase(baseHpDecrease);
     }
 
-    public void Attacked()
+    public void Attacked(float dmgFromProjectile)
     {
         attackX = Random.Range(1, 20);
         defenseY = Random.Range(31, 80);

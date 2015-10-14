@@ -23,7 +23,10 @@ namespace Assets.Scripts.Temp_Databases.Heroes
 
         public int[] Radius { get; set; }
 
-        public int Damage { get; set; }
+        public int Damage {
+            get { return damage; }
+            private set {; }
+        }
 
     }
 }

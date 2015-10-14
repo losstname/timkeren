@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ProjectileAttack : MonoBehaviour
 {
+    private float dmgFromHero;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -10,7 +11,7 @@ public class ProjectileAttack : MonoBehaviour
         {
             //Projectile hit enemy
             disableProjectileVisulization();
-            other.gameObject.GetComponent<Enemy>().Attacked();
+            other.gameObject.GetComponent<Enemy>().Attacked(dmgFromHero);
             GetComponent<ProjectileSound>().hitTargetSound();
             float waitToDestroy = GetComponent<ProjectileSound>().getSoundClipLength();
             Destroy(gameObject, waitToDestroy);
@@ -24,5 +25,10 @@ public class ProjectileAttack : MonoBehaviour
         Destroy(GetComponent<Rigidbody2D>());
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<SpriteRenderer>());
+    }
+
+    public void GetDmgFromHero(float dmg)
+    {
+        dmgFromHero = dmg;
     }
 }

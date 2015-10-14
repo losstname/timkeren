@@ -25,7 +25,10 @@ namespace Assets.Scripts.Temp_Databases.Heroes
 
         public int HeroesID { get; private set; }
 
-        public AttackModel MainAttack { get; private set; }
+        public AttackModel MainAttack {
+            get { return mainAttack; }
+            private set {; }
+        }
         public AttackModel SkillAttack { get; private set; }
         public AttackModel UltSkillAttack { get; private set; }
         public int AttackSpeed { get; private set; }

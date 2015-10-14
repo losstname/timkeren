@@ -3,6 +3,7 @@ using System.Collections;
 //Put on the hero
 public class Hero : MonoBehaviour
 {
+    public int heroID;
 
     public float DistanceFromHero;
     public float protectionRadius = 10f;
@@ -96,4 +97,17 @@ public class Hero : MonoBehaviour
 		//spawn additional animation for skill
 		Instantiate(additAnim, this.ProjectilePosTr.position, this.ProjectilePosTr.rotation);
 	}
+
+    private int GetHeroAttackStat()
+    {
+        //Get defense status from database
+        //Don't forget to change the enemy ID using public int enemyID variable in this class
+        if (heroID == 0) { return DataHeroes.getInstance().DataArcher.MainAttack.Damage; }
+        else if (heroID == 1) { return DataHeroes.getInstance().DataSniper.MainAttack.Damage; }
+        else if (heroID == 2) { return DataHeroes.getInstance().DataDukun.MainAttack.Damage; }
+        else if (heroID == 3) { return DataHeroes.getInstance().DataRogue.MainAttack.Damage; }
+
+        Debug.Log("hero id in Hero.cs not detected, using damage on default ID = 0");
+        return DataHeroes.getInstance().DataArcher.MainAttack.Damage;
+    }
 }

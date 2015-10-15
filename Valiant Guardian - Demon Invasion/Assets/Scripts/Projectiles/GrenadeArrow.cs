@@ -71,6 +71,9 @@ public class GrenadeArrow : MonoBehaviour
 	
 	void setFirstEnemyOnTap()
 	{
+		if (!heroSkillTrigger.canResume()) {
+			return;
+		}
 		RaycastHit2D hitObject = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 		if (hitObject.transform.tag == "Enemy" && Vector2.Distance(transform.position, hitObject.transform.position) <= radius)
 		{

@@ -100,6 +100,9 @@ public class GassyFlashBang : MonoBehaviour {
 	
 	void setFirstEnemyOnTap()
 	{
+		if (!heroSkillTrigger.canResume()) {
+			return;
+		}
 		//validate the place of the bomb 
 		//so that it can't be too high and too close to the door
 		ground = Camera.main.ScreenToWorldPoint (Input.mousePosition);

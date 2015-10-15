@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: bbe586a0a6540d249a34a4b81df1d0ae
+timeCreated: 1444485435
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: vfx_-portal-open_0
+    21300002: vfx_-portal-open_1
+    21300004: vfx_-portal-open_2
+    21300006: vfx_-portal-open_3
+    21300008: vfx_-portal-open_4
+    21300010: vfx_-portal-open_5
+    21300012: vfx_-portal-open_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: vfx_-portal-open_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 56
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vfx_-portal-open_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 56
+        width: 100
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vfx_-portal-open_2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 56
+        width: 72
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vfx_-portal-open_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 28
+        width: 113
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vfx_-portal-open_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 14
+        width: 10
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vfx_-portal-open_5
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 0
+        width: 23
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vfx_-portal-open_6
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 0
+        width: 23
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

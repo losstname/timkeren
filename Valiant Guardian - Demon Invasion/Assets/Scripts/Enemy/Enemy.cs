@@ -181,9 +181,8 @@ public class Enemy : MonoBehaviour
         int enemyDefense = GetEnemyDefenseStat();
         //implement enemy defense formula without character level
         enemyDefense = (int)(Mathf.Ceil(enemyDefense * 1.15f));
-		//Exponential Formula for Hero Attack. 4 row below
-		HPDecrease = Mathf.CeilToInt (projectileDmg * (1 + Mathf.Pow(1/*<-- level*/, 2)/10) * (1+(1/*<-- level*//100)) + (1/*<-- level*/* projectileDmg / 4));
-		HPDecrease = Mathf.RoundToInt(HPDecrease - (HPDecrease * (attackX / 100f)) - (HPDecrease * (defenseY / 100f)));
+		//Formula for Hero Attack. 2 row below
+		HPDecrease = HeroAttackExponent (HPDecrease, attackX, defenseY, projectileDmg);
         hitPoints -= HPDecrease;
         //Spawn damage floater
         SpawnDamageFloater(HPDecrease);
@@ -195,6 +194,21 @@ public class Enemy : MonoBehaviour
             disableBeingTargeted();
         }
     }
+
+	//Hero's Attack Exponent formula
+	public int HeroAttackExponent(int HPDecrease, int attackX, int defenseY, float projectileDmg)
+	{
+			HPDecrease = Mathf.CeilToInt (projectileDmg * (1 + Mathf.Pow(1/*<-- level*/, 2)/10) * (1+(1/*<-- level*//100)) + (1/*<-- level*/* projectileDmg / 4));
+	        HPDecrease = Mathf.RoundToInt(HPDecrease - (HPDecrease * (attackX / 100f)) - (HPDecrease * (defenseY / 100f)));
+		    return HPDecrease;
+	}
+
+	//Hero's Attack Linear formula
+	public int HeroAttackLinear(int HPDecrease, float projectileDmg)
+	{
+			HPDecrease = Mathf.CeilToInt (projectileDmg /*CurrentLvlAtk-1*/ * 1.15f);
+			return HPDecrease;
+	}
 
 	public void AttackedV2()
 	{

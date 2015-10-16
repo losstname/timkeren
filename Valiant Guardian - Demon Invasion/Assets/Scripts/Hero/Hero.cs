@@ -94,10 +94,28 @@ public class Hero : MonoBehaviour
 
             Quaternion direction = Quaternion.LookRotation(newEnemyPosition - ProjectilePosTr.position, ProjectilePosTr.TransformDirection(Vector3.up));
             ProjectilePosTr.rotation = new Quaternion(0, 0, direction.z, direction.w);
-			anim.SetInteger("degreeToTarget",(int)ProjectilePosTr.rotation.eulerAngles.z);
+			if(ContainsParam(anim,"degreeToTarget"))
+			{				
+				anim.SetInteger("degreeToTarget",(int)ProjectilePosTr.rotation.eulerAngles.z);
+			}
 
         }
     }
+	/// <summary>
+	/// 	temporary for check if there is a parameter with x name
+	/// </summary>
+	/// <returns><c>true</c>, if parameter was containsed, <c>false</c> otherwise.</returns>
+	/// <param name="_Anim">_ animation.</param>
+	/// <param name="_ParamName">_ parameter name.</param>
+	public static bool ContainsParam(Animator _Anim, string _ParamName)
+	{
+		foreach (AnimatorControllerParameter param in _Anim.parameters)
+		{
+			if (param.name == _ParamName) return true;
+		}
+		return false;
+	}
+
 
 	public void additionalAnimation()
 	{

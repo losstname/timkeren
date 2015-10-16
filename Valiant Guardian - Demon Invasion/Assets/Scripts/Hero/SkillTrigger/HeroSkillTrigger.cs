@@ -105,14 +105,22 @@ public class HeroSkillTrigger : MonoBehaviour
         SkillsHolder.SetActive(false);
     }
 
-    public void PauseHeroAnimation()
+	public bool canResume()
+	{
+		return !hero.anim.enabled;
+	}
+
+	public void PauseHeroAnimation()
     {
         hero.anim.enabled = false;
+
     }
+
 
     public void ResumeHeroAnimation()
     {
         hero.anim.enabled = true;
+
     }
 
     public void RestartHeroAnimation()

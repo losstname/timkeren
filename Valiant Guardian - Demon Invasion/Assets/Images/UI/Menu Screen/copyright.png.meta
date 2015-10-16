@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 7978d5918bff9a044b0d1db5b3935a64
-timeCreated: 1436361280
+guid: 81dcb6c80c7f49d47a49b85abfe4fc3e
+timeCreated: 1444962676
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -30,7 +30,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0

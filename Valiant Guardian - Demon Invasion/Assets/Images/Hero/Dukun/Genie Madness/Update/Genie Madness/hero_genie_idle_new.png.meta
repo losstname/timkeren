@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 17a0d39de2b5109469fef7eb94fca0e3
+timeCreated: 1444485291
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hero_genie_idle_new_0
+    21300002: hero_genie_idle_new_1
+    21300004: hero_genie_idle_new_2
+    21300006: hero_genie_idle_new_3
+    21300008: hero_genie_idle_new_4
+    21300010: hero_genie_idle_new_5
+    21300012: hero_genie_idle_new_6
+    21300014: hero_genie_idle_new_7
+    21300016: hero_genie_idle_new_8
+    21300018: hero_genie_idle_new_9
+    21300020: hero_genie_idle_new_10
+    21300022: hero_genie_idle_new_11
+    21300024: hero_genie_idle_new_12
+    21300026: hero_genie_idle_new_13
+    21300028: hero_genie_idle_new_14
+    21300030: hero_genie_idle_new_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: hero_genie_idle_new_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 25
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 234
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 234
+        width: 25
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 25
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 156
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 25
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 78
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_8
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_9
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 234
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 156
+        width: 25
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 156
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 78
+        width: 25
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 78
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_14
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 25
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hero_genie_idle_new_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

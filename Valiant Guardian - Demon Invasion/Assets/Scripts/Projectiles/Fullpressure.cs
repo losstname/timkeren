@@ -107,6 +107,9 @@ public class Fullpressure : MonoBehaviour {
 	
 	void setFirstEnemyOnTap()
 	{
+		if (!heroSkillTrigger.canResume()) {
+			return;
+		}
 		//validate the place of the laser 
 		//so that it can only been tap when it's close to the door
 		ground = Camera.main.ScreenToWorldPoint (Input.mousePosition);

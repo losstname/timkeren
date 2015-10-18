@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: 0f6a0224859a45a4ebe544c1bc4959d6
+timeCreated: 1443851205
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: megabot3_idle_0
+    21300002: megabot3_idle_1
+    21300004: megabot3_idle_2
+    21300006: megabot3_idle_3
+    21300008: megabot3_idle_4
+    21300010: megabot3_idle_5
+    21300012: megabot3_idle_6
+    21300014: megabot3_idle_7
+    21300016: megabot3_idle_8
+    21300018: megabot3_idle_9
+    21300020: megabot3_idle_10
+    21300022: megabot3_idle_11
+    21300024: megabot3_idle_12
+    21300026: megabot3_idle_13
+    21300028: megabot3_idle_14
+    21300030: megabot3_idle_15
+    21300032: megabot3_idle_16
+    21300034: megabot3_idle_17
+    21300036: megabot3_idle_18
+    21300038: megabot3_idle_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: megabot3_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1065
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_1
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1065
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_2
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1065
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1065
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1065
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 710
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_6
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 710
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_7
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 710
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_8
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 710
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_9
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 710
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 355
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_11
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 355
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_12
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 355
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_13
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 355
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_14
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 355
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_16
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_17
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_18
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 0
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_idle_19
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 0
+        width: 392
+        height: 355
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

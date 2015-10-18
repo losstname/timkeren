@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: d3d8d8cf6fdf1944d9c55d05def38eea
+timeCreated: 1443105592
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniperskill-fullpressure_8
+    21300002: sniperskill-fullpressure_19
+    21300004: sniperskill-fullpressure_20
+    21300006: sniperskill-fullpressure_21
+    21300008: sniperskill-fullpressure_22
+    21300010: sniperskill-fullpressure_24
+    21300012: sniperskill-fullpressure_29
+    21300014: sniperskill-fullpressure_39
+    21300016: sniperskill-fullpressure_57
+    21300018: sniperskill-fullpressure_0
+    21300020: sniperskill-fullpressure_1
+    21300022: sniperskill-fullpressure_2
+    21300024: sniperskill-fullpressure_3
+    21300026: sniperskill-fullpressure_4
+    21300028: sniperskill-fullpressure_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniperskill-fullpressure_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2939
+        width: 12
+        height: 12
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_19
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2427
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_20
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 2211
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1957
+        width: 40
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_22
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1704
+        width: 1192
+        height: 139
+      alignment: 9
+      pivot: {x: .0474040471, y: .399746895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_24
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1465
+        width: 1235
+        height: 140
+      alignment: 9
+      pivot: {x: .0744460821, y: .428901881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_29
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1204
+        width: 1241
+        height: 168
+      alignment: 9
+      pivot: {x: .0765035674, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_39
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 939
+        width: 1247
+        height: 225
+      alignment: 9
+      pivot: {x: .0787198842, y: .499998361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_57
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 735
+        width: 1236
+        height: 169
+      alignment: 9
+      pivot: {x: .0769475028, y: .499999285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 3071
+        width: 200
+        height: 178
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 2841
+        width: 160
+        height: 175
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2630
+        width: 119
+        height: 130
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 507
+        width: 1207
+        height: 157
+      alignment: 9
+      pivot: {x: .070831798, y: .484435648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 262
+        width: 1105
+        height: 173
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-fullpressure_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 30
+        width: 1095
+        height: 164
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

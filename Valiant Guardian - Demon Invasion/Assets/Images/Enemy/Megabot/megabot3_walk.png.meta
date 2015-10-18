@@ -1,0 +1,495 @@
+fileFormatVersion: 2
+guid: 59bccd24ce01ed742805d84b7f5d9771
+timeCreated: 1443851237
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: megabot3_walk_0
+    21300002: megabot3_walk_1
+    21300004: megabot3_walk_2
+    21300006: megabot3_walk_3
+    21300008: megabot3_walk_4
+    21300010: megabot3_walk_5
+    21300012: megabot3_walk_6
+    21300014: megabot3_walk_7
+    21300016: megabot3_walk_8
+    21300018: megabot3_walk_9
+    21300020: megabot3_walk_10
+    21300022: megabot3_walk_11
+    21300024: megabot3_walk_12
+    21300026: megabot3_walk_13
+    21300028: megabot3_walk_14
+    21300030: megabot3_walk_15
+    21300032: megabot3_walk_16
+    21300034: megabot3_walk_17
+    21300036: megabot3_walk_18
+    21300038: megabot3_walk_19
+    21300040: megabot3_walk_20
+    21300042: megabot3_walk_21
+    21300044: megabot3_walk_22
+    21300046: megabot3_walk_23
+    21300048: megabot3_walk_24
+    21300050: megabot3_walk_25
+    21300052: megabot3_walk_26
+    21300054: megabot3_walk_27
+    21300056: megabot3_walk_28
+    21300058: megabot3_walk_29
+    21300060: megabot3_walk_30
+    21300062: megabot3_walk_31
+    21300064: megabot3_walk_32
+    21300066: megabot3_walk_33
+    21300068: megabot3_walk_34
+    21300070: megabot3_walk_35
+    21300072: megabot3_walk_36
+    21300074: megabot3_walk_37
+    21300076: megabot3_walk_38
+    21300078: megabot3_walk_39
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: megabot3_walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_1
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_2
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_3
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_4
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_5
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_6
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_7
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 1492
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_9
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_10
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_11
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_12
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_13
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_14
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_15
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 1119
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_17
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_18
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_19
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_20
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_21
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_22
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_23
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 746
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_25
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_26
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_27
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_28
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_29
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_30
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_31
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 373
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_33
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_34
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_35
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_36
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_37
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_38
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: megabot3_walk_39
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 0
+        width: 515
+        height: 373
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

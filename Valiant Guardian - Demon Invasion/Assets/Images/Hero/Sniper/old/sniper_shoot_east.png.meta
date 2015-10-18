@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 8847e0ddb024a7144a70575fea25777f
+timeCreated: 1441529383
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniper_shoot_east_0
+    21300002: sniper_shoot_east_1
+    21300004: sniper_shoot_east_2
+    21300006: sniper_shoot_east_3
+    21300008: sniper_shoot_east_4
+    21300010: sniper_shoot_east_5
+    21300012: sniper_shoot_east_6
+    21300014: sniper_shoot_east_7
+    21300016: sniper_shoot_east_8
+    21300018: sniper_shoot_east_9
+    21300020: sniper_shoot_east_10
+    21300022: sniper_shoot_east_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniper_shoot_east_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_5
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_6
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_7
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_8
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_9
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_10
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_shoot_east_11
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 9
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

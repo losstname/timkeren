@@ -1,0 +1,20 @@
+sniper_fullpress_repair.png
+framesize 156x157
+
+sniper_fullpress_repairdone.png
+framesize 156x157
+
+sniper_fullpress_mendarat.png
+framesize 156x157
+
+sniper_fullpress_loncatloop.png
+framesize 156x157
+
+sniper_fullpress_loncat.png
+framesize 156x157
+
+sniperskill-fullpressure.png
+framesize 1254x234
+
+sniper_fullpress_shoot.png
+framesize 156x157

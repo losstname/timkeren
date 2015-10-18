@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 8b8dbb601856f8d4cab0fbc822b88cfe
+timeCreated: 1443017943
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniperskill-bullseye-enemyhit_0
+    21300002: sniperskill-bullseye-enemyhit_1
+    21300004: sniperskill-bullseye-enemyhit_2
+    21300006: sniperskill-bullseye-enemyhit_3
+    21300008: sniperskill-bullseye-enemyhit_4
+    21300010: sniperskill-bullseye-enemyhit_5
+    21300012: sniperskill-bullseye-enemyhit_6
+    21300014: sniperskill-bullseye-enemyhit_7
+    21300016: sniperskill-bullseye-enemyhit_8
+    21300018: sniperskill-bullseye-enemyhit_9
+    21300020: sniperskill-bullseye-enemyhit_10
+    21300022: sniperskill-bullseye-enemyhit_11
+    21300024: sniperskill-bullseye-enemyhit_12
+    21300026: sniperskill-bullseye-enemyhit_13
+    21300028: sniperskill-bullseye-enemyhit_14
+    21300030: sniperskill-bullseye-enemyhit_15
+    21300032: sniperskill-bullseye-enemyhit_16
+    21300034: sniperskill-bullseye-enemyhit_17
+    21300036: sniperskill-bullseye-enemyhit_18
+    21300038: sniperskill-bullseye-enemyhit_19
+    21300040: sniperskill-bullseye-enemyhit_20
+    21300042: sniperskill-bullseye-enemyhit_21
+    21300044: sniperskill-bullseye-enemyhit_22
+    21300046: sniperskill-bullseye-enemyhit_23
+    21300048: sniperskill-bullseye-enemyhit_24
+    21300050: sniperskill-bullseye-enemyhit_25
+    21300052: sniperskill-bullseye-enemyhit_26
+    21300054: sniperskill-bullseye-enemyhit_27
+    21300056: sniperskill-bullseye-enemyhit_28
+    21300058: sniperskill-bullseye-enemyhit_29
+    21300060: sniperskill-bullseye-enemyhit_30
+    21300062: sniperskill-bullseye-enemyhit_31
+    21300064: sniperskill-bullseye-enemyhit_32
+    21300066: sniperskill-bullseye-enemyhit_33
+    21300068: sniperskill-bullseye-enemyhit_34
+    21300070: sniperskill-bullseye-enemyhit_35
+    21300072: sniperskill-bullseye-enemyhit_36
+    21300074: sniperskill-bullseye-enemyhit_37
+    21300076: sniperskill-bullseye-enemyhit_38
+    21300078: sniperskill-bullseye-enemyhit_39
+    21300080: sniperskill-bullseye-enemyhit_40
+    21300082: sniperskill-bullseye-enemyhit_41
+    21300084: sniperskill-bullseye-enemyhit_42
+    21300086: sniperskill-bullseye-enemyhit_43
+    21300088: sniperskill-bullseye-enemyhit_44
+    21300090: sniperskill-bullseye-enemyhit_45
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniperskill-bullseye-enemyhit_3
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 8
+        width: 103
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-enemyhit_4
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 5
+        width: 113
+        height: 93
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-enemyhit_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 21
+        width: 73
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-enemyhit_0
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 5
+        width: 126
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-enemyhit_1
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 9
+        width: 114
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniperskill-bullseye-enemyhit_2
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 12
+        width: 118
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

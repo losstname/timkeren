@@ -1,0 +1,23 @@
+laser_projectile.png
+framesize = 100x18
+
+sniperskill-bullseye-weaponeffect-east.png
+framesize = 134x106
+
+sniperskill-bullseye-enemyhit.png
+framesize = 130x108
+
+sniper_bullseye_east.png
+framesize = 156x157
+
+sniperskill-bullseye-weaponeffect-south.png
+framesize = 106x134
+
+sniper_bullseye_south.png
+framesize = 156x157
+
+sniperskill-bullseye-weaponeffect-southeast.png
+framesize = 169x158
+
+sniper_bullseye_southeast.png
+framesize = 156x157

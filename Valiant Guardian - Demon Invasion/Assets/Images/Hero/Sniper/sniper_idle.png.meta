@@ -1,0 +1,407 @@
+fileFormatVersion: 2
+guid: 51ce26a177cc304439987291b83c78d3
+timeCreated: 1442928220
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sniper_idle_0
+    21300002: sniper_idle_1
+    21300004: sniper_idle_2
+    21300006: sniper_idle_3
+    21300008: sniper_idle_4
+    21300010: sniper_idle_5
+    21300012: sniper_idle_6
+    21300014: sniper_idle_7
+    21300016: sniper_idle_8
+    21300018: sniper_idle_9
+    21300020: sniper_idle_10
+    21300022: sniper_idle_11
+    21300024: sniper_idle_12
+    21300026: sniper_idle_13
+    21300028: sniper_idle_14
+    21300030: sniper_idle_15
+    21300032: sniper_idle_16
+    21300034: sniper_idle_17
+    21300036: sniper_idle_18
+    21300038: sniper_idle_19
+    21300040: sniper_idle_20
+    21300042: sniper_idle_21
+    21300044: sniper_idle_22
+    21300046: sniper_idle_23
+    21300048: sniper_idle_24
+    21300050: sniper_idle_25
+    21300052: sniper_idle_26
+    21300054: sniper_idle_27
+    21300056: sniper_idle_28
+    21300058: sniper_idle_29
+    21300060: sniper_idle_30
+    21300062: sniper_idle_31
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sniper_idle_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 807
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 807
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_2
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 807
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 807
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_4
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 807
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_5
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 807
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 650
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 650
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_8
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 650
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 650
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_10
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 650
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_11
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 650
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_12
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 493
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 493
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_14
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 493
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_15
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 493
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_16
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 493
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_17
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 493
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 336
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_20
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 336
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_21
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 336
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_22
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 336
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_23
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 336
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_24
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 179
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 179
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_26
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 179
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 179
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_28
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 179
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_29
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 179
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_30
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 22
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sniper_idle_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 22
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
